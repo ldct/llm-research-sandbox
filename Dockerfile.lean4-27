@@ -1,4 +1,5 @@
 FROM ubuntu:noble
+RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf
 
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
