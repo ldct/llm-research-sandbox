@@ -7,7 +7,11 @@ ENV PATH="/root/.elan/bin:${PATH}"
 
 RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf && \
     curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none && \
-    elan toolchain install leanprover/lean4:v4.25.1 && elan default leanprover/lean4:v4.25.1
+    for i in 1 2 3 4 5; do \
+      echo "nameserver 1.1.1.1" > /etc/resolv.conf && \
+      elan toolchain install leanprover/lean4:v4.25.1 && break || sleep 5; \
+    done && \
+    elan default leanprover/lean4:v4.25.1
 
 RUN echo '#eval 1 + 1' | lean --stdin | grep -q '^2$'
 
