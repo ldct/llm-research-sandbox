@@ -4,5 +4,5 @@ export NVM_DIR="/home/exedev/.nvm"
 export PATH="/home/exedev/.elan/bin:$PATH"
 nvm use 25
 
-cd /home/exedev/lean4web
+cd /home/exedev/llm-research-sandbox/lean4web
 exec env PORT=8000 ALLOW_NO_BUBBLEWRAP=true node server/index.mjs
