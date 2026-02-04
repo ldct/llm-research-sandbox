@@ -1,0 +1,16 @@
+FROM ubuntu:noble
+
+RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf && \
+    apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf && \
+    curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none && \
+    elan toolchain install leanprover/lean4:v4.25.0 && elan default leanprover/lean4:v4.25.0
+
+RUN echo '#eval 1 + 1' | lean --stdin | grep -q '^2$'
+
+RUN echo '#eval Lean.versionString' | lean --stdin | grep -q '"4.25.0"'
+
+CMD ["/bin/bash"]
