@@ -1,0 +1,3122 @@
+[
+  {
+    "order": 1,
+    "index": 1,
+    "group_id": "SmallGroup(1,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1,
+    "inv2_a2b_eq_b2a": 1,
+    "inv3_a2_eq_b2": 1,
+    "inv4_conj_is_inv": 1
+  },
+  {
+    "order": 2,
+    "index": 1,
+    "group_id": "SmallGroup(2,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 4,
+    "inv2_a2b_eq_b2a": 2,
+    "inv3_a2_eq_b2": 4,
+    "inv4_conj_is_inv": 4
+  },
+  {
+    "order": 3,
+    "index": 1,
+    "group_id": "SmallGroup(3,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 9,
+    "inv2_a2b_eq_b2a": 3,
+    "inv3_a2_eq_b2": 3,
+    "inv4_conj_is_inv": 3
+  },
+  {
+    "order": 4,
+    "index": 1,
+    "group_id": "SmallGroup(4,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 16,
+    "inv2_a2b_eq_b2a": 4,
+    "inv3_a2_eq_b2": 8,
+    "inv4_conj_is_inv": 8
+  },
+  {
+    "order": 4,
+    "index": 2,
+    "group_id": "SmallGroup(4,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 16,
+    "inv2_a2b_eq_b2a": 4,
+    "inv3_a2_eq_b2": 16,
+    "inv4_conj_is_inv": 16
+  },
+  {
+    "order": 5,
+    "index": 1,
+    "group_id": "SmallGroup(5,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 25,
+    "inv2_a2b_eq_b2a": 5,
+    "inv3_a2_eq_b2": 5,
+    "inv4_conj_is_inv": 5
+  },
+  {
+    "order": 6,
+    "index": 1,
+    "group_id": "SmallGroup(6,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 18,
+    "inv2_a2b_eq_b2a": 6,
+    "inv3_a2_eq_b2": 18,
+    "inv4_conj_is_inv": 18
+  },
+  {
+    "order": 6,
+    "index": 2,
+    "group_id": "SmallGroup(6,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 36,
+    "inv2_a2b_eq_b2a": 6,
+    "inv3_a2_eq_b2": 12,
+    "inv4_conj_is_inv": 12
+  },
+  {
+    "order": 7,
+    "index": 1,
+    "group_id": "SmallGroup(7,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 49,
+    "inv2_a2b_eq_b2a": 7,
+    "inv3_a2_eq_b2": 7,
+    "inv4_conj_is_inv": 7
+  },
+  {
+    "order": 8,
+    "index": 1,
+    "group_id": "SmallGroup(8,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 64,
+    "inv2_a2b_eq_b2a": 8,
+    "inv3_a2_eq_b2": 16,
+    "inv4_conj_is_inv": 16
+  },
+  {
+    "order": 8,
+    "index": 2,
+    "group_id": "SmallGroup(8,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 64,
+    "inv2_a2b_eq_b2a": 8,
+    "inv3_a2_eq_b2": 32,
+    "inv4_conj_is_inv": 32
+  },
+  {
+    "order": 8,
+    "index": 3,
+    "group_id": "SmallGroup(8,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 40,
+    "inv2_a2b_eq_b2a": 8,
+    "inv3_a2_eq_b2": 40,
+    "inv4_conj_is_inv": 40
+  },
+  {
+    "order": 8,
+    "index": 4,
+    "group_id": "SmallGroup(8,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 40,
+    "inv2_a2b_eq_b2a": 8,
+    "inv3_a2_eq_b2": 40,
+    "inv4_conj_is_inv": 40
+  },
+  {
+    "order": 8,
+    "index": 5,
+    "group_id": "SmallGroup(8,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 64,
+    "inv2_a2b_eq_b2a": 8,
+    "inv3_a2_eq_b2": 64,
+    "inv4_conj_is_inv": 64
+  },
+  {
+    "order": 9,
+    "index": 1,
+    "group_id": "SmallGroup(9,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 81,
+    "inv2_a2b_eq_b2a": 9,
+    "inv3_a2_eq_b2": 9,
+    "inv4_conj_is_inv": 9
+  },
+  {
+    "order": 9,
+    "index": 2,
+    "group_id": "SmallGroup(9,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 81,
+    "inv2_a2b_eq_b2a": 9,
+    "inv3_a2_eq_b2": 9,
+    "inv4_conj_is_inv": 9
+  },
+  {
+    "order": 10,
+    "index": 1,
+    "group_id": "SmallGroup(10,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 40,
+    "inv2_a2b_eq_b2a": 10,
+    "inv3_a2_eq_b2": 40,
+    "inv4_conj_is_inv": 40
+  },
+  {
+    "order": 10,
+    "index": 2,
+    "group_id": "SmallGroup(10,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 100,
+    "inv2_a2b_eq_b2a": 10,
+    "inv3_a2_eq_b2": 20,
+    "inv4_conj_is_inv": 20
+  },
+  {
+    "order": 11,
+    "index": 1,
+    "group_id": "SmallGroup(11,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 121,
+    "inv2_a2b_eq_b2a": 11,
+    "inv3_a2_eq_b2": 11,
+    "inv4_conj_is_inv": 11
+  },
+  {
+    "order": 12,
+    "index": 1,
+    "group_id": "SmallGroup(12,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 72,
+    "inv2_a2b_eq_b2a": 12,
+    "inv3_a2_eq_b2": 48,
+    "inv4_conj_is_inv": 48
+  },
+  {
+    "order": 12,
+    "index": 2,
+    "group_id": "SmallGroup(12,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 144,
+    "inv2_a2b_eq_b2a": 12,
+    "inv3_a2_eq_b2": 24,
+    "inv4_conj_is_inv": 24
+  },
+  {
+    "order": 12,
+    "index": 3,
+    "group_id": "SmallGroup(12,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 48,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 24,
+    "inv4_conj_is_inv": 24
+  },
+  {
+    "order": 12,
+    "index": 4,
+    "group_id": "SmallGroup(12,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 72,
+    "inv2_a2b_eq_b2a": 12,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 12,
+    "index": 5,
+    "group_id": "SmallGroup(12,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 144,
+    "inv2_a2b_eq_b2a": 12,
+    "inv3_a2_eq_b2": 48,
+    "inv4_conj_is_inv": 48
+  },
+  {
+    "order": 13,
+    "index": 1,
+    "group_id": "SmallGroup(13,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 169,
+    "inv2_a2b_eq_b2a": 13,
+    "inv3_a2_eq_b2": 13,
+    "inv4_conj_is_inv": 13
+  },
+  {
+    "order": 14,
+    "index": 1,
+    "group_id": "SmallGroup(14,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 70,
+    "inv2_a2b_eq_b2a": 14,
+    "inv3_a2_eq_b2": 70,
+    "inv4_conj_is_inv": 70
+  },
+  {
+    "order": 14,
+    "index": 2,
+    "group_id": "SmallGroup(14,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 196,
+    "inv2_a2b_eq_b2a": 14,
+    "inv3_a2_eq_b2": 28,
+    "inv4_conj_is_inv": 28
+  },
+  {
+    "order": 15,
+    "index": 1,
+    "group_id": "SmallGroup(15,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 225,
+    "inv2_a2b_eq_b2a": 15,
+    "inv3_a2_eq_b2": 15,
+    "inv4_conj_is_inv": 15
+  },
+  {
+    "order": 16,
+    "index": 1,
+    "group_id": "SmallGroup(16,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 256,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 32,
+    "inv4_conj_is_inv": 32
+  },
+  {
+    "order": 16,
+    "index": 2,
+    "group_id": "SmallGroup(16,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 256,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 64,
+    "inv4_conj_is_inv": 64
+  },
+  {
+    "order": 16,
+    "index": 3,
+    "group_id": "SmallGroup(16,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 16,
+    "index": 4,
+    "group_id": "SmallGroup(16,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 16,
+    "index": 5,
+    "group_id": "SmallGroup(16,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 256,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 64,
+    "inv4_conj_is_inv": 64
+  },
+  {
+    "order": 16,
+    "index": 6,
+    "group_id": "SmallGroup(16,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 64,
+    "inv4_conj_is_inv": 64
+  },
+  {
+    "order": 16,
+    "index": 7,
+    "group_id": "SmallGroup(16,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 112,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 112,
+    "inv4_conj_is_inv": 112
+  },
+  {
+    "order": 16,
+    "index": 8,
+    "group_id": "SmallGroup(16,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 112,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 80,
+    "inv4_conj_is_inv": 80
+  },
+  {
+    "order": 16,
+    "index": 9,
+    "group_id": "SmallGroup(16,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 112,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 112,
+    "inv4_conj_is_inv": 112
+  },
+  {
+    "order": 16,
+    "index": 10,
+    "group_id": "SmallGroup(16,10)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 256,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 16,
+    "index": 11,
+    "group_id": "SmallGroup(16,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 160,
+    "inv4_conj_is_inv": 160
+  },
+  {
+    "order": 16,
+    "index": 12,
+    "group_id": "SmallGroup(16,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 160,
+    "inv4_conj_is_inv": 160
+  },
+  {
+    "order": 16,
+    "index": 13,
+    "group_id": "SmallGroup(16,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 16,
+    "index": 14,
+    "group_id": "SmallGroup(16,14)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 256,
+    "inv2_a2b_eq_b2a": 16,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 17,
+    "index": 1,
+    "group_id": "SmallGroup(17,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 289,
+    "inv2_a2b_eq_b2a": 17,
+    "inv3_a2_eq_b2": 17,
+    "inv4_conj_is_inv": 17
+  },
+  {
+    "order": 18,
+    "index": 1,
+    "group_id": "SmallGroup(18,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 108,
+    "inv2_a2b_eq_b2a": 18,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 18,
+    "index": 2,
+    "group_id": "SmallGroup(18,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 324,
+    "inv2_a2b_eq_b2a": 18,
+    "inv3_a2_eq_b2": 36,
+    "inv4_conj_is_inv": 36
+  },
+  {
+    "order": 18,
+    "index": 3,
+    "group_id": "SmallGroup(18,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 162,
+    "inv2_a2b_eq_b2a": 18,
+    "inv3_a2_eq_b2": 54,
+    "inv4_conj_is_inv": 54
+  },
+  {
+    "order": 18,
+    "index": 4,
+    "group_id": "SmallGroup(18,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 108,
+    "inv2_a2b_eq_b2a": 18,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 18,
+    "index": 5,
+    "group_id": "SmallGroup(18,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 324,
+    "inv2_a2b_eq_b2a": 18,
+    "inv3_a2_eq_b2": 36,
+    "inv4_conj_is_inv": 36
+  },
+  {
+    "order": 19,
+    "index": 1,
+    "group_id": "SmallGroup(19,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 361,
+    "inv2_a2b_eq_b2a": 19,
+    "inv3_a2_eq_b2": 19,
+    "inv4_conj_is_inv": 19
+  },
+  {
+    "order": 20,
+    "index": 1,
+    "group_id": "SmallGroup(20,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 20,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 20,
+    "index": 2,
+    "group_id": "SmallGroup(20,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 400,
+    "inv2_a2b_eq_b2a": 20,
+    "inv3_a2_eq_b2": 40,
+    "inv4_conj_is_inv": 40
+  },
+  {
+    "order": 20,
+    "index": 3,
+    "group_id": "SmallGroup(20,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 100,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 60,
+    "inv4_conj_is_inv": 60
+  },
+  {
+    "order": 20,
+    "index": 4,
+    "group_id": "SmallGroup(20,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 160,
+    "inv2_a2b_eq_b2a": 20,
+    "inv3_a2_eq_b2": 160,
+    "inv4_conj_is_inv": 160
+  },
+  {
+    "order": 20,
+    "index": 5,
+    "group_id": "SmallGroup(20,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 400,
+    "inv2_a2b_eq_b2a": 20,
+    "inv3_a2_eq_b2": 80,
+    "inv4_conj_is_inv": 80
+  },
+  {
+    "order": 21,
+    "index": 1,
+    "group_id": "SmallGroup(21,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 105,
+    "inv2_a2b_eq_b2a": 21,
+    "inv3_a2_eq_b2": 21,
+    "inv4_conj_is_inv": 21
+  },
+  {
+    "order": 21,
+    "index": 2,
+    "group_id": "SmallGroup(21,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 441,
+    "inv2_a2b_eq_b2a": 21,
+    "inv3_a2_eq_b2": 21,
+    "inv4_conj_is_inv": 21
+  },
+  {
+    "order": 22,
+    "index": 1,
+    "group_id": "SmallGroup(22,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 154,
+    "inv2_a2b_eq_b2a": 22,
+    "inv3_a2_eq_b2": 154,
+    "inv4_conj_is_inv": 154
+  },
+  {
+    "order": 22,
+    "index": 2,
+    "group_id": "SmallGroup(22,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 484,
+    "inv2_a2b_eq_b2a": 22,
+    "inv3_a2_eq_b2": 44,
+    "inv4_conj_is_inv": 44
+  },
+  {
+    "order": 23,
+    "index": 1,
+    "group_id": "SmallGroup(23,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 529,
+    "inv2_a2b_eq_b2a": 23,
+    "inv3_a2_eq_b2": 23,
+    "inv4_conj_is_inv": 23
+  },
+  {
+    "order": 24,
+    "index": 1,
+    "group_id": "SmallGroup(24,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 288,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 24,
+    "index": 2,
+    "group_id": "SmallGroup(24,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 48,
+    "inv4_conj_is_inv": 48
+  },
+  {
+    "order": 24,
+    "index": 3,
+    "group_id": "SmallGroup(24,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 168,
+    "inv2_a2b_eq_b2a": 72,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 24,
+    "index": 4,
+    "group_id": "SmallGroup(24,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 216,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 216,
+    "inv4_conj_is_inv": 216
+  },
+  {
+    "order": 24,
+    "index": 5,
+    "group_id": "SmallGroup(24,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 288,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 144,
+    "inv4_conj_is_inv": 144
+  },
+  {
+    "order": 24,
+    "index": 6,
+    "group_id": "SmallGroup(24,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 216,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 216,
+    "inv4_conj_is_inv": 216
+  },
+  {
+    "order": 24,
+    "index": 7,
+    "group_id": "SmallGroup(24,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 288,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 24,
+    "index": 8,
+    "group_id": "SmallGroup(24,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 216,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 168,
+    "inv4_conj_is_inv": 168
+  },
+  {
+    "order": 24,
+    "index": 9,
+    "group_id": "SmallGroup(24,9)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 24,
+    "index": 10,
+    "group_id": "SmallGroup(24,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 360,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 24,
+    "index": 11,
+    "group_id": "SmallGroup(24,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 360,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 24,
+    "index": 12,
+    "group_id": "SmallGroup(24,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 120,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 24,
+    "index": 13,
+    "group_id": "SmallGroup(24,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 192,
+    "inv2_a2b_eq_b2a": 72,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 24,
+    "index": 14,
+    "group_id": "SmallGroup(24,14)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 288,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 24,
+    "index": 15,
+    "group_id": "SmallGroup(24,15)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 24,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 25,
+    "index": 1,
+    "group_id": "SmallGroup(25,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 625,
+    "inv2_a2b_eq_b2a": 25,
+    "inv3_a2_eq_b2": 25,
+    "inv4_conj_is_inv": 25
+  },
+  {
+    "order": 25,
+    "index": 2,
+    "group_id": "SmallGroup(25,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 625,
+    "inv2_a2b_eq_b2a": 25,
+    "inv3_a2_eq_b2": 25,
+    "inv4_conj_is_inv": 25
+  },
+  {
+    "order": 26,
+    "index": 1,
+    "group_id": "SmallGroup(26,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 208,
+    "inv2_a2b_eq_b2a": 26,
+    "inv3_a2_eq_b2": 208,
+    "inv4_conj_is_inv": 208
+  },
+  {
+    "order": 26,
+    "index": 2,
+    "group_id": "SmallGroup(26,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 676,
+    "inv2_a2b_eq_b2a": 26,
+    "inv3_a2_eq_b2": 52,
+    "inv4_conj_is_inv": 52
+  },
+  {
+    "order": 27,
+    "index": 1,
+    "group_id": "SmallGroup(27,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 729,
+    "inv2_a2b_eq_b2a": 27,
+    "inv3_a2_eq_b2": 27,
+    "inv4_conj_is_inv": 27
+  },
+  {
+    "order": 27,
+    "index": 2,
+    "group_id": "SmallGroup(27,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 729,
+    "inv2_a2b_eq_b2a": 27,
+    "inv3_a2_eq_b2": 27,
+    "inv4_conj_is_inv": 27
+  },
+  {
+    "order": 27,
+    "index": 3,
+    "group_id": "SmallGroup(27,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 297,
+    "inv2_a2b_eq_b2a": 27,
+    "inv3_a2_eq_b2": 27,
+    "inv4_conj_is_inv": 27
+  },
+  {
+    "order": 27,
+    "index": 4,
+    "group_id": "SmallGroup(27,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 297,
+    "inv2_a2b_eq_b2a": 27,
+    "inv3_a2_eq_b2": 27,
+    "inv4_conj_is_inv": 27
+  },
+  {
+    "order": 27,
+    "index": 5,
+    "group_id": "SmallGroup(27,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 729,
+    "inv2_a2b_eq_b2a": 27,
+    "inv3_a2_eq_b2": 27,
+    "inv4_conj_is_inv": 27
+  },
+  {
+    "order": 28,
+    "index": 1,
+    "group_id": "SmallGroup(28,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 280,
+    "inv2_a2b_eq_b2a": 28,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 28,
+    "index": 2,
+    "group_id": "SmallGroup(28,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 784,
+    "inv2_a2b_eq_b2a": 28,
+    "inv3_a2_eq_b2": 56,
+    "inv4_conj_is_inv": 56
+  },
+  {
+    "order": 28,
+    "index": 3,
+    "group_id": "SmallGroup(28,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 280,
+    "inv2_a2b_eq_b2a": 28,
+    "inv3_a2_eq_b2": 280,
+    "inv4_conj_is_inv": 280
+  },
+  {
+    "order": 28,
+    "index": 4,
+    "group_id": "SmallGroup(28,4)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 784,
+    "inv2_a2b_eq_b2a": 28,
+    "inv3_a2_eq_b2": 112,
+    "inv4_conj_is_inv": 112
+  },
+  {
+    "order": 29,
+    "index": 1,
+    "group_id": "SmallGroup(29,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 841,
+    "inv2_a2b_eq_b2a": 29,
+    "inv3_a2_eq_b2": 29,
+    "inv4_conj_is_inv": 29
+  },
+  {
+    "order": 30,
+    "index": 1,
+    "group_id": "SmallGroup(30,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 450,
+    "inv2_a2b_eq_b2a": 30,
+    "inv3_a2_eq_b2": 90,
+    "inv4_conj_is_inv": 90
+  },
+  {
+    "order": 30,
+    "index": 2,
+    "group_id": "SmallGroup(30,2)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 360,
+    "inv2_a2b_eq_b2a": 30,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 30,
+    "index": 3,
+    "group_id": "SmallGroup(30,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 270,
+    "inv2_a2b_eq_b2a": 30,
+    "inv3_a2_eq_b2": 270,
+    "inv4_conj_is_inv": 270
+  },
+  {
+    "order": 30,
+    "index": 4,
+    "group_id": "SmallGroup(30,4)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 900,
+    "inv2_a2b_eq_b2a": 30,
+    "inv3_a2_eq_b2": 60,
+    "inv4_conj_is_inv": 60
+  },
+  {
+    "order": 31,
+    "index": 1,
+    "group_id": "SmallGroup(31,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 961,
+    "inv2_a2b_eq_b2a": 31,
+    "inv3_a2_eq_b2": 31,
+    "inv4_conj_is_inv": 31
+  },
+  {
+    "order": 32,
+    "index": 1,
+    "group_id": "SmallGroup(32,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 64,
+    "inv4_conj_is_inv": 64
+  },
+  {
+    "order": 32,
+    "index": 2,
+    "group_id": "SmallGroup(32,2)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 3,
+    "group_id": "SmallGroup(32,3)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 32,
+    "index": 4,
+    "group_id": "SmallGroup(32,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 32,
+    "index": 5,
+    "group_id": "SmallGroup(32,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 32,
+    "index": 6,
+    "group_id": "SmallGroup(32,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 32,
+    "index": 7,
+    "group_id": "SmallGroup(32,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 32,
+    "index": 8,
+    "group_id": "SmallGroup(32,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 32,
+    "index": 9,
+    "group_id": "SmallGroup(32,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 10,
+    "group_id": "SmallGroup(32,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 11,
+    "group_id": "SmallGroup(32,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 32,
+    "index": 12,
+    "group_id": "SmallGroup(32,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 32,
+    "index": 13,
+    "group_id": "SmallGroup(32,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 32,
+    "index": 14,
+    "group_id": "SmallGroup(32,14)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 15,
+    "group_id": "SmallGroup(32,15)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 32,
+    "index": 16,
+    "group_id": "SmallGroup(32,16)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 32,
+    "index": 17,
+    "group_id": "SmallGroup(32,17)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 128,
+    "inv4_conj_is_inv": 128
+  },
+  {
+    "order": 32,
+    "index": 18,
+    "group_id": "SmallGroup(32,18)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 352,
+    "inv4_conj_is_inv": 352
+  },
+  {
+    "order": 32,
+    "index": 19,
+    "group_id": "SmallGroup(32,19)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 32,
+    "index": 20,
+    "group_id": "SmallGroup(32,20)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 352,
+    "inv4_conj_is_inv": 352
+  },
+  {
+    "order": 32,
+    "index": 21,
+    "group_id": "SmallGroup(32,21)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 22,
+    "group_id": "SmallGroup(32,22)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 32,
+    "index": 23,
+    "group_id": "SmallGroup(32,23)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 32,
+    "index": 24,
+    "group_id": "SmallGroup(32,24)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 25,
+    "group_id": "SmallGroup(32,25)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 26,
+    "group_id": "SmallGroup(32,26)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 27,
+    "group_id": "SmallGroup(32,27)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 32,
+    "index": 28,
+    "group_id": "SmallGroup(32,28)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 32,
+    "index": 29,
+    "group_id": "SmallGroup(32,29)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 32,
+    "index": 30,
+    "group_id": "SmallGroup(32,30)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 31,
+    "group_id": "SmallGroup(32,31)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 32,
+    "group_id": "SmallGroup(32,32)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 33,
+    "group_id": "SmallGroup(32,33)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 34,
+    "group_id": "SmallGroup(32,34)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 32,
+    "index": 35,
+    "group_id": "SmallGroup(32,35)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 32,
+    "index": 36,
+    "group_id": "SmallGroup(32,36)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 37,
+    "group_id": "SmallGroup(32,37)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 38,
+    "group_id": "SmallGroup(32,38)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 256,
+    "inv4_conj_is_inv": 256
+  },
+  {
+    "order": 32,
+    "index": 39,
+    "group_id": "SmallGroup(32,39)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 32,
+    "index": 40,
+    "group_id": "SmallGroup(32,40)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 41,
+    "group_id": "SmallGroup(32,41)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 32,
+    "index": 42,
+    "group_id": "SmallGroup(32,42)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 32,
+    "index": 43,
+    "group_id": "SmallGroup(32,43)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 352,
+    "inv4_conj_is_inv": 352
+  },
+  {
+    "order": 32,
+    "index": 44,
+    "group_id": "SmallGroup(32,44)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 352,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 352,
+    "inv4_conj_is_inv": 352
+  },
+  {
+    "order": 32,
+    "index": 45,
+    "group_id": "SmallGroup(32,45)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 512,
+    "inv4_conj_is_inv": 512
+  },
+  {
+    "order": 32,
+    "index": 46,
+    "group_id": "SmallGroup(32,46)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 640,
+    "inv4_conj_is_inv": 640
+  },
+  {
+    "order": 32,
+    "index": 47,
+    "group_id": "SmallGroup(32,47)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 640,
+    "inv4_conj_is_inv": 640
+  },
+  {
+    "order": 32,
+    "index": 48,
+    "group_id": "SmallGroup(32,48)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 512,
+    "inv4_conj_is_inv": 512
+  },
+  {
+    "order": 32,
+    "index": 49,
+    "group_id": "SmallGroup(32,49)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 544,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 544,
+    "inv4_conj_is_inv": 544
+  },
+  {
+    "order": 32,
+    "index": 50,
+    "group_id": "SmallGroup(32,50)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 544,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 544,
+    "inv4_conj_is_inv": 544
+  },
+  {
+    "order": 32,
+    "index": 51,
+    "group_id": "SmallGroup(32,51)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1024,
+    "inv2_a2b_eq_b2a": 32,
+    "inv3_a2_eq_b2": 1024,
+    "inv4_conj_is_inv": 1024
+  },
+  {
+    "order": 33,
+    "index": 1,
+    "group_id": "SmallGroup(33,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1089,
+    "inv2_a2b_eq_b2a": 33,
+    "inv3_a2_eq_b2": 33,
+    "inv4_conj_is_inv": 33
+  },
+  {
+    "order": 34,
+    "index": 1,
+    "group_id": "SmallGroup(34,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 340,
+    "inv2_a2b_eq_b2a": 34,
+    "inv3_a2_eq_b2": 340,
+    "inv4_conj_is_inv": 340
+  },
+  {
+    "order": 34,
+    "index": 2,
+    "group_id": "SmallGroup(34,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1156,
+    "inv2_a2b_eq_b2a": 34,
+    "inv3_a2_eq_b2": 68,
+    "inv4_conj_is_inv": 68
+  },
+  {
+    "order": 35,
+    "index": 1,
+    "group_id": "SmallGroup(35,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1225,
+    "inv2_a2b_eq_b2a": 35,
+    "inv3_a2_eq_b2": 35,
+    "inv4_conj_is_inv": 35
+  },
+  {
+    "order": 36,
+    "index": 1,
+    "group_id": "SmallGroup(36,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 360,
+    "inv4_conj_is_inv": 360
+  },
+  {
+    "order": 36,
+    "index": 2,
+    "group_id": "SmallGroup(36,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1296,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 36,
+    "index": 3,
+    "group_id": "SmallGroup(36,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 108,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 36,
+    "index": 4,
+    "group_id": "SmallGroup(36,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 432,
+    "inv4_conj_is_inv": 432
+  },
+  {
+    "order": 36,
+    "index": 5,
+    "group_id": "SmallGroup(36,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1296,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 144,
+    "inv4_conj_is_inv": 144
+  },
+  {
+    "order": 36,
+    "index": 6,
+    "group_id": "SmallGroup(36,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 648,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 144,
+    "inv4_conj_is_inv": 144
+  },
+  {
+    "order": 36,
+    "index": 7,
+    "group_id": "SmallGroup(36,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 360,
+    "inv4_conj_is_inv": 360
+  },
+  {
+    "order": 36,
+    "index": 8,
+    "group_id": "SmallGroup(36,8)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1296,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 36,
+    "index": 9,
+    "group_id": "SmallGroup(36,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 216,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 144,
+    "inv4_conj_is_inv": 144
+  },
+  {
+    "order": 36,
+    "index": 10,
+    "group_id": "SmallGroup(36,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 324,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 324,
+    "inv4_conj_is_inv": 324
+  },
+  {
+    "order": 36,
+    "index": 11,
+    "group_id": "SmallGroup(36,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 108,
+    "inv3_a2_eq_b2": 72,
+    "inv4_conj_is_inv": 72
+  },
+  {
+    "order": 36,
+    "index": 12,
+    "group_id": "SmallGroup(36,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 648,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 216,
+    "inv4_conj_is_inv": 216
+  },
+  {
+    "order": 36,
+    "index": 13,
+    "group_id": "SmallGroup(36,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 432,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 432,
+    "inv4_conj_is_inv": 432
+  },
+  {
+    "order": 36,
+    "index": 14,
+    "group_id": "SmallGroup(36,14)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1296,
+    "inv2_a2b_eq_b2a": 36,
+    "inv3_a2_eq_b2": 144,
+    "inv4_conj_is_inv": 144
+  },
+  {
+    "order": 37,
+    "index": 1,
+    "group_id": "SmallGroup(37,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1369,
+    "inv2_a2b_eq_b2a": 37,
+    "inv3_a2_eq_b2": 37,
+    "inv4_conj_is_inv": 37
+  },
+  {
+    "order": 38,
+    "index": 1,
+    "group_id": "SmallGroup(38,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 418,
+    "inv2_a2b_eq_b2a": 38,
+    "inv3_a2_eq_b2": 418,
+    "inv4_conj_is_inv": 418
+  },
+  {
+    "order": 38,
+    "index": 2,
+    "group_id": "SmallGroup(38,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1444,
+    "inv2_a2b_eq_b2a": 38,
+    "inv3_a2_eq_b2": 76,
+    "inv4_conj_is_inv": 76
+  },
+  {
+    "order": 39,
+    "index": 1,
+    "group_id": "SmallGroup(39,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 273,
+    "inv2_a2b_eq_b2a": 39,
+    "inv3_a2_eq_b2": 39,
+    "inv4_conj_is_inv": 39
+  },
+  {
+    "order": 39,
+    "index": 2,
+    "group_id": "SmallGroup(39,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1521,
+    "inv2_a2b_eq_b2a": 39,
+    "inv3_a2_eq_b2": 39,
+    "inv4_conj_is_inv": 39
+  },
+  {
+    "order": 40,
+    "index": 1,
+    "group_id": "SmallGroup(40,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 240,
+    "inv4_conj_is_inv": 240
+  },
+  {
+    "order": 40,
+    "index": 2,
+    "group_id": "SmallGroup(40,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1600,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 80,
+    "inv4_conj_is_inv": 80
+  },
+  {
+    "order": 40,
+    "index": 3,
+    "group_id": "SmallGroup(40,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 400,
+    "inv2_a2b_eq_b2a": 80,
+    "inv3_a2_eq_b2": 160,
+    "inv4_conj_is_inv": 160
+  },
+  {
+    "order": 40,
+    "index": 4,
+    "group_id": "SmallGroup(40,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 520,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 520,
+    "inv4_conj_is_inv": 520
+  },
+  {
+    "order": 40,
+    "index": 5,
+    "group_id": "SmallGroup(40,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 40,
+    "index": 6,
+    "group_id": "SmallGroup(40,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 520,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 520,
+    "inv4_conj_is_inv": 520
+  },
+  {
+    "order": 40,
+    "index": 7,
+    "group_id": "SmallGroup(40,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 40,
+    "index": 8,
+    "group_id": "SmallGroup(40,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 520,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 360,
+    "inv4_conj_is_inv": 360
+  },
+  {
+    "order": 40,
+    "index": 9,
+    "group_id": "SmallGroup(40,9)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1600,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 160,
+    "inv4_conj_is_inv": 160
+  },
+  {
+    "order": 40,
+    "index": 10,
+    "group_id": "SmallGroup(40,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1000,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 200,
+    "inv4_conj_is_inv": 200
+  },
+  {
+    "order": 40,
+    "index": 11,
+    "group_id": "SmallGroup(40,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1000,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 200,
+    "inv4_conj_is_inv": 200
+  },
+  {
+    "order": 40,
+    "index": 12,
+    "group_id": "SmallGroup(40,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 400,
+    "inv2_a2b_eq_b2a": 80,
+    "inv3_a2_eq_b2": 240,
+    "inv4_conj_is_inv": 240
+  },
+  {
+    "order": 40,
+    "index": 13,
+    "group_id": "SmallGroup(40,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 640,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 640,
+    "inv4_conj_is_inv": 640
+  },
+  {
+    "order": 40,
+    "index": 14,
+    "group_id": "SmallGroup(40,14)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1600,
+    "inv2_a2b_eq_b2a": 40,
+    "inv3_a2_eq_b2": 320,
+    "inv4_conj_is_inv": 320
+  },
+  {
+    "order": 41,
+    "index": 1,
+    "group_id": "SmallGroup(41,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1681,
+    "inv2_a2b_eq_b2a": 41,
+    "inv3_a2_eq_b2": 41,
+    "inv4_conj_is_inv": 41
+  },
+  {
+    "order": 42,
+    "index": 1,
+    "group_id": "SmallGroup(42,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 294,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 126,
+    "inv4_conj_is_inv": 126
+  },
+  {
+    "order": 42,
+    "index": 2,
+    "group_id": "SmallGroup(42,2)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 420,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 84,
+    "inv4_conj_is_inv": 84
+  },
+  {
+    "order": 42,
+    "index": 3,
+    "group_id": "SmallGroup(42,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 882,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 126,
+    "inv4_conj_is_inv": 126
+  },
+  {
+    "order": 42,
+    "index": 4,
+    "group_id": "SmallGroup(42,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 630,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 210,
+    "inv4_conj_is_inv": 210
+  },
+  {
+    "order": 42,
+    "index": 5,
+    "group_id": "SmallGroup(42,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 504,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 504,
+    "inv4_conj_is_inv": 504
+  },
+  {
+    "order": 42,
+    "index": 6,
+    "group_id": "SmallGroup(42,6)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1764,
+    "inv2_a2b_eq_b2a": 42,
+    "inv3_a2_eq_b2": 84,
+    "inv4_conj_is_inv": 84
+  },
+  {
+    "order": 43,
+    "index": 1,
+    "group_id": "SmallGroup(43,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1849,
+    "inv2_a2b_eq_b2a": 43,
+    "inv3_a2_eq_b2": 43,
+    "inv4_conj_is_inv": 43
+  },
+  {
+    "order": 44,
+    "index": 1,
+    "group_id": "SmallGroup(44,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 616,
+    "inv2_a2b_eq_b2a": 44,
+    "inv3_a2_eq_b2": 528,
+    "inv4_conj_is_inv": 528
+  },
+  {
+    "order": 44,
+    "index": 2,
+    "group_id": "SmallGroup(44,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1936,
+    "inv2_a2b_eq_b2a": 44,
+    "inv3_a2_eq_b2": 88,
+    "inv4_conj_is_inv": 88
+  },
+  {
+    "order": 44,
+    "index": 3,
+    "group_id": "SmallGroup(44,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 616,
+    "inv2_a2b_eq_b2a": 44,
+    "inv3_a2_eq_b2": 616,
+    "inv4_conj_is_inv": 616
+  },
+  {
+    "order": 44,
+    "index": 4,
+    "group_id": "SmallGroup(44,4)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 1936,
+    "inv2_a2b_eq_b2a": 44,
+    "inv3_a2_eq_b2": 176,
+    "inv4_conj_is_inv": 176
+  },
+  {
+    "order": 45,
+    "index": 1,
+    "group_id": "SmallGroup(45,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2025,
+    "inv2_a2b_eq_b2a": 45,
+    "inv3_a2_eq_b2": 45,
+    "inv4_conj_is_inv": 45
+  },
+  {
+    "order": 45,
+    "index": 2,
+    "group_id": "SmallGroup(45,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2025,
+    "inv2_a2b_eq_b2a": 45,
+    "inv3_a2_eq_b2": 45,
+    "inv4_conj_is_inv": 45
+  },
+  {
+    "order": 46,
+    "index": 1,
+    "group_id": "SmallGroup(46,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 598,
+    "inv2_a2b_eq_b2a": 46,
+    "inv3_a2_eq_b2": 598,
+    "inv4_conj_is_inv": 598
+  },
+  {
+    "order": 46,
+    "index": 2,
+    "group_id": "SmallGroup(46,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2116,
+    "inv2_a2b_eq_b2a": 46,
+    "inv3_a2_eq_b2": 92,
+    "inv4_conj_is_inv": 92
+  },
+  {
+    "order": 47,
+    "index": 1,
+    "group_id": "SmallGroup(47,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2209,
+    "inv2_a2b_eq_b2a": 47,
+    "inv3_a2_eq_b2": 47,
+    "inv4_conj_is_inv": 47
+  },
+  {
+    "order": 48,
+    "index": 1,
+    "group_id": "SmallGroup(48,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 2,
+    "group_id": "SmallGroup(48,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2304,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 48,
+    "index": 3,
+    "group_id": "SmallGroup(48,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 384,
+    "inv2_a2b_eq_b2a": 144,
+    "inv3_a2_eq_b2": 96,
+    "inv4_conj_is_inv": 96
+  },
+  {
+    "order": 48,
+    "index": 4,
+    "group_id": "SmallGroup(48,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 5,
+    "group_id": "SmallGroup(48,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 6,
+    "group_id": "SmallGroup(48,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 432,
+    "inv4_conj_is_inv": 432
+  },
+  {
+    "order": 48,
+    "index": 7,
+    "group_id": "SmallGroup(48,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 720,
+    "inv4_conj_is_inv": 720
+  },
+  {
+    "order": 48,
+    "index": 8,
+    "group_id": "SmallGroup(48,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 720,
+    "inv4_conj_is_inv": 720
+  },
+  {
+    "order": 48,
+    "index": 9,
+    "group_id": "SmallGroup(48,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 10,
+    "group_id": "SmallGroup(48,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 11,
+    "group_id": "SmallGroup(48,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 12,
+    "group_id": "SmallGroup(48,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 13,
+    "group_id": "SmallGroup(48,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 672,
+    "inv4_conj_is_inv": 672
+  },
+  {
+    "order": 48,
+    "index": 14,
+    "group_id": "SmallGroup(48,14)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 15,
+    "group_id": "SmallGroup(48,15)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 16,
+    "group_id": "SmallGroup(48,16)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 17,
+    "group_id": "SmallGroup(48,17)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 18,
+    "group_id": "SmallGroup(48,18)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 576,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 19,
+    "group_id": "SmallGroup(48,19)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 20,
+    "group_id": "SmallGroup(48,20)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2304,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 21,
+    "group_id": "SmallGroup(48,21)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 22,
+    "group_id": "SmallGroup(48,22)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 23,
+    "group_id": "SmallGroup(48,23)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2304,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 24,
+    "group_id": "SmallGroup(48,24)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 25,
+    "group_id": "SmallGroup(48,25)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1008,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 336,
+    "inv4_conj_is_inv": 336
+  },
+  {
+    "order": 48,
+    "index": 26,
+    "group_id": "SmallGroup(48,26)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1008,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 240,
+    "inv4_conj_is_inv": 240
+  },
+  {
+    "order": 48,
+    "index": 27,
+    "group_id": "SmallGroup(48,27)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1008,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 336,
+    "inv4_conj_is_inv": 336
+  },
+  {
+    "order": 48,
+    "index": 28,
+    "group_id": "SmallGroup(48,28)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 384,
+    "inv2_a2b_eq_b2a": 96,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 29,
+    "group_id": "SmallGroup(48,29)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 384,
+    "inv2_a2b_eq_b2a": 96,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 30,
+    "group_id": "SmallGroup(48,30)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 480,
+    "inv2_a2b_eq_b2a": 96,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 31,
+    "group_id": "SmallGroup(48,31)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 768,
+    "inv2_a2b_eq_b2a": 144,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 32,
+    "group_id": "SmallGroup(48,32)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 672,
+    "inv2_a2b_eq_b2a": 144,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 33,
+    "group_id": "SmallGroup(48,33)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 672,
+    "inv2_a2b_eq_b2a": 144,
+    "inv3_a2_eq_b2": 192,
+    "inv4_conj_is_inv": 192
+  },
+  {
+    "order": 48,
+    "index": 34,
+    "group_id": "SmallGroup(48,34)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 864,
+    "inv4_conj_is_inv": 864
+  },
+  {
+    "order": 48,
+    "index": 35,
+    "group_id": "SmallGroup(48,35)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 576,
+    "inv4_conj_is_inv": 576
+  },
+  {
+    "order": 48,
+    "index": 36,
+    "group_id": "SmallGroup(48,36)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 864,
+    "inv4_conj_is_inv": 864
+  },
+  {
+    "order": 48,
+    "index": 37,
+    "group_id": "SmallGroup(48,37)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 576,
+    "inv4_conj_is_inv": 576
+  },
+  {
+    "order": 48,
+    "index": 38,
+    "group_id": "SmallGroup(48,38)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 720,
+    "inv4_conj_is_inv": 720
+  },
+  {
+    "order": 48,
+    "index": 39,
+    "group_id": "SmallGroup(48,39)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 624,
+    "inv4_conj_is_inv": 624
+  },
+  {
+    "order": 48,
+    "index": 40,
+    "group_id": "SmallGroup(48,40)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 720,
+    "inv4_conj_is_inv": 720
+  },
+  {
+    "order": 48,
+    "index": 41,
+    "group_id": "SmallGroup(48,41)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 624,
+    "inv4_conj_is_inv": 624
+  },
+  {
+    "order": 48,
+    "index": 42,
+    "group_id": "SmallGroup(48,42)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 768,
+    "inv4_conj_is_inv": 768
+  },
+  {
+    "order": 48,
+    "index": 43,
+    "group_id": "SmallGroup(48,43)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 864,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 672,
+    "inv4_conj_is_inv": 672
+  },
+  {
+    "order": 48,
+    "index": 44,
+    "group_id": "SmallGroup(48,44)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2304,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 45,
+    "group_id": "SmallGroup(48,45)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 46,
+    "group_id": "SmallGroup(48,46)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 47,
+    "group_id": "SmallGroup(48,47)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 48,
+    "group_id": "SmallGroup(48,48)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 480,
+    "inv2_a2b_eq_b2a": 96,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 48,
+    "index": 49,
+    "group_id": "SmallGroup(48,49)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 768,
+    "inv2_a2b_eq_b2a": 144,
+    "inv3_a2_eq_b2": 384,
+    "inv4_conj_is_inv": 384
+  },
+  {
+    "order": 48,
+    "index": 50,
+    "group_id": "SmallGroup(48,50)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 384,
+    "inv2_a2b_eq_b2a": 528,
+    "inv3_a2_eq_b2": 288,
+    "inv4_conj_is_inv": 288
+  },
+  {
+    "order": 48,
+    "index": 51,
+    "group_id": "SmallGroup(48,51)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1152,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 1152,
+    "inv4_conj_is_inv": 1152
+  },
+  {
+    "order": 48,
+    "index": 52,
+    "group_id": "SmallGroup(48,52)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2304,
+    "inv2_a2b_eq_b2a": 48,
+    "inv3_a2_eq_b2": 768,
+    "inv4_conj_is_inv": 768
+  },
+  {
+    "order": 49,
+    "index": 1,
+    "group_id": "SmallGroup(49,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2401,
+    "inv2_a2b_eq_b2a": 49,
+    "inv3_a2_eq_b2": 49,
+    "inv4_conj_is_inv": 49
+  },
+  {
+    "order": 49,
+    "index": 2,
+    "group_id": "SmallGroup(49,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2401,
+    "inv2_a2b_eq_b2a": 49,
+    "inv3_a2_eq_b2": 49,
+    "inv4_conj_is_inv": 49
+  },
+  {
+    "order": 50,
+    "index": 1,
+    "group_id": "SmallGroup(50,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 700,
+    "inv2_a2b_eq_b2a": 50,
+    "inv3_a2_eq_b2": 700,
+    "inv4_conj_is_inv": 700
+  },
+  {
+    "order": 50,
+    "index": 2,
+    "group_id": "SmallGroup(50,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2500,
+    "inv2_a2b_eq_b2a": 50,
+    "inv3_a2_eq_b2": 100,
+    "inv4_conj_is_inv": 100
+  },
+  {
+    "order": 50,
+    "index": 3,
+    "group_id": "SmallGroup(50,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1000,
+    "inv2_a2b_eq_b2a": 50,
+    "inv3_a2_eq_b2": 200,
+    "inv4_conj_is_inv": 200
+  },
+  {
+    "order": 50,
+    "index": 4,
+    "group_id": "SmallGroup(50,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 700,
+    "inv2_a2b_eq_b2a": 50,
+    "inv3_a2_eq_b2": 700,
+    "inv4_conj_is_inv": 700
+  },
+  {
+    "order": 50,
+    "index": 5,
+    "group_id": "SmallGroup(50,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2500,
+    "inv2_a2b_eq_b2a": 50,
+    "inv3_a2_eq_b2": 100,
+    "inv4_conj_is_inv": 100
+  },
+  {
+    "order": 51,
+    "index": 1,
+    "group_id": "SmallGroup(51,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2601,
+    "inv2_a2b_eq_b2a": 51,
+    "inv3_a2_eq_b2": 51,
+    "inv4_conj_is_inv": 51
+  },
+  {
+    "order": 52,
+    "index": 1,
+    "group_id": "SmallGroup(52,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 832,
+    "inv2_a2b_eq_b2a": 52,
+    "inv3_a2_eq_b2": 728,
+    "inv4_conj_is_inv": 728
+  },
+  {
+    "order": 52,
+    "index": 2,
+    "group_id": "SmallGroup(52,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2704,
+    "inv2_a2b_eq_b2a": 52,
+    "inv3_a2_eq_b2": 104,
+    "inv4_conj_is_inv": 104
+  },
+  {
+    "order": 52,
+    "index": 3,
+    "group_id": "SmallGroup(52,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 364,
+    "inv2_a2b_eq_b2a": 52,
+    "inv3_a2_eq_b2": 260,
+    "inv4_conj_is_inv": 260
+  },
+  {
+    "order": 52,
+    "index": 4,
+    "group_id": "SmallGroup(52,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 832,
+    "inv2_a2b_eq_b2a": 52,
+    "inv3_a2_eq_b2": 832,
+    "inv4_conj_is_inv": 832
+  },
+  {
+    "order": 52,
+    "index": 5,
+    "group_id": "SmallGroup(52,5)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2704,
+    "inv2_a2b_eq_b2a": 52,
+    "inv3_a2_eq_b2": 208,
+    "inv4_conj_is_inv": 208
+  },
+  {
+    "order": 53,
+    "index": 1,
+    "group_id": "SmallGroup(53,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2809,
+    "inv2_a2b_eq_b2a": 53,
+    "inv3_a2_eq_b2": 53,
+    "inv4_conj_is_inv": 53
+  },
+  {
+    "order": 54,
+    "index": 1,
+    "group_id": "SmallGroup(54,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 810,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 810,
+    "inv4_conj_is_inv": 810
+  },
+  {
+    "order": 54,
+    "index": 2,
+    "group_id": "SmallGroup(54,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2916,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 54,
+    "index": 3,
+    "group_id": "SmallGroup(54,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 972,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 324,
+    "inv4_conj_is_inv": 324
+  },
+  {
+    "order": 54,
+    "index": 4,
+    "group_id": "SmallGroup(54,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1458,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 162,
+    "inv4_conj_is_inv": 162
+  },
+  {
+    "order": 54,
+    "index": 5,
+    "group_id": "SmallGroup(54,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 540,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 216,
+    "inv4_conj_is_inv": 216
+  },
+  {
+    "order": 54,
+    "index": 6,
+    "group_id": "SmallGroup(54,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 540,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 216,
+    "inv4_conj_is_inv": 216
+  },
+  {
+    "order": 54,
+    "index": 7,
+    "group_id": "SmallGroup(54,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 810,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 810,
+    "inv4_conj_is_inv": 810
+  },
+  {
+    "order": 54,
+    "index": 8,
+    "group_id": "SmallGroup(54,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 540,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 324,
+    "inv4_conj_is_inv": 324
+  },
+  {
+    "order": 54,
+    "index": 9,
+    "group_id": "SmallGroup(54,9)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2916,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 54,
+    "index": 10,
+    "group_id": "SmallGroup(54,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1188,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 54,
+    "index": 11,
+    "group_id": "SmallGroup(54,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1188,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 54,
+    "index": 12,
+    "group_id": "SmallGroup(54,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1458,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 162,
+    "inv4_conj_is_inv": 162
+  },
+  {
+    "order": 54,
+    "index": 13,
+    "group_id": "SmallGroup(54,13)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 972,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 324,
+    "inv4_conj_is_inv": 324
+  },
+  {
+    "order": 54,
+    "index": 14,
+    "group_id": "SmallGroup(54,14)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 810,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 810,
+    "inv4_conj_is_inv": 810
+  },
+  {
+    "order": 54,
+    "index": 15,
+    "group_id": "SmallGroup(54,15)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 2916,
+    "inv2_a2b_eq_b2a": 54,
+    "inv3_a2_eq_b2": 108,
+    "inv4_conj_is_inv": 108
+  },
+  {
+    "order": 55,
+    "index": 1,
+    "group_id": "SmallGroup(55,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 385,
+    "inv2_a2b_eq_b2a": 165,
+    "inv3_a2_eq_b2": 55,
+    "inv4_conj_is_inv": 55
+  },
+  {
+    "order": 55,
+    "index": 2,
+    "group_id": "SmallGroup(55,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3025,
+    "inv2_a2b_eq_b2a": 55,
+    "inv3_a2_eq_b2": 55,
+    "inv4_conj_is_inv": 55
+  },
+  {
+    "order": 56,
+    "index": 1,
+    "group_id": "SmallGroup(56,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1120,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 56,
+    "index": 2,
+    "group_id": "SmallGroup(56,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3136,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 112,
+    "inv4_conj_is_inv": 112
+  },
+  {
+    "order": 56,
+    "index": 3,
+    "group_id": "SmallGroup(56,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 952,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 952,
+    "inv4_conj_is_inv": 952
+  },
+  {
+    "order": 56,
+    "index": 4,
+    "group_id": "SmallGroup(56,4)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1120,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 560,
+    "inv4_conj_is_inv": 560
+  },
+  {
+    "order": 56,
+    "index": 5,
+    "group_id": "SmallGroup(56,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 952,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 952,
+    "inv4_conj_is_inv": 952
+  },
+  {
+    "order": 56,
+    "index": 6,
+    "group_id": "SmallGroup(56,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1120,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 896,
+    "inv4_conj_is_inv": 896
+  },
+  {
+    "order": 56,
+    "index": 7,
+    "group_id": "SmallGroup(56,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 952,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 616,
+    "inv4_conj_is_inv": 616
+  },
+  {
+    "order": 56,
+    "index": 8,
+    "group_id": "SmallGroup(56,8)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3136,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 224,
+    "inv4_conj_is_inv": 224
+  },
+  {
+    "order": 56,
+    "index": 9,
+    "group_id": "SmallGroup(56,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1960,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 280,
+    "inv4_conj_is_inv": 280
+  },
+  {
+    "order": 56,
+    "index": 10,
+    "group_id": "SmallGroup(56,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1960,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 280,
+    "inv4_conj_is_inv": 280
+  },
+  {
+    "order": 56,
+    "index": 11,
+    "group_id": "SmallGroup(56,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 448,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 112,
+    "inv4_conj_is_inv": 112
+  },
+  {
+    "order": 56,
+    "index": 12,
+    "group_id": "SmallGroup(56,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1120,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 1120,
+    "inv4_conj_is_inv": 1120
+  },
+  {
+    "order": 56,
+    "index": 13,
+    "group_id": "SmallGroup(56,13)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3136,
+    "inv2_a2b_eq_b2a": 56,
+    "inv3_a2_eq_b2": 448,
+    "inv4_conj_is_inv": 448
+  },
+  {
+    "order": 57,
+    "index": 1,
+    "group_id": "SmallGroup(57,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 513,
+    "inv2_a2b_eq_b2a": 57,
+    "inv3_a2_eq_b2": 57,
+    "inv4_conj_is_inv": 57
+  },
+  {
+    "order": 57,
+    "index": 2,
+    "group_id": "SmallGroup(57,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3249,
+    "inv2_a2b_eq_b2a": 57,
+    "inv3_a2_eq_b2": 57,
+    "inv4_conj_is_inv": 57
+  },
+  {
+    "order": 58,
+    "index": 1,
+    "group_id": "SmallGroup(58,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 928,
+    "inv2_a2b_eq_b2a": 58,
+    "inv3_a2_eq_b2": 928,
+    "inv4_conj_is_inv": 928
+  },
+  {
+    "order": 58,
+    "index": 2,
+    "group_id": "SmallGroup(58,2)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3364,
+    "inv2_a2b_eq_b2a": 58,
+    "inv3_a2_eq_b2": 116,
+    "inv4_conj_is_inv": 116
+  },
+  {
+    "order": 59,
+    "index": 1,
+    "group_id": "SmallGroup(59,1)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3481,
+    "inv2_a2b_eq_b2a": 59,
+    "inv3_a2_eq_b2": 59,
+    "inv4_conj_is_inv": 59
+  },
+  {
+    "order": 60,
+    "index": 1,
+    "group_id": "SmallGroup(60,1)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1800,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 240,
+    "inv4_conj_is_inv": 240
+  },
+  {
+    "order": 60,
+    "index": 2,
+    "group_id": "SmallGroup(60,2)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 360,
+    "inv4_conj_is_inv": 360
+  },
+  {
+    "order": 60,
+    "index": 3,
+    "group_id": "SmallGroup(60,3)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1080,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 960,
+    "inv4_conj_is_inv": 960
+  },
+  {
+    "order": 60,
+    "index": 4,
+    "group_id": "SmallGroup(60,4)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3600,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 60,
+    "index": 5,
+    "group_id": "SmallGroup(60,5)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 300,
+    "inv2_a2b_eq_b2a": 180,
+    "inv3_a2_eq_b2": 300,
+    "inv4_conj_is_inv": 300
+  },
+  {
+    "order": 60,
+    "index": 6,
+    "group_id": "SmallGroup(60,6)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 900,
+    "inv2_a2b_eq_b2a": 120,
+    "inv3_a2_eq_b2": 180,
+    "inv4_conj_is_inv": 180
+  },
+  {
+    "order": 60,
+    "index": 7,
+    "group_id": "SmallGroup(60,7)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 540,
+    "inv2_a2b_eq_b2a": 120,
+    "inv3_a2_eq_b2": 300,
+    "inv4_conj_is_inv": 300
+  },
+  {
+    "order": 60,
+    "index": 8,
+    "group_id": "SmallGroup(60,8)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 720,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 720,
+    "inv4_conj_is_inv": 720
+  },
+  {
+    "order": 60,
+    "index": 9,
+    "group_id": "SmallGroup(60,9)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1200,
+    "inv2_a2b_eq_b2a": 180,
+    "inv3_a2_eq_b2": 120,
+    "inv4_conj_is_inv": 120
+  },
+  {
+    "order": 60,
+    "index": 10,
+    "group_id": "SmallGroup(60,10)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1440,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 480,
+    "inv4_conj_is_inv": 480
+  },
+  {
+    "order": 60,
+    "index": 11,
+    "group_id": "SmallGroup(60,11)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1800,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 360,
+    "inv4_conj_is_inv": 360
+  },
+  {
+    "order": 60,
+    "index": 12,
+    "group_id": "SmallGroup(60,12)",
+    "is_abelian": 0,
+    "inv1_ab_eq_ba": 1080,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 1080,
+    "inv4_conj_is_inv": 1080
+  },
+  {
+    "order": 60,
+    "index": 13,
+    "group_id": "SmallGroup(60,13)",
+    "is_abelian": 1,
+    "inv1_ab_eq_ba": 3600,
+    "inv2_a2b_eq_b2a": 60,
+    "inv3_a2_eq_b2": 240,
+    "inv4_conj_is_inv": 240
+  }
+]

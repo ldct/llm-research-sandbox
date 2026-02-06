@@ -1,0 +1,882 @@
+0
+[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31m[1m[34m[0m[31mSyntax error: while parsing a function: statement or 'end' expected
+    local inv1, inv2, inv3, inv4, inv5, inv6, inv7, inv8, inv9, inv10;
+    ^^^^^
+Syntax error: expression expected
+    local inv11, inv12, inv13, inv14, inv15;
+    ^^^^^
+Error, Variable: 'n' must have a value
+not in any function at *stdin*:9
+Error, Variable: 'G' must have a value
+not in any function at *stdin*:10
+Error, Variable: 'G' must have a value
+not in any function at *stdin*:11
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from 
+<function "unknown">( <arguments> )
+ called from read-eval loop at *stdin*:21
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv2 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv3 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv4 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv5 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from
+<function "unknown">( <arguments> )
+ called from read-eval loop at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv6 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 5 = b ^ 5 then
+            inv1 := inv1 + 1;
+        fi;
+    od;
+od; at *stdin*:21 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv7 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b) ^ 5 = (b * a) ^ 5 then
+            inv2 := inv2 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv8 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:6
+            if (a^-1 * b^-1 * a * b)^2 = e then
+                                         ^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a ) = Order( b ) then
+            inv3 := inv3 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv9 := 0;
+    ^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:6
+            if (a*b*a)^2 = e then
+                           ^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b = b * a ^ 2 then
+            inv4 := inv4 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv10 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a ^ 3 * b = b * a ^ 3 then
+            inv5 := inv5 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv11 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a = a ^ 2 * b then
+            inv6 := inv6 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv12 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if Order( a * b ) = 5 then
+            inv12 := inv12 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a ^ -1 = b ^ 2 then
+            inv7 := inv7 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv13 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a * b * a * b = a ^ 2 * b ^ 2 then
+            inv13 := inv13 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 5 then
+            inv12 := inv12 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a ^ -1 * b ^ -1 * a * b) ^ 2 = e then
+            inv8 := inv8 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv14 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if (a * b) ^ -1 = b * a then
+            inv14 := inv14 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if a * b * a * b = a ^ 2 * b ^ 2 then
+            inv13 := inv13 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 5 then
+            inv12 := inv12 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b * a) ^ 2 = e then
+            inv9 := inv9 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+Syntax warning: Unbound global variable in *errin*:3
+    inv15 := 0;
+    ^^^^^
+0
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+        ^
+Syntax warning: Unbound global variable in *errin*:4
+    for a in elements do
+             ^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+            ^
+Syntax warning: Unbound global variable in *errin*:5
+        for b in elements do
+                 ^^^^^^^^
+Error, Variable: 'elements' must have an assigned value in
+  for a in elements do
+    for b in elements do
+        if a ^ 2 * b ^ 2 = (a * b) ^ 2 then
+            inv15 := inv15 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from 
+for a in elements do
+    for b in elements do
+        if (a * b) ^ -1 = b * a then
+            inv14 := inv14 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a * b = a ^ 2 * b ^ 2 then
+            inv13 := inv13 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 5 then
+            inv12 := inv12 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 2 then
+            inv10 := inv10 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:10
+type 'quit;' to quit to outer loop
+'return <object>' cannot be used in this read-eval-print loop
+Syntax error: expression expected in *errin*:3
+end;
+^^^
+Syntax warning: Unbound global variable in *errin*:6
+pairs := [
+^^^^^
+[ [ 32, 2 ], [ 32, 24 ], [ 32, 13 ], [ 32, 15 ], [ 32, 27 ], [ 32, 34 ], 
+  [ 32, 30 ], [ 32, 31 ], [ 32, 37 ], [ 32, 38 ], [ 32, 40 ], [ 32, 42 ], 
+  [ 50, 1 ], [ 50, 4 ] ]
+Syntax warning: Unbound global variable in *errin*:16
+for pair in pairs do
+    ^^^^
+Syntax warning: Unbound global variable in *errin*:17
+    result := TestCreativeInvariants(pair[1], pair[2]);
+    ^^^^^^
+Syntax warning: Unbound global variable in *errin*:17
+    result := TestCreativeInvariants(pair[1], pair[2]);
+              ^^^^^^^^^^^^^^^^^^^^^^
+Syntax warning: Unbound global variable in *errin*:19
+    for val in result do
+        ^^^
+Syntax warning: Unbound global variable in *errin*:19
+    for val in result do
+               ^^^^^^
+Error, Variable: 'TestCreativeInvariants' must have an assigned value in
+  result := TestCreativeInvariants( pair[1], pair[2] ); at *errin*:17 called from 
+for a in elements do
+    for b in elements do
+        if a ^ 2 * b ^ 2 = (a * b) ^ 2 then
+            inv15 := inv15 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if (a * b) ^ -1 = b * a then
+            inv14 := inv14 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if a * b * a * b = a ^ 2 * b ^ 2 then
+            inv13 := inv13 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 5 then
+            inv12 := inv12 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+for a in elements do
+    for b in elements do
+        if Order( a * b ) = 4 then
+            inv11 := inv11 + 1;
+        fi;
+    od;
+od; at *errin*:10 called from
+...  at *errin*:23
+type 'quit;' to quit to outer loop

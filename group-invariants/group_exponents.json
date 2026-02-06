@@ -1,0 +1,1874 @@
+[
+  {
+    "order": 1,
+    "index": 1,
+    "group_id": "SmallGroup(1,1)",
+    "exponent": 1
+  },
+  {
+    "order": 2,
+    "index": 1,
+    "group_id": "SmallGroup(2,1)",
+    "exponent": 2
+  },
+  {
+    "order": 3,
+    "index": 1,
+    "group_id": "SmallGroup(3,1)",
+    "exponent": 3
+  },
+  {
+    "order": 4,
+    "index": 1,
+    "group_id": "SmallGroup(4,1)",
+    "exponent": 4
+  },
+  {
+    "order": 4,
+    "index": 2,
+    "group_id": "SmallGroup(4,2)",
+    "exponent": 2
+  },
+  {
+    "order": 5,
+    "index": 1,
+    "group_id": "SmallGroup(5,1)",
+    "exponent": 5
+  },
+  {
+    "order": 6,
+    "index": 1,
+    "group_id": "SmallGroup(6,1)",
+    "exponent": 6
+  },
+  {
+    "order": 6,
+    "index": 2,
+    "group_id": "SmallGroup(6,2)",
+    "exponent": 6
+  },
+  {
+    "order": 7,
+    "index": 1,
+    "group_id": "SmallGroup(7,1)",
+    "exponent": 7
+  },
+  {
+    "order": 8,
+    "index": 1,
+    "group_id": "SmallGroup(8,1)",
+    "exponent": 8
+  },
+  {
+    "order": 8,
+    "index": 2,
+    "group_id": "SmallGroup(8,2)",
+    "exponent": 4
+  },
+  {
+    "order": 8,
+    "index": 3,
+    "group_id": "SmallGroup(8,3)",
+    "exponent": 4
+  },
+  {
+    "order": 8,
+    "index": 4,
+    "group_id": "SmallGroup(8,4)",
+    "exponent": 4
+  },
+  {
+    "order": 8,
+    "index": 5,
+    "group_id": "SmallGroup(8,5)",
+    "exponent": 2
+  },
+  {
+    "order": 9,
+    "index": 1,
+    "group_id": "SmallGroup(9,1)",
+    "exponent": 9
+  },
+  {
+    "order": 9,
+    "index": 2,
+    "group_id": "SmallGroup(9,2)",
+    "exponent": 3
+  },
+  {
+    "order": 10,
+    "index": 1,
+    "group_id": "SmallGroup(10,1)",
+    "exponent": 10
+  },
+  {
+    "order": 10,
+    "index": 2,
+    "group_id": "SmallGroup(10,2)",
+    "exponent": 10
+  },
+  {
+    "order": 11,
+    "index": 1,
+    "group_id": "SmallGroup(11,1)",
+    "exponent": 11
+  },
+  {
+    "order": 12,
+    "index": 1,
+    "group_id": "SmallGroup(12,1)",
+    "exponent": 12
+  },
+  {
+    "order": 12,
+    "index": 2,
+    "group_id": "SmallGroup(12,2)",
+    "exponent": 12
+  },
+  {
+    "order": 12,
+    "index": 3,
+    "group_id": "SmallGroup(12,3)",
+    "exponent": 6
+  },
+  {
+    "order": 12,
+    "index": 4,
+    "group_id": "SmallGroup(12,4)",
+    "exponent": 6
+  },
+  {
+    "order": 12,
+    "index": 5,
+    "group_id": "SmallGroup(12,5)",
+    "exponent": 6
+  },
+  {
+    "order": 13,
+    "index": 1,
+    "group_id": "SmallGroup(13,1)",
+    "exponent": 13
+  },
+  {
+    "order": 14,
+    "index": 1,
+    "group_id": "SmallGroup(14,1)",
+    "exponent": 14
+  },
+  {
+    "order": 14,
+    "index": 2,
+    "group_id": "SmallGroup(14,2)",
+    "exponent": 14
+  },
+  {
+    "order": 15,
+    "index": 1,
+    "group_id": "SmallGroup(15,1)",
+    "exponent": 15
+  },
+  {
+    "order": 16,
+    "index": 1,
+    "group_id": "SmallGroup(16,1)",
+    "exponent": 16
+  },
+  {
+    "order": 16,
+    "index": 2,
+    "group_id": "SmallGroup(16,2)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 3,
+    "group_id": "SmallGroup(16,3)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 4,
+    "group_id": "SmallGroup(16,4)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 5,
+    "group_id": "SmallGroup(16,5)",
+    "exponent": 8
+  },
+  {
+    "order": 16,
+    "index": 6,
+    "group_id": "SmallGroup(16,6)",
+    "exponent": 8
+  },
+  {
+    "order": 16,
+    "index": 7,
+    "group_id": "SmallGroup(16,7)",
+    "exponent": 8
+  },
+  {
+    "order": 16,
+    "index": 8,
+    "group_id": "SmallGroup(16,8)",
+    "exponent": 8
+  },
+  {
+    "order": 16,
+    "index": 9,
+    "group_id": "SmallGroup(16,9)",
+    "exponent": 8
+  },
+  {
+    "order": 16,
+    "index": 10,
+    "group_id": "SmallGroup(16,10)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 11,
+    "group_id": "SmallGroup(16,11)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 12,
+    "group_id": "SmallGroup(16,12)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 13,
+    "group_id": "SmallGroup(16,13)",
+    "exponent": 4
+  },
+  {
+    "order": 16,
+    "index": 14,
+    "group_id": "SmallGroup(16,14)",
+    "exponent": 2
+  },
+  {
+    "order": 17,
+    "index": 1,
+    "group_id": "SmallGroup(17,1)",
+    "exponent": 17
+  },
+  {
+    "order": 18,
+    "index": 1,
+    "group_id": "SmallGroup(18,1)",
+    "exponent": 18
+  },
+  {
+    "order": 18,
+    "index": 2,
+    "group_id": "SmallGroup(18,2)",
+    "exponent": 18
+  },
+  {
+    "order": 18,
+    "index": 3,
+    "group_id": "SmallGroup(18,3)",
+    "exponent": 6
+  },
+  {
+    "order": 18,
+    "index": 4,
+    "group_id": "SmallGroup(18,4)",
+    "exponent": 6
+  },
+  {
+    "order": 18,
+    "index": 5,
+    "group_id": "SmallGroup(18,5)",
+    "exponent": 6
+  },
+  {
+    "order": 19,
+    "index": 1,
+    "group_id": "SmallGroup(19,1)",
+    "exponent": 19
+  },
+  {
+    "order": 20,
+    "index": 1,
+    "group_id": "SmallGroup(20,1)",
+    "exponent": 20
+  },
+  {
+    "order": 20,
+    "index": 2,
+    "group_id": "SmallGroup(20,2)",
+    "exponent": 20
+  },
+  {
+    "order": 20,
+    "index": 3,
+    "group_id": "SmallGroup(20,3)",
+    "exponent": 20
+  },
+  {
+    "order": 20,
+    "index": 4,
+    "group_id": "SmallGroup(20,4)",
+    "exponent": 10
+  },
+  {
+    "order": 20,
+    "index": 5,
+    "group_id": "SmallGroup(20,5)",
+    "exponent": 10
+  },
+  {
+    "order": 21,
+    "index": 1,
+    "group_id": "SmallGroup(21,1)",
+    "exponent": 21
+  },
+  {
+    "order": 21,
+    "index": 2,
+    "group_id": "SmallGroup(21,2)",
+    "exponent": 21
+  },
+  {
+    "order": 22,
+    "index": 1,
+    "group_id": "SmallGroup(22,1)",
+    "exponent": 22
+  },
+  {
+    "order": 22,
+    "index": 2,
+    "group_id": "SmallGroup(22,2)",
+    "exponent": 22
+  },
+  {
+    "order": 23,
+    "index": 1,
+    "group_id": "SmallGroup(23,1)",
+    "exponent": 23
+  },
+  {
+    "order": 24,
+    "index": 1,
+    "group_id": "SmallGroup(24,1)",
+    "exponent": 24
+  },
+  {
+    "order": 24,
+    "index": 2,
+    "group_id": "SmallGroup(24,2)",
+    "exponent": 24
+  },
+  {
+    "order": 24,
+    "index": 3,
+    "group_id": "SmallGroup(24,3)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 4,
+    "group_id": "SmallGroup(24,4)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 5,
+    "group_id": "SmallGroup(24,5)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 6,
+    "group_id": "SmallGroup(24,6)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 7,
+    "group_id": "SmallGroup(24,7)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 8,
+    "group_id": "SmallGroup(24,8)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 9,
+    "group_id": "SmallGroup(24,9)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 10,
+    "group_id": "SmallGroup(24,10)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 11,
+    "group_id": "SmallGroup(24,11)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 12,
+    "group_id": "SmallGroup(24,12)",
+    "exponent": 12
+  },
+  {
+    "order": 24,
+    "index": 13,
+    "group_id": "SmallGroup(24,13)",
+    "exponent": 6
+  },
+  {
+    "order": 24,
+    "index": 14,
+    "group_id": "SmallGroup(24,14)",
+    "exponent": 6
+  },
+  {
+    "order": 24,
+    "index": 15,
+    "group_id": "SmallGroup(24,15)",
+    "exponent": 6
+  },
+  {
+    "order": 25,
+    "index": 1,
+    "group_id": "SmallGroup(25,1)",
+    "exponent": 25
+  },
+  {
+    "order": 25,
+    "index": 2,
+    "group_id": "SmallGroup(25,2)",
+    "exponent": 5
+  },
+  {
+    "order": 26,
+    "index": 1,
+    "group_id": "SmallGroup(26,1)",
+    "exponent": 26
+  },
+  {
+    "order": 26,
+    "index": 2,
+    "group_id": "SmallGroup(26,2)",
+    "exponent": 26
+  },
+  {
+    "order": 27,
+    "index": 1,
+    "group_id": "SmallGroup(27,1)",
+    "exponent": 27
+  },
+  {
+    "order": 27,
+    "index": 2,
+    "group_id": "SmallGroup(27,2)",
+    "exponent": 9
+  },
+  {
+    "order": 27,
+    "index": 3,
+    "group_id": "SmallGroup(27,3)",
+    "exponent": 3
+  },
+  {
+    "order": 27,
+    "index": 4,
+    "group_id": "SmallGroup(27,4)",
+    "exponent": 9
+  },
+  {
+    "order": 27,
+    "index": 5,
+    "group_id": "SmallGroup(27,5)",
+    "exponent": 3
+  },
+  {
+    "order": 28,
+    "index": 1,
+    "group_id": "SmallGroup(28,1)",
+    "exponent": 28
+  },
+  {
+    "order": 28,
+    "index": 2,
+    "group_id": "SmallGroup(28,2)",
+    "exponent": 28
+  },
+  {
+    "order": 28,
+    "index": 3,
+    "group_id": "SmallGroup(28,3)",
+    "exponent": 14
+  },
+  {
+    "order": 28,
+    "index": 4,
+    "group_id": "SmallGroup(28,4)",
+    "exponent": 14
+  },
+  {
+    "order": 29,
+    "index": 1,
+    "group_id": "SmallGroup(29,1)",
+    "exponent": 29
+  },
+  {
+    "order": 30,
+    "index": 1,
+    "group_id": "SmallGroup(30,1)",
+    "exponent": 30
+  },
+  {
+    "order": 30,
+    "index": 2,
+    "group_id": "SmallGroup(30,2)",
+    "exponent": 30
+  },
+  {
+    "order": 30,
+    "index": 3,
+    "group_id": "SmallGroup(30,3)",
+    "exponent": 30
+  },
+  {
+    "order": 30,
+    "index": 4,
+    "group_id": "SmallGroup(30,4)",
+    "exponent": 30
+  },
+  {
+    "order": 31,
+    "index": 1,
+    "group_id": "SmallGroup(31,1)",
+    "exponent": 31
+  },
+  {
+    "order": 32,
+    "index": 1,
+    "group_id": "SmallGroup(32,1)",
+    "exponent": 32
+  },
+  {
+    "order": 32,
+    "index": 2,
+    "group_id": "SmallGroup(32,2)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 3,
+    "group_id": "SmallGroup(32,3)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 4,
+    "group_id": "SmallGroup(32,4)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 5,
+    "group_id": "SmallGroup(32,5)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 6,
+    "group_id": "SmallGroup(32,6)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 7,
+    "group_id": "SmallGroup(32,7)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 8,
+    "group_id": "SmallGroup(32,8)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 9,
+    "group_id": "SmallGroup(32,9)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 10,
+    "group_id": "SmallGroup(32,10)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 11,
+    "group_id": "SmallGroup(32,11)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 12,
+    "group_id": "SmallGroup(32,12)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 13,
+    "group_id": "SmallGroup(32,13)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 14,
+    "group_id": "SmallGroup(32,14)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 15,
+    "group_id": "SmallGroup(32,15)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 16,
+    "group_id": "SmallGroup(32,16)",
+    "exponent": 16
+  },
+  {
+    "order": 32,
+    "index": 17,
+    "group_id": "SmallGroup(32,17)",
+    "exponent": 16
+  },
+  {
+    "order": 32,
+    "index": 18,
+    "group_id": "SmallGroup(32,18)",
+    "exponent": 16
+  },
+  {
+    "order": 32,
+    "index": 19,
+    "group_id": "SmallGroup(32,19)",
+    "exponent": 16
+  },
+  {
+    "order": 32,
+    "index": 20,
+    "group_id": "SmallGroup(32,20)",
+    "exponent": 16
+  },
+  {
+    "order": 32,
+    "index": 21,
+    "group_id": "SmallGroup(32,21)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 22,
+    "group_id": "SmallGroup(32,22)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 23,
+    "group_id": "SmallGroup(32,23)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 24,
+    "group_id": "SmallGroup(32,24)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 25,
+    "group_id": "SmallGroup(32,25)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 26,
+    "group_id": "SmallGroup(32,26)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 27,
+    "group_id": "SmallGroup(32,27)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 28,
+    "group_id": "SmallGroup(32,28)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 29,
+    "group_id": "SmallGroup(32,29)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 30,
+    "group_id": "SmallGroup(32,30)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 31,
+    "group_id": "SmallGroup(32,31)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 32,
+    "group_id": "SmallGroup(32,32)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 33,
+    "group_id": "SmallGroup(32,33)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 34,
+    "group_id": "SmallGroup(32,34)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 35,
+    "group_id": "SmallGroup(32,35)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 36,
+    "group_id": "SmallGroup(32,36)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 37,
+    "group_id": "SmallGroup(32,37)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 38,
+    "group_id": "SmallGroup(32,38)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 39,
+    "group_id": "SmallGroup(32,39)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 40,
+    "group_id": "SmallGroup(32,40)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 41,
+    "group_id": "SmallGroup(32,41)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 42,
+    "group_id": "SmallGroup(32,42)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 43,
+    "group_id": "SmallGroup(32,43)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 44,
+    "group_id": "SmallGroup(32,44)",
+    "exponent": 8
+  },
+  {
+    "order": 32,
+    "index": 45,
+    "group_id": "SmallGroup(32,45)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 46,
+    "group_id": "SmallGroup(32,46)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 47,
+    "group_id": "SmallGroup(32,47)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 48,
+    "group_id": "SmallGroup(32,48)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 49,
+    "group_id": "SmallGroup(32,49)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 50,
+    "group_id": "SmallGroup(32,50)",
+    "exponent": 4
+  },
+  {
+    "order": 32,
+    "index": 51,
+    "group_id": "SmallGroup(32,51)",
+    "exponent": 2
+  },
+  {
+    "order": 33,
+    "index": 1,
+    "group_id": "SmallGroup(33,1)",
+    "exponent": 33
+  },
+  {
+    "order": 34,
+    "index": 1,
+    "group_id": "SmallGroup(34,1)",
+    "exponent": 34
+  },
+  {
+    "order": 34,
+    "index": 2,
+    "group_id": "SmallGroup(34,2)",
+    "exponent": 34
+  },
+  {
+    "order": 35,
+    "index": 1,
+    "group_id": "SmallGroup(35,1)",
+    "exponent": 35
+  },
+  {
+    "order": 36,
+    "index": 1,
+    "group_id": "SmallGroup(36,1)",
+    "exponent": 36
+  },
+  {
+    "order": 36,
+    "index": 2,
+    "group_id": "SmallGroup(36,2)",
+    "exponent": 36
+  },
+  {
+    "order": 36,
+    "index": 3,
+    "group_id": "SmallGroup(36,3)",
+    "exponent": 18
+  },
+  {
+    "order": 36,
+    "index": 4,
+    "group_id": "SmallGroup(36,4)",
+    "exponent": 18
+  },
+  {
+    "order": 36,
+    "index": 5,
+    "group_id": "SmallGroup(36,5)",
+    "exponent": 18
+  },
+  {
+    "order": 36,
+    "index": 6,
+    "group_id": "SmallGroup(36,6)",
+    "exponent": 12
+  },
+  {
+    "order": 36,
+    "index": 7,
+    "group_id": "SmallGroup(36,7)",
+    "exponent": 12
+  },
+  {
+    "order": 36,
+    "index": 8,
+    "group_id": "SmallGroup(36,8)",
+    "exponent": 12
+  },
+  {
+    "order": 36,
+    "index": 9,
+    "group_id": "SmallGroup(36,9)",
+    "exponent": 12
+  },
+  {
+    "order": 36,
+    "index": 10,
+    "group_id": "SmallGroup(36,10)",
+    "exponent": 6
+  },
+  {
+    "order": 36,
+    "index": 11,
+    "group_id": "SmallGroup(36,11)",
+    "exponent": 6
+  },
+  {
+    "order": 36,
+    "index": 12,
+    "group_id": "SmallGroup(36,12)",
+    "exponent": 6
+  },
+  {
+    "order": 36,
+    "index": 13,
+    "group_id": "SmallGroup(36,13)",
+    "exponent": 6
+  },
+  {
+    "order": 36,
+    "index": 14,
+    "group_id": "SmallGroup(36,14)",
+    "exponent": 6
+  },
+  {
+    "order": 37,
+    "index": 1,
+    "group_id": "SmallGroup(37,1)",
+    "exponent": 37
+  },
+  {
+    "order": 38,
+    "index": 1,
+    "group_id": "SmallGroup(38,1)",
+    "exponent": 38
+  },
+  {
+    "order": 38,
+    "index": 2,
+    "group_id": "SmallGroup(38,2)",
+    "exponent": 38
+  },
+  {
+    "order": 39,
+    "index": 1,
+    "group_id": "SmallGroup(39,1)",
+    "exponent": 39
+  },
+  {
+    "order": 39,
+    "index": 2,
+    "group_id": "SmallGroup(39,2)",
+    "exponent": 39
+  },
+  {
+    "order": 40,
+    "index": 1,
+    "group_id": "SmallGroup(40,1)",
+    "exponent": 40
+  },
+  {
+    "order": 40,
+    "index": 2,
+    "group_id": "SmallGroup(40,2)",
+    "exponent": 40
+  },
+  {
+    "order": 40,
+    "index": 3,
+    "group_id": "SmallGroup(40,3)",
+    "exponent": 40
+  },
+  {
+    "order": 40,
+    "index": 4,
+    "group_id": "SmallGroup(40,4)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 5,
+    "group_id": "SmallGroup(40,5)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 6,
+    "group_id": "SmallGroup(40,6)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 7,
+    "group_id": "SmallGroup(40,7)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 8,
+    "group_id": "SmallGroup(40,8)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 9,
+    "group_id": "SmallGroup(40,9)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 10,
+    "group_id": "SmallGroup(40,10)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 11,
+    "group_id": "SmallGroup(40,11)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 12,
+    "group_id": "SmallGroup(40,12)",
+    "exponent": 20
+  },
+  {
+    "order": 40,
+    "index": 13,
+    "group_id": "SmallGroup(40,13)",
+    "exponent": 10
+  },
+  {
+    "order": 40,
+    "index": 14,
+    "group_id": "SmallGroup(40,14)",
+    "exponent": 10
+  },
+  {
+    "order": 41,
+    "index": 1,
+    "group_id": "SmallGroup(41,1)",
+    "exponent": 41
+  },
+  {
+    "order": 42,
+    "index": 1,
+    "group_id": "SmallGroup(42,1)",
+    "exponent": 42
+  },
+  {
+    "order": 42,
+    "index": 2,
+    "group_id": "SmallGroup(42,2)",
+    "exponent": 42
+  },
+  {
+    "order": 42,
+    "index": 3,
+    "group_id": "SmallGroup(42,3)",
+    "exponent": 42
+  },
+  {
+    "order": 42,
+    "index": 4,
+    "group_id": "SmallGroup(42,4)",
+    "exponent": 42
+  },
+  {
+    "order": 42,
+    "index": 5,
+    "group_id": "SmallGroup(42,5)",
+    "exponent": 42
+  },
+  {
+    "order": 42,
+    "index": 6,
+    "group_id": "SmallGroup(42,6)",
+    "exponent": 42
+  },
+  {
+    "order": 43,
+    "index": 1,
+    "group_id": "SmallGroup(43,1)",
+    "exponent": 43
+  },
+  {
+    "order": 44,
+    "index": 1,
+    "group_id": "SmallGroup(44,1)",
+    "exponent": 44
+  },
+  {
+    "order": 44,
+    "index": 2,
+    "group_id": "SmallGroup(44,2)",
+    "exponent": 44
+  },
+  {
+    "order": 44,
+    "index": 3,
+    "group_id": "SmallGroup(44,3)",
+    "exponent": 22
+  },
+  {
+    "order": 44,
+    "index": 4,
+    "group_id": "SmallGroup(44,4)",
+    "exponent": 22
+  },
+  {
+    "order": 45,
+    "index": 1,
+    "group_id": "SmallGroup(45,1)",
+    "exponent": 45
+  },
+  {
+    "order": 45,
+    "index": 2,
+    "group_id": "SmallGroup(45,2)",
+    "exponent": 15
+  },
+  {
+    "order": 46,
+    "index": 1,
+    "group_id": "SmallGroup(46,1)",
+    "exponent": 46
+  },
+  {
+    "order": 46,
+    "index": 2,
+    "group_id": "SmallGroup(46,2)",
+    "exponent": 46
+  },
+  {
+    "order": 47,
+    "index": 1,
+    "group_id": "SmallGroup(47,1)",
+    "exponent": 47
+  },
+  {
+    "order": 48,
+    "index": 1,
+    "group_id": "SmallGroup(48,1)",
+    "exponent": 48
+  },
+  {
+    "order": 48,
+    "index": 2,
+    "group_id": "SmallGroup(48,2)",
+    "exponent": 48
+  },
+  {
+    "order": 48,
+    "index": 3,
+    "group_id": "SmallGroup(48,3)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 4,
+    "group_id": "SmallGroup(48,4)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 5,
+    "group_id": "SmallGroup(48,5)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 6,
+    "group_id": "SmallGroup(48,6)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 7,
+    "group_id": "SmallGroup(48,7)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 8,
+    "group_id": "SmallGroup(48,8)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 9,
+    "group_id": "SmallGroup(48,9)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 10,
+    "group_id": "SmallGroup(48,10)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 11,
+    "group_id": "SmallGroup(48,11)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 12,
+    "group_id": "SmallGroup(48,12)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 13,
+    "group_id": "SmallGroup(48,13)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 14,
+    "group_id": "SmallGroup(48,14)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 15,
+    "group_id": "SmallGroup(48,15)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 16,
+    "group_id": "SmallGroup(48,16)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 17,
+    "group_id": "SmallGroup(48,17)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 18,
+    "group_id": "SmallGroup(48,18)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 19,
+    "group_id": "SmallGroup(48,19)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 20,
+    "group_id": "SmallGroup(48,20)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 21,
+    "group_id": "SmallGroup(48,21)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 22,
+    "group_id": "SmallGroup(48,22)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 23,
+    "group_id": "SmallGroup(48,23)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 24,
+    "group_id": "SmallGroup(48,24)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 25,
+    "group_id": "SmallGroup(48,25)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 26,
+    "group_id": "SmallGroup(48,26)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 27,
+    "group_id": "SmallGroup(48,27)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 28,
+    "group_id": "SmallGroup(48,28)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 29,
+    "group_id": "SmallGroup(48,29)",
+    "exponent": 24
+  },
+  {
+    "order": 48,
+    "index": 30,
+    "group_id": "SmallGroup(48,30)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 31,
+    "group_id": "SmallGroup(48,31)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 32,
+    "group_id": "SmallGroup(48,32)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 33,
+    "group_id": "SmallGroup(48,33)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 34,
+    "group_id": "SmallGroup(48,34)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 35,
+    "group_id": "SmallGroup(48,35)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 36,
+    "group_id": "SmallGroup(48,36)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 37,
+    "group_id": "SmallGroup(48,37)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 38,
+    "group_id": "SmallGroup(48,38)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 39,
+    "group_id": "SmallGroup(48,39)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 40,
+    "group_id": "SmallGroup(48,40)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 41,
+    "group_id": "SmallGroup(48,41)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 42,
+    "group_id": "SmallGroup(48,42)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 43,
+    "group_id": "SmallGroup(48,43)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 44,
+    "group_id": "SmallGroup(48,44)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 45,
+    "group_id": "SmallGroup(48,45)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 46,
+    "group_id": "SmallGroup(48,46)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 47,
+    "group_id": "SmallGroup(48,47)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 48,
+    "group_id": "SmallGroup(48,48)",
+    "exponent": 12
+  },
+  {
+    "order": 48,
+    "index": 49,
+    "group_id": "SmallGroup(48,49)",
+    "exponent": 6
+  },
+  {
+    "order": 48,
+    "index": 50,
+    "group_id": "SmallGroup(48,50)",
+    "exponent": 6
+  },
+  {
+    "order": 48,
+    "index": 51,
+    "group_id": "SmallGroup(48,51)",
+    "exponent": 6
+  },
+  {
+    "order": 48,
+    "index": 52,
+    "group_id": "SmallGroup(48,52)",
+    "exponent": 6
+  },
+  {
+    "order": 49,
+    "index": 1,
+    "group_id": "SmallGroup(49,1)",
+    "exponent": 49
+  },
+  {
+    "order": 49,
+    "index": 2,
+    "group_id": "SmallGroup(49,2)",
+    "exponent": 7
+  },
+  {
+    "order": 50,
+    "index": 1,
+    "group_id": "SmallGroup(50,1)",
+    "exponent": 50
+  },
+  {
+    "order": 50,
+    "index": 2,
+    "group_id": "SmallGroup(50,2)",
+    "exponent": 50
+  },
+  {
+    "order": 50,
+    "index": 3,
+    "group_id": "SmallGroup(50,3)",
+    "exponent": 10
+  },
+  {
+    "order": 50,
+    "index": 4,
+    "group_id": "SmallGroup(50,4)",
+    "exponent": 10
+  },
+  {
+    "order": 50,
+    "index": 5,
+    "group_id": "SmallGroup(50,5)",
+    "exponent": 10
+  },
+  {
+    "order": 51,
+    "index": 1,
+    "group_id": "SmallGroup(51,1)",
+    "exponent": 51
+  },
+  {
+    "order": 52,
+    "index": 1,
+    "group_id": "SmallGroup(52,1)",
+    "exponent": 52
+  },
+  {
+    "order": 52,
+    "index": 2,
+    "group_id": "SmallGroup(52,2)",
+    "exponent": 52
+  },
+  {
+    "order": 52,
+    "index": 3,
+    "group_id": "SmallGroup(52,3)",
+    "exponent": 52
+  },
+  {
+    "order": 52,
+    "index": 4,
+    "group_id": "SmallGroup(52,4)",
+    "exponent": 26
+  },
+  {
+    "order": 52,
+    "index": 5,
+    "group_id": "SmallGroup(52,5)",
+    "exponent": 26
+  },
+  {
+    "order": 53,
+    "index": 1,
+    "group_id": "SmallGroup(53,1)",
+    "exponent": 53
+  },
+  {
+    "order": 54,
+    "index": 1,
+    "group_id": "SmallGroup(54,1)",
+    "exponent": 54
+  },
+  {
+    "order": 54,
+    "index": 2,
+    "group_id": "SmallGroup(54,2)",
+    "exponent": 54
+  },
+  {
+    "order": 54,
+    "index": 3,
+    "group_id": "SmallGroup(54,3)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 4,
+    "group_id": "SmallGroup(54,4)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 5,
+    "group_id": "SmallGroup(54,5)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 6,
+    "group_id": "SmallGroup(54,6)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 7,
+    "group_id": "SmallGroup(54,7)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 8,
+    "group_id": "SmallGroup(54,8)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 9,
+    "group_id": "SmallGroup(54,9)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 10,
+    "group_id": "SmallGroup(54,10)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 11,
+    "group_id": "SmallGroup(54,11)",
+    "exponent": 18
+  },
+  {
+    "order": 54,
+    "index": 12,
+    "group_id": "SmallGroup(54,12)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 13,
+    "group_id": "SmallGroup(54,13)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 14,
+    "group_id": "SmallGroup(54,14)",
+    "exponent": 6
+  },
+  {
+    "order": 54,
+    "index": 15,
+    "group_id": "SmallGroup(54,15)",
+    "exponent": 6
+  },
+  {
+    "order": 55,
+    "index": 1,
+    "group_id": "SmallGroup(55,1)",
+    "exponent": 55
+  },
+  {
+    "order": 55,
+    "index": 2,
+    "group_id": "SmallGroup(55,2)",
+    "exponent": 55
+  },
+  {
+    "order": 56,
+    "index": 1,
+    "group_id": "SmallGroup(56,1)",
+    "exponent": 56
+  },
+  {
+    "order": 56,
+    "index": 2,
+    "group_id": "SmallGroup(56,2)",
+    "exponent": 56
+  },
+  {
+    "order": 56,
+    "index": 3,
+    "group_id": "SmallGroup(56,3)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 4,
+    "group_id": "SmallGroup(56,4)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 5,
+    "group_id": "SmallGroup(56,5)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 6,
+    "group_id": "SmallGroup(56,6)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 7,
+    "group_id": "SmallGroup(56,7)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 8,
+    "group_id": "SmallGroup(56,8)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 9,
+    "group_id": "SmallGroup(56,9)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 10,
+    "group_id": "SmallGroup(56,10)",
+    "exponent": 28
+  },
+  {
+    "order": 56,
+    "index": 11,
+    "group_id": "SmallGroup(56,11)",
+    "exponent": 14
+  },
+  {
+    "order": 56,
+    "index": 12,
+    "group_id": "SmallGroup(56,12)",
+    "exponent": 14
+  },
+  {
+    "order": 56,
+    "index": 13,
+    "group_id": "SmallGroup(56,13)",
+    "exponent": 14
+  },
+  {
+    "order": 57,
+    "index": 1,
+    "group_id": "SmallGroup(57,1)",
+    "exponent": 57
+  },
+  {
+    "order": 57,
+    "index": 2,
+    "group_id": "SmallGroup(57,2)",
+    "exponent": 57
+  },
+  {
+    "order": 58,
+    "index": 1,
+    "group_id": "SmallGroup(58,1)",
+    "exponent": 58
+  },
+  {
+    "order": 58,
+    "index": 2,
+    "group_id": "SmallGroup(58,2)",
+    "exponent": 58
+  },
+  {
+    "order": 59,
+    "index": 1,
+    "group_id": "SmallGroup(59,1)",
+    "exponent": 59
+  },
+  {
+    "order": 60,
+    "index": 1,
+    "group_id": "SmallGroup(60,1)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 2,
+    "group_id": "SmallGroup(60,2)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 3,
+    "group_id": "SmallGroup(60,3)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 4,
+    "group_id": "SmallGroup(60,4)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 5,
+    "group_id": "SmallGroup(60,5)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 6,
+    "group_id": "SmallGroup(60,6)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 7,
+    "group_id": "SmallGroup(60,7)",
+    "exponent": 60
+  },
+  {
+    "order": 60,
+    "index": 8,
+    "group_id": "SmallGroup(60,8)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 9,
+    "group_id": "SmallGroup(60,9)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 10,
+    "group_id": "SmallGroup(60,10)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 11,
+    "group_id": "SmallGroup(60,11)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 12,
+    "group_id": "SmallGroup(60,12)",
+    "exponent": 30
+  },
+  {
+    "order": 60,
+    "index": 13,
+    "group_id": "SmallGroup(60,13)",
+    "exponent": 30
+  }
+]
