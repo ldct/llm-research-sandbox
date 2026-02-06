@@ -2,7 +2,7 @@ import { atom } from 'jotai'
 
 import { urlArgsAtom, urlArgsStableAtom } from './url-atoms'
 
-const DEFAULT_PROJECT = 'MathlibDemo'
+const DEFAULT_PROJECT = 'Lean4270'
 
 /** The currently selected project */
 export const projectAtom = atom(
