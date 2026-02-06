@@ -31,10 +31,11 @@ elan default leanprover/lean4:v4.24.0
 ```bash
 cd Projects/Lean4270
 source ~/.elan/env && lake update
+lake exe cache get
 cd ../..  # back to lean4web root
 ```
 
-This downloads the mathlib cache (~6GB).
+`lake update` fetches dependencies and `lake exe cache get` downloads the prebuilt mathlib cache (~6GB).
 
 ### 4. Install Node.js 25.x
 
