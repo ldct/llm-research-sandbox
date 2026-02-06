@@ -1,0 +1,41 @@
+FROM ubuntu:noble
+
+RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+
+RUN elan toolchain install leanprover/lean4:v4.27.0 && elan default leanprover/lean4:v4.27.0
+
+WORKDIR /project
+
+RUN printf 'leanprover/lean4:v4.27.0\n' > lean-toolchain
+
+RUN printf '\
+name = "mathlib_project"\n\
+version = "0.1.0"\n\
+defaultTargets = ["MathProject"]\n\
+\n\
+[[require]]\n\
+name = "mathlib"\n\
+git = "https://github.com/leanprover-community/mathlib4.git"\n\
+rev = "v4.27.0"\n\
+\n\
+[[lean_lib]]\n\
+name = "MathProject"\n\
+' > lakefile.toml
+
+RUN printf 'import Mathlib\n' > MathProject.lean
+
+ENV MATHLIB_NO_CACHE_ON_UPDATE=1
+
+RUN lake update
+
+RUN lake exe cache get
+
+RUN lake build
+
+RUN printf 'import Mathlib\n#eval 1 + 1\n' > Test.lean && lake env lean Test.lean
+
+CMD ["/bin/bash"]
