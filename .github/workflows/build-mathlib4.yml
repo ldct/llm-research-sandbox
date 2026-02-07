@@ -13,14 +13,13 @@ env:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
     strategy:
       fail-fast: false
       matrix:
-        include:
+        version:
           - dockerfile: Dockerfile.mathlib4-24
             tag: v4.24.0
           - dockerfile: Dockerfile.mathlib4-25
@@ -29,6 +28,17 @@ jobs:
             tag: v4.26.0
           - dockerfile: Dockerfile.mathlib4-27
             tag: v4.27.0
+        arch:
+          - runner: ubuntu-latest
+            suffix: amd64
+        include:
+          - version:
+              dockerfile: Dockerfile.mathlib4-24
+              tag: v4.24.0
+            arch:
+              runner: ubuntu-24.04-arm
+              suffix: arm64
+    runs-on: ${{ matrix.arch.runner }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +51,44 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: lean4-dockerfiles
-          file: lean4-dockerfiles/${{ matrix.dockerfile }}
+          file: lean4-dockerfiles/${{ matrix.version.dockerfile }}
           push: true
-          tags: ${{ env.IMAGE }}:${{ matrix.tag }}
+          tags: ${{ env.IMAGE }}:${{ matrix.version.tag }}-${{ matrix.arch.suffix }}
+
+  manifest:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - tag: v4.24.0
+            multi_arch: true
+          - tag: v4.25.0
+            multi_arch: false
+          - tag: v4.26.0
+            multi_arch: false
+          - tag: v4.27.0
+            multi_arch: false
+    steps:
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create multi-arch manifest
+        if: matrix.multi_arch
+        run: |
+          docker buildx imagetools create -t ${{ env.IMAGE }}:${{ matrix.tag }} \
+            ${{ env.IMAGE }}:${{ matrix.tag }}-amd64 \
+            ${{ env.IMAGE }}:${{ matrix.tag }}-arm64
+
+      - name: Tag amd64-only image
+        if: ${{ !matrix.multi_arch }}
+        run: |
+          docker buildx imagetools create -t ${{ env.IMAGE }}:${{ matrix.tag }} \
+            ${{ env.IMAGE }}:${{ matrix.tag }}-amd64
