@@ -8,16 +8,15 @@ on:
       - lean4-dockerfiles/Dockerfile.lean4-*
       - .github/workflows/build-lean4.yml
 
+env:
+  IMAGE: ghcr.io/ldct/lean4
+
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+  build:
     strategy:
       fail-fast: false
       matrix:
-        include:
+        version:
           - dockerfile: Dockerfile.lean4-24
             tag: v4.24
           - dockerfile: Dockerfile.lean4-24.1
@@ -36,13 +35,22 @@ jobs:
             tag: v4.27.0
           - dockerfile: Dockerfile.lean4-28.0-rc1
             tag: v4.28.0-rc1
+        arch:
+          - runner: ubuntu-latest
+            suffix: amd64
+          - runner: ubuntu-24.04-arm
+            suffix: arm64
+    runs-on: ${{ matrix.arch.runner }}
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v4
 
       - name: Patch Dockerfile to remove DNS workaround
         run: |
-          sed -i '/^RUN echo "nameserver 1.1.1.1" > \/etc\/resolv.conf$/d' lean4-dockerfiles/${{ matrix.dockerfile }}
-          sed -i 's|echo "nameserver 1.1.1.1" > /etc/resolv.conf &&[[:space:]]*||g' lean4-dockerfiles/${{ matrix.dockerfile }}
+          sed -i '/^RUN echo "nameserver 1.1.1.1" > \/etc\/resolv.conf$/d' lean4-dockerfiles/${{ matrix.version.dockerfile }}
+          sed -i 's|echo "nameserver 1.1.1.1" > /etc/resolv.conf &&[[:space:]]*||g' lean4-dockerfiles/${{ matrix.version.dockerfile }}
 
       - uses: docker/login-action@v3
         with:
@@ -53,6 +61,38 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: lean4-dockerfiles
-          file: lean4-dockerfiles/${{ matrix.dockerfile }}
+          file: lean4-dockerfiles/${{ matrix.version.dockerfile }}
           push: true
-          tags: ghcr.io/ldct/lean4:${{ matrix.tag }}
+          tags: ${{ env.IMAGE }}:${{ matrix.version.tag }}-${{ matrix.arch.suffix }}
+
+  manifest:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - tag: v4.24
+          - tag: v4.24.1
+          - tag: v4.25.0
+          - tag: v4.25.1
+          - tag: v4.25.2
+          - tag: v4.26.0
+          - tag: v4.27
+          - tag: v4.27.0
+          - tag: v4.28.0-rc1
+    steps:
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create multi-arch manifest
+        run: |
+          docker buildx imagetools create -t ${{ env.IMAGE }}:${{ matrix.tag }} \
+            ${{ env.IMAGE }}:${{ matrix.tag }}-amd64 \
+            ${{ env.IMAGE }}:${{ matrix.tag }}-arm64
