@@ -1,0 +1,61 @@
+FROM ubuntu:noble
+
+RUN apt-get update && apt-get install -y curl git zstd && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+
+RUN elan toolchain install leanprover/lean4:v4.27.0 && elan default leanprover/lean4:v4.27.0
+
+# Manually install v4.27.0-rc1 toolchain (elan can't always resolve rc tags)
+RUN mkdir -p /root/.elan/toolchains/leanprover--lean4---v4.27.0-rc1 && \
+    curl -L -o /tmp/lean.tar.zst "https://github.com/leanprover/lean4/releases/download/v4.27.0-rc1/lean-4.27.0-rc1-linux.tar.zst" && \
+    zstd -d /tmp/lean.tar.zst -o /tmp/lean.tar && \
+    tar xf /tmp/lean.tar --strip-components=1 -C /root/.elan/toolchains/leanprover--lean4---v4.27.0-rc1 && \
+    rm /tmp/lean.tar /tmp/lean.tar.zst && \
+    elan default leanprover/lean4:v4.27.0-rc1
+
+WORKDIR /project
+
+RUN printf 'leanprover/lean4:v4.27.0-rc1\n' > lean-toolchain
+
+RUN printf '\
+name = "mathlib_canonical"\n\
+version = "0.1.0"\n\
+defaultTargets = ["MathProject"]\n\
+\n\
+[[require]]\n\
+name = "mathlib"\n\
+git = "https://github.com/leanprover-community/mathlib4.git"\n\
+rev = "v4.27.0-rc1"\n\
+\n\
+[[require]]\n\
+name = "Canonical"\n\
+git = "https://github.com/chasenorman/CanonicalLean.git"\n\
+rev = "main"\n\
+\n\
+[[lean_lib]]\n\
+name = "MathProject"\n\
+' > lakefile.toml
+
+RUN printf 'import Mathlib\nimport Canonical\n' > MathProject.lean
+
+ENV MATHLIB_NO_CACHE_ON_UPDATE=1
+
+RUN lake update
+
+# Download the native Rust shared library for Canonical
+RUN mkdir -p .lake/packages/Canonical/.lake/build/lib && \
+    curl -L -o .lake/packages/Canonical/.lake/build/lib/libcanonical_lean.so \
+      https://github.com/chasenorman/Canonical/releases/download/v4.25.0/libcanonical_lean.so
+
+RUN lake exe cache get
+
+RUN lake build
+
+# Smoke test: build a file that uses both Mathlib and Canonical
+RUN printf 'import Mathlib\nimport Canonical\n\nexample : Nat := by canonical\nexample : 1 + 1 = 2 := by norm_num\n' > Test.lean && \
+    lake build Test
+
+CMD ["/bin/bash"]
