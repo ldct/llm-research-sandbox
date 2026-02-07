@@ -1,0 +1,40 @@
+name: Build Mathlib4 Docker images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - lean4-dockerfiles/Dockerfile.mathlib4-*
+      - .github/workflows/build-mathlib4.yml
+
+env:
+  IMAGE: ghcr.io/ldct/mathlib4
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dockerfile: Dockerfile.mathlib4-24
+            tag: v4.24
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: lean4-dockerfiles
+          file: lean4-dockerfiles/${{ matrix.dockerfile }}
+          push: true
+          tags: ${{ env.IMAGE }}:${{ matrix.tag }}
