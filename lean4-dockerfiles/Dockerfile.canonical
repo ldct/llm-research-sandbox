@@ -1,0 +1,33 @@
+FROM ubuntu:noble
+
+RUN apt-get update && apt-get install -y curl git zstd && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+
+# Install v4.27.0 as base, then manually install v4.27.0-rc1 toolchain
+RUN elan toolchain install leanprover/lean4:v4.27.0 && elan default leanprover/lean4:v4.27.0
+
+RUN mkdir -p /root/.elan/toolchains/leanprover--lean4---v4.27.0-rc1 && \
+    curl -L -o /tmp/lean.tar.zst "https://github.com/leanprover/lean4/releases/download/v4.27.0-rc1/lean-4.27.0-rc1-linux.tar.zst" && \
+    zstd -d /tmp/lean.tar.zst -o /tmp/lean.tar && \
+    tar xf /tmp/lean.tar --strip-components=1 -C /root/.elan/toolchains/leanprover--lean4---v4.27.0-rc1 && \
+    rm /tmp/lean.tar /tmp/lean.tar.zst && \
+    elan default leanprover/lean4:v4.27.0-rc1
+
+WORKDIR /canonical
+
+RUN git clone https://github.com/chasenorman/CanonicalLean.git .
+
+# Download the native Rust shared library
+RUN mkdir -p .lake/build/lib && \
+    curl -L -o .lake/build/lib/libcanonical_lean.so \
+      https://github.com/chasenorman/Canonical/releases/download/v4.25.0/libcanonical_lean.so
+
+RUN lake build
+
+# Smoke test - build the test file (interpreter mode doesn't work with FFI plugins)
+RUN lake build Test
+
+CMD ["/bin/bash"]
