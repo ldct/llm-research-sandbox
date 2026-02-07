@@ -2,6 +2,10 @@ name: Test Mathlib4 + Canonical image
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/test-mathlib4-canonical.yml
 
 jobs:
   test:
