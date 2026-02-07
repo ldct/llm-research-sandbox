@@ -40,7 +40,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Patch Dockerfile to remove DNS workaround
-        run: sed -i 's|echo "nameserver 1.1.1.1" > /etc/resolv.conf \&\&||g' lean4-dockerfiles/${{ matrix.dockerfile }}
+        run: |
+          sed -i '/^RUN echo "nameserver 1.1.1.1" > \/etc\/resolv.conf$/d' lean4-dockerfiles/${{ matrix.dockerfile }}
+          sed -i 's|echo "nameserver 1.1.1.1" > /etc/resolv.conf &&[[:space:]]*||g' lean4-dockerfiles/${{ matrix.dockerfile }}
 
       - uses: docker/login-action@v3
         with:
