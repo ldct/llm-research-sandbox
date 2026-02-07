@@ -15,6 +15,7 @@ jobs:
       contents: read
       packages: write
     strategy:
+      fail-fast: false
       matrix:
         include:
           - dockerfile: Dockerfile.lean4-24
@@ -37,6 +38,9 @@ jobs:
             tag: v4.28.0-rc1
     steps:
       - uses: actions/checkout@v4
+
+      - name: Patch Dockerfile to remove DNS workaround
+        run: sed -i 's|echo "nameserver 1.1.1.1" > /etc/resolv.conf \&\&||g' lean4-dockerfiles/${{ matrix.dockerfile }}
 
       - uses: docker/login-action@v3
         with:
