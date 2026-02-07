@@ -33,7 +33,7 @@ rev = "v4.27.0-rc1"\n\
 [[require]]\n\
 name = "Canonical"\n\
 git = "https://github.com/chasenorman/CanonicalLean.git"\n\
-rev = "main"\n\
+rev = "v4.27.0-rc1"\n\
 \n\
 [[lean_lib]]\n\
 name = "MathProject"\n\
