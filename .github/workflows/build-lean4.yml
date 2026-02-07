@@ -6,7 +6,7 @@ on:
     branches: [main]
     paths:
       - lean4-dockerfiles/Dockerfile.lean4-*
-      - .github/workflows/build-lean4-24.yml
+      - .github/workflows/build-lean4.yml
 
 jobs:
   build-and-push:
