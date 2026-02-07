@@ -1,0 +1,50 @@
+name: Build CSLib Docker images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - lean4-dockerfiles/Dockerfile.cslib
+      - .github/workflows/build-cslib.yml
+
+env:
+  IMAGE: ghcr.io/ldct/cslib
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - cslib_tag: v4.25.0
+            lean_toolchain: "leanprover/lean4:v4.25.0"
+            image_tag: v4.25.0
+          - cslib_tag: v4.26.0
+            lean_toolchain: "leanprover/lean4:v4.26.0"
+            image_tag: v4.26.0
+          - cslib_tag: v4.27.0-rc1
+            lean_toolchain: "leanprover/lean4:v4.27.0-rc1"
+            image_tag: v4.27.0-rc1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: lean4-dockerfiles
+          file: lean4-dockerfiles/Dockerfile.cslib
+          push: true
+          tags: ${{ env.IMAGE }}:${{ matrix.image_tag }}
+          build-args: |
+            CSLIB_TAG=${{ matrix.cslib_tag }}
+            LEAN_TOOLCHAIN=${{ matrix.lean_toolchain }}

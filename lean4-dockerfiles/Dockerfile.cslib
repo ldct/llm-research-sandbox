@@ -1,0 +1,32 @@
+ARG CSLIB_TAG=v4.27.0-rc1
+ARG LEAN_TOOLCHAIN=leanprover/lean4:v4.27.0-rc1
+
+FROM ubuntu:noble
+
+ARG CSLIB_TAG
+ARG LEAN_TOOLCHAIN
+
+RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+
+RUN elan toolchain install ${LEAN_TOOLCHAIN} && elan default ${LEAN_TOOLCHAIN}
+
+WORKDIR /project
+
+RUN git clone --branch ${CSLIB_TAG} --depth 1 https://github.com/leanprover/cslib.git .
+
+ENV MATHLIB_NO_CACHE_ON_UPDATE=1
+
+RUN lake update
+
+RUN lake exe cache get
+
+RUN lake build
+
+# Smoke test
+RUN printf 'import Cslib\n#eval 1 + 1\n' > Test.lean && lake env lean Test.lean
+
+CMD ["/bin/bash"]
