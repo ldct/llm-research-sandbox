@@ -23,6 +23,12 @@ jobs:
         include:
           - dockerfile: Dockerfile.mathlib4-24
             tag: v4.24
+          - dockerfile: Dockerfile.mathlib4-25
+            tag: v4.25
+          - dockerfile: Dockerfile.mathlib4-26
+            tag: v4.26
+          - dockerfile: Dockerfile.mathlib4-27
+            tag: v4.27
     steps:
       - uses: actions/checkout@v4
 
