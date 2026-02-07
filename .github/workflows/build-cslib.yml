@@ -23,12 +23,15 @@ jobs:
         include:
           - cslib_tag: v4.25.0
             lean_toolchain: "leanprover/lean4:v4.25.0"
+            lean_version: "4.25.0"
             image_tag: v4.25.0
           - cslib_tag: v4.26.0
             lean_toolchain: "leanprover/lean4:v4.26.0"
+            lean_version: "4.26.0"
             image_tag: v4.26.0
           - cslib_tag: v4.27.0-rc1
             lean_toolchain: "leanprover/lean4:v4.27.0-rc1"
+            lean_version: "4.27.0-rc1"
             image_tag: v4.27.0-rc1
     steps:
       - uses: actions/checkout@v4
@@ -48,3 +51,4 @@ jobs:
           build-args: |
             CSLIB_TAG=${{ matrix.cslib_tag }}
             LEAN_TOOLCHAIN=${{ matrix.lean_toolchain }}
+            LEAN_VERSION=${{ matrix.lean_version }}

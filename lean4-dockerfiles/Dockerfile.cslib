@@ -1,18 +1,27 @@
 ARG CSLIB_TAG=v4.27.0-rc1
 ARG LEAN_TOOLCHAIN=leanprover/lean4:v4.27.0-rc1
+ARG LEAN_VERSION=4.27.0-rc1
 
 FROM ubuntu:noble
 
 ARG CSLIB_TAG
 ARG LEAN_TOOLCHAIN
+ARG LEAN_VERSION
 
-RUN apt-get update && apt-get install -y curl git && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y curl git zstd && rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/root/.elan/bin:${PATH}"
 
 RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
 
-RUN elan toolchain install ${LEAN_TOOLCHAIN} && elan default ${LEAN_TOOLCHAIN}
+# Install toolchain: try elan first, fall back to manual install from GitHub releases
+RUN elan toolchain install ${LEAN_TOOLCHAIN} && elan default ${LEAN_TOOLCHAIN} || \
+    ( mkdir -p /root/.elan/toolchains/$(echo ${LEAN_TOOLCHAIN} | sed 's|/|--|g; s|:|---|g') && \
+      curl -L -o /tmp/lean.tar.zst "https://github.com/leanprover/lean4/releases/download/v${LEAN_VERSION}/lean-${LEAN_VERSION}-linux.tar.zst" && \
+      zstd -d /tmp/lean.tar.zst -o /tmp/lean.tar && \
+      tar xf /tmp/lean.tar --strip-components=1 -C /root/.elan/toolchains/$(echo ${LEAN_TOOLCHAIN} | sed 's|/|--|g; s|:|---|g') && \
+      rm /tmp/lean.tar /tmp/lean.tar.zst && \
+      elan default ${LEAN_TOOLCHAIN} )
 
 WORKDIR /project
 
