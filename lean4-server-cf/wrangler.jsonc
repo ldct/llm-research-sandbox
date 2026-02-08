@@ -16,6 +16,12 @@
       "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.25.0",
       "instance_type": "standard-1",
       "max_instances": 5
+    },
+    {
+      "class_name": "Lean4v26Container",
+      "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.26.0",
+      "instance_type": "standard-1",
+      "max_instances": 5
     }
   ],
   "durable_objects": {
@@ -27,6 +33,10 @@
       {
         "class_name": "Lean4v25Container",
         "name": "LEAN_4_25_0"
+      },
+      {
+        "class_name": "Lean4v26Container",
+        "name": "LEAN_4_26_0"
       }
     ]
   },
@@ -39,6 +49,10 @@
       "deleted_classes": ["LeanContainer"],
       "new_sqlite_classes": ["Lean4v24Container", "Lean4v25Container"],
       "tag": "v2"
+    },
+    {
+      "new_sqlite_classes": ["Lean4v26Container"],
+      "tag": "v3"
     }
   ]
 }
