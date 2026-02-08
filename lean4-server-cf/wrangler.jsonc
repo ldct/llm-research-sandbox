@@ -1,0 +1,6 @@
+{
+  "name": "lean4-server",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-08",
+  "account_id": "d130938d761b67012e1f4df74bd23241"
+}
