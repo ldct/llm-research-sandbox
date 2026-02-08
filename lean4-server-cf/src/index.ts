@@ -4,6 +4,8 @@ interface Env {
   LEAN_4_24_0: DurableObjectNamespace;
   LEAN_4_25_0: DurableObjectNamespace;
   LEAN_4_26_0: DurableObjectNamespace;
+  LEAN_4_27_0: DurableObjectNamespace;
+  LEAN_4_28_0_RC1: DurableObjectNamespace;
 }
 
 const CONTAINER_PORT = 8000;
@@ -33,6 +35,8 @@ class BaseLeanContainer extends DurableObject {
 export class Lean4v24Container extends BaseLeanContainer {}
 export class Lean4v25Container extends BaseLeanContainer {}
 export class Lean4v26Container extends BaseLeanContainer {}
+export class Lean4v27Container extends BaseLeanContainer {}
+export class Lean4v28rc1Container extends BaseLeanContainer {}
 
 const ROUTES: Record<string, { ns: keyof Env; rewrite: string }> = {
   "POST /lean-4-24-0":        { ns: "LEAN_4_24_0", rewrite: "/" },
@@ -41,6 +45,10 @@ const ROUTES: Record<string, { ns: keyof Env; rewrite: string }> = {
   "GET /lean-4-25-0/health":  { ns: "LEAN_4_25_0", rewrite: "/health" },
   "POST /lean-4-26-0":        { ns: "LEAN_4_26_0", rewrite: "/" },
   "GET /lean-4-26-0/health":  { ns: "LEAN_4_26_0", rewrite: "/health" },
+  "POST /lean-4-27-0":        { ns: "LEAN_4_27_0", rewrite: "/" },
+  "GET /lean-4-27-0/health":  { ns: "LEAN_4_27_0", rewrite: "/health" },
+  "POST /lean-4-28-0-rc1":        { ns: "LEAN_4_28_0_RC1", rewrite: "/" },
+  "GET /lean-4-28-0-rc1/health":  { ns: "LEAN_4_28_0_RC1", rewrite: "/health" },
 };
 
 export default {

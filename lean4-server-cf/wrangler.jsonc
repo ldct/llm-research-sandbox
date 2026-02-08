@@ -22,6 +22,18 @@
       "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.26.0",
       "instance_type": "standard-1",
       "max_instances": 5
+    },
+    {
+      "class_name": "Lean4v27Container",
+      "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.27.0",
+      "instance_type": "standard-1",
+      "max_instances": 5
+    },
+    {
+      "class_name": "Lean4v28rc1Container",
+      "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.28.0-rc1",
+      "instance_type": "standard-1",
+      "max_instances": 5
     }
   ],
   "durable_objects": {
@@ -37,6 +49,14 @@
       {
         "class_name": "Lean4v26Container",
         "name": "LEAN_4_26_0"
+      },
+      {
+        "class_name": "Lean4v27Container",
+        "name": "LEAN_4_27_0"
+      },
+      {
+        "class_name": "Lean4v28rc1Container",
+        "name": "LEAN_4_28_0_RC1"
       }
     ]
   },
@@ -53,6 +73,10 @@
     {
       "new_sqlite_classes": ["Lean4v26Container"],
       "tag": "v3"
+    },
+    {
+      "new_sqlite_classes": ["Lean4v27Container", "Lean4v28rc1Container"],
+      "tag": "v4"
     }
   ]
 }
