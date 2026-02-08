@@ -6,6 +6,7 @@ interface Env {
   LEAN_4_26_0: DurableObjectNamespace;
   LEAN_4_27_0: DurableObjectNamespace;
   LEAN_4_28_0_RC1: DurableObjectNamespace;
+  MATHLIB_4_27_0: DurableObjectNamespace;
 }
 
 class BaseLeanContainer extends Container<Env> {
@@ -19,6 +20,14 @@ export class Lean4v25Container extends BaseLeanContainer {}
 export class Lean4v26Container extends BaseLeanContainer {}
 export class Lean4v27Container extends BaseLeanContainer {}
 export class Lean4v28rc1Container extends BaseLeanContainer {}
+
+class BaseMathlib4Container extends Container<Env> {
+  defaultPort = 8000;
+  sleepAfter = "120s";
+  enableInternet = false;
+}
+
+export class Mathlib4v27Container extends BaseMathlib4Container {}
 
 const ROUTES: Record<string, { ns: keyof Env; rewrite: string; cold?: boolean }> = {
   "POST /lean-4-24-0":            { ns: "LEAN_4_24_0", rewrite: "/" },
@@ -36,6 +45,9 @@ const ROUTES: Record<string, { ns: keyof Env; rewrite: string; cold?: boolean }>
   "POST /lean-4-28-0-rc1":        { ns: "LEAN_4_28_0_RC1", rewrite: "/" },
   "GET /lean-4-28-0-rc1/health":  { ns: "LEAN_4_28_0_RC1", rewrite: "/health" },
   "POST /lean-4-28-0-rc1/cold":   { ns: "LEAN_4_28_0_RC1", rewrite: "/", cold: true },
+  "POST /mathlib-4-27-0":           { ns: "MATHLIB_4_27_0", rewrite: "/" },
+  "GET /mathlib-4-27-0/health":     { ns: "MATHLIB_4_27_0", rewrite: "/health" },
+  "POST /mathlib-4-27-0/cold":      { ns: "MATHLIB_4_27_0", rewrite: "/", cold: true },
 };
 
 const CORS_HEADERS: Record<string, string> = {
