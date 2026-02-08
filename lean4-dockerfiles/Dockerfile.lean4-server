@@ -1,0 +1,9 @@
+FROM ghcr.io/ldct/lean4:v4.24
+
+RUN apt-get update && apt-get install -y python3 && rm -rf /var/lib/apt/lists/*
+
+COPY lean_server.py /lean_server.py
+
+EXPOSE 8000
+
+CMD ["python3", "/lean_server.py"]
