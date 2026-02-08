@@ -1,4 +1,7 @@
-import { EditorView, basicSetup, EditorState, keymap, oneDark } from './cm-bundle.js';
+import {
+  EditorView, basicSetup, EditorState, keymap, oneDark,
+  leanLanguage, leanHighlightStyle, leanHighlightStyleDark,
+} from './cm-bundle.js';
 
 // ── Config ────────────────────────────────────────────
 const API_BASE = 'https://lean4-servers.xuanji.workers.dev';
@@ -258,8 +261,9 @@ const editorView = new EditorView({
     extensions: [
       basicSetup,
       runKeymap,
+      leanLanguage,
+      ...(isDark ? [leanHighlightStyleDark, oneDark] : [leanHighlightStyle]),
       EditorView.lineWrapping,
-      ...(isDark ? [oneDark] : []),
       EditorView.theme({
         '&': { height: '100%' },
         '.cm-scroller': { overflow: 'auto', fontFamily: 'var(--font-mono)', fontSize: '14px' },
