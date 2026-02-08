@@ -38,8 +38,25 @@ const ROUTES: Record<string, { ns: keyof Env; rewrite: string; cold?: boolean }>
   "POST /lean-4-28-0-rc1/cold":   { ns: "LEAN_4_28_0_RC1", rewrite: "/", cold: true },
 };
 
+const CORS_HEADERS: Record<string, string> = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Max-Age": "86400",
+};
+
+function withCors(response: Response): Response {
+  const r = new Response(response.body, response);
+  for (const [k, v] of Object.entries(CORS_HEADERS)) r.headers.set(k, v);
+  return r;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    if (request.method === "OPTIONS") {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
+
     const url = new URL(request.url);
     const key = `${request.method} ${url.pathname}`;
     const route = ROUTES[key];
@@ -48,9 +65,10 @@ export default {
       const ns = env[route.ns] as DurableObjectNamespace;
       const id = route.cold ? ns.newUniqueId() : ns.idFromName("singleton");
       const stub = ns.get(id);
-      return stub.fetch(new Request(new URL(route.rewrite, url), request));
+      const resp = await stub.fetch(new Request(new URL(route.rewrite, url), request));
+      return withCors(resp);
     }
 
-    return new Response("Not Found", { status: 404 });
+    return withCors(new Response("Not Found", { status: 404 }));
   },
 };
