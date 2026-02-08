@@ -164,11 +164,63 @@ curl -X POST https://lean4-server.<subdomain>.workers.dev/ \
   -d '#check Nat.add_comm'
 ```
 
+## Step 0: Test Workers Setup Without Containers
+
+Before deploying the full container stack, verify the Workers toolchain end-to-end with a **stub Worker** that has no container dependency. This catches account/plan/auth/wrangler issues cheaply.
+
+### What to build
+
+Create a minimal `wrangler.jsonc` and `src/index.ts` with **no** `containers`, `durable_objects`, or `migrations` fields. The Worker should:
+
+- `POST /` → return a hard-coded JSON response mimicking the real server:
+  ```json
+  {"ok": true, "stdout": "2\n", "stderr": "", "exitCode": 0, "elapsed": 0.0, "stub": true}
+  ```
+- `GET /health` → return `{"status": "ok", "stub": true}`
+- Everything else → 404
+
+Stub `wrangler.jsonc`:
+
+```jsonc
+{
+  "name": "lean4-server",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-08"
+}
+```
+
+### Deploy & verify
+
+```bash
+cd lean4-server-cf
+npm install
+npx wrangler deploy          # deploys stub Worker only, no Docker needed
+curl https://lean4-server.<subdomain>.workers.dev/health
+curl -X POST https://lean4-server.<subdomain>.workers.dev/ -d '#eval 1 + 1'
+```
+
+### What this validates
+
+| Concern | Verified? |
+|---|---|
+| Cloudflare account & Workers Paid plan active | ✅ |
+| `wrangler login` credentials work | ✅ |
+| Worker deploys and is reachable at expected URL | ✅ |
+| Route handling (POST /, GET /health, 404 fallback) | ✅ |
+| CORS headers (if added) work from browser | ✅ |
+| Custom domain routing (if configured) | ✅ |
+
+### Transition to containers
+
+Once the stub is confirmed working, add the `containers`, `durable_objects`, and `migrations` sections back to `wrangler.jsonc`, replace the stub handler with the real proxy logic, and run `wrangler deploy` again. The URL stays the same — the container deployment is an in-place upgrade.
+
 ## TODO
 
 - [ ] Set up Cloudflare account + Workers Paid plan
 - [ ] `wrangler login`
 - [ ] Scaffold the Worker, config, and package.json
-- [ ] `wrangler deploy` and test
+- [ ] **Deploy stub Worker (no containers) and verify routing** ← Step 0
+- [ ] Add container config to `wrangler.jsonc` and real proxy to `index.ts`
+- [ ] `wrangler deploy` with containers and test
 - [ ] Optionally add a custom domain
 - [ ] Optionally add authentication (API key header check in Worker)
