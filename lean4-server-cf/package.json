@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cloudflare/workers-types": "^4.20260207.0",
     "wrangler": "^4.63.0"
   }
 }

@@ -2,5 +2,28 @@
   "name": "lean4-server",
   "main": "src/index.ts",
   "compatibility_date": "2025-10-08",
-  "account_id": "d130938d761b67012e1f4df74bd23241"
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "d130938d761b67012e1f4df74bd23241",
+  "containers": [
+    {
+      "class_name": "LeanContainer",
+      "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/lean4-server:v4.24.0",
+      "instance_type": "standard-1",
+      "max_instances": 5
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "LeanContainer",
+        "name": "LEAN_CONTAINER"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "new_sqlite_classes": ["LeanContainer"],
+      "tag": "v1"
+    }
+  ]
 }
