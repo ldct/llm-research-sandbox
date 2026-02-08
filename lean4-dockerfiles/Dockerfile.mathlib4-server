@@ -1,0 +1,11 @@
+FROM ghcr.io/ldct/mathlib4:v4.27.0
+
+RUN apt-get update && apt-get install -y python3 && rm -rf /var/lib/apt/lists/*
+
+COPY mathlib_server.py /mathlib_server.py
+
+WORKDIR /project
+
+EXPOSE 8000
+
+CMD ["python3", "/mathlib_server.py"]
