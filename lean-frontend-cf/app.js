@@ -1,3 +1,5 @@
+import { EditorView, basicSetup, EditorState, keymap, oneDark } from './cm-bundle.js';
+
 // ── Config ────────────────────────────────────────────
 const API_BASE = 'https://lean4-servers.xuanji.workers.dev';
 const VERSIONS = [
@@ -241,27 +243,32 @@ const statusElapsed = document.getElementById('status-elapsed');
 const statusState = document.getElementById('status-state');
 const divider = document.getElementById('divider');
 
-// ── Editor setup (plain textarea) ─────────────────────
-const textarea = document.createElement('textarea');
-textarea.id = 'code-input';
-textarea.spellcheck = false;
-textarea.autocomplete = 'off';
-textarea.value = DEFAULT_CODE;
-editorPane.appendChild(textarea);
+// ── Editor setup (CodeMirror 6) ───────────────────────
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-textarea.addEventListener('keydown', (e) => {
-  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-    e.preventDefault();
-    runCode();
-  }
-  // Tab inserts 2 spaces
-  if (e.key === 'Tab') {
-    e.preventDefault();
-    const start = textarea.selectionStart;
-    const end = textarea.selectionEnd;
-    textarea.value = textarea.value.substring(0, start) + '  ' + textarea.value.substring(end);
-    textarea.selectionStart = textarea.selectionEnd = start + 2;
-  }
+const runKeymap = keymap.of([{
+  key: 'Ctrl-Enter',
+  mac: 'Cmd-Enter',
+  run: () => { runCode(); return true; },
+}]);
+
+const editorView = new EditorView({
+  state: EditorState.create({
+    doc: DEFAULT_CODE,
+    extensions: [
+      basicSetup,
+      runKeymap,
+      EditorView.lineWrapping,
+      ...(isDark ? [oneDark] : []),
+      EditorView.theme({
+        '&': { height: '100%' },
+        '.cm-scroller': { overflow: 'auto', fontFamily: 'var(--font-mono)', fontSize: '14px' },
+        '.cm-content': { padding: '12px 0' },
+        '.cm-gutters': { borderRight: '1px solid var(--border)' },
+      }),
+    ],
+  }),
+  parent: editorPane,
 });
 
 // ── Version toggle ────────────────────────────────────
@@ -287,7 +294,7 @@ async function runCode() {
   if (running) return;
   running = true;
 
-  const code = textarea.value;
+  const code = editorView.state.doc.toString();
   const url = `${API_BASE}/${currentVersion}`;
 
   // UI: loading
@@ -389,13 +396,12 @@ function formatOutputText(text) {
 }
 
 function jumpToLine(line) {
-  const lines = textarea.value.split('\n');
-  let pos = 0;
-  for (let i = 0; i < Math.min(line - 1, lines.length); i++) {
-    pos += lines[i].length + 1;
-  }
-  textarea.focus();
-  textarea.selectionStart = textarea.selectionEnd = pos;
+  const lineInfo = editorView.state.doc.line(Math.min(line, editorView.state.doc.lines));
+  editorView.dispatch({
+    selection: { anchor: lineInfo.from },
+    scrollIntoView: true,
+  });
+  editorView.focus();
 }
 
 function escHtml(s) {
@@ -410,7 +416,9 @@ EXAMPLES.forEach((ex, i) => {
   const item = document.createElement('button');
   item.textContent = ex.name;
   item.addEventListener('click', () => {
-    textarea.value = ex.code;
+    editorView.dispatch({
+      changes: { from: 0, to: editorView.state.doc.length, insert: ex.code },
+    });
     examplesMenu.classList.add('hidden');
   });
   examplesMenu.appendChild(item);
