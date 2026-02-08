@@ -1,0 +1,293 @@
+/* Reset & base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-toolbar: #2c2c2c;
+  --text: #1e1e1e;
+  --text-secondary: #666;
+  --text-toolbar: #e0e0e0;
+  --border: #d0d0d0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --toolbar-height: 48px;
+  --statusbar-height: 28px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e1e;
+    --bg-secondary: #252526;
+    --bg-toolbar: #1a1a1a;
+    --text: #d4d4d4;
+    --text-secondary: #888;
+    --border: #3e3e3e;
+  }
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* Toolbar */
+#toolbar {
+  height: var(--toolbar-height);
+  background: var(--bg-toolbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.toolbar-left .logo {
+  color: var(--text-toolbar);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+}
+
+/* Version toggle */
+.version-toggle {
+  display: flex;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.version-toggle button {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.version-toggle button:hover {
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.05);
+}
+
+.version-toggle button.active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Run button */
+#run-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#run-btn:hover { background: var(--accent-hover); }
+#run-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+#run-btn .run-icon { font-size: 11px; }
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.hidden { display: none !important; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Main split layout */
+#main {
+  display: flex;
+  height: calc(100% - var(--toolbar-height) - var(--statusbar-height));
+}
+
+#editor-pane {
+  flex: 1 1 55%;
+  min-width: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#code-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  tab-size: 2;
+}
+
+/* Divider */
+#divider {
+  width: 5px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+#divider:hover, #divider.dragging {
+  background: var(--accent);
+}
+
+/* Output pane */
+#output-pane {
+  flex: 1 1 45%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.output-header {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#output-content {
+  flex: 1;
+  overflow: auto;
+  padding: 12px 16px;
+}
+
+.output-placeholder {
+  color: var(--text-secondary);
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+.output-placeholder kbd {
+  background: var(--border);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* Output sections */
+.output-section {
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.output-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  color: var(--text-secondary);
+}
+
+.output-section pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 8px 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+}
+
+.output-section.stdout pre { border-left-color: var(--success); }
+.output-section.stderr pre { border-left-color: var(--error); }
+
+.output-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  display: flex;
+  gap: 16px;
+}
+
+.output-meta .exit-ok { color: var(--success); }
+.output-meta .exit-fail { color: var(--error); }
+
+.output-error-msg {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--error);
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+/* Clickable error lines */
+.error-line-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.error-line-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Status bar */
+#statusbar {
+  height: var(--statusbar-height);
+  background: var(--bg-toolbar);
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 20px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#statusbar .status-shortcut {
+  margin-left: auto;
+  opacity: 0.5;
+}
+
+/* Loading state on run */
+.running #status-state {
+  color: var(--warning);
+}

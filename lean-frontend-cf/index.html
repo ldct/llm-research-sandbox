@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean 4 Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <div class="toolbar-left">
+      <span class="logo">Lean 4 Editor</span>
+    </div>
+    <div class="toolbar-center">
+      <div id="version-toggle" class="version-toggle">
+        <button data-version="lean-4-24-0">4.24</button>
+        <button data-version="lean-4-25-0">4.25</button>
+        <button data-version="lean-4-26-0">4.26</button>
+        <button data-version="lean-4-27-0" class="active">4.27</button>
+        <button data-version="lean-4-28-0-rc1">4.28-rc1</button>
+      </div>
+    </div>
+    <div class="toolbar-right">
+      <button id="run-btn" title="Run (Ctrl+Enter)">
+        <span class="run-icon">▶</span>
+        <span class="run-label">Run</span>
+        <span class="spinner hidden"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="editor-pane"></div>
+    <div id="divider"></div>
+    <div id="output-pane">
+      <div class="output-header">Output</div>
+      <div id="output-content">
+        <div class="output-placeholder">Press <kbd>Ctrl+Enter</kbd> or click <strong>▶ Run</strong> to evaluate.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="statusbar">
+    <span id="status-version">Lean 4.27.0</span>
+    <span id="status-elapsed"></span>
+    <span id="status-state">Ready</span>
+    <span class="status-shortcut">Ctrl+Enter to run</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
