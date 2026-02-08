@@ -1,5 +1,5 @@
 {
-  "name": "lean-4-24-0",
+  "name": "lean4-servers",
   "main": "src/index.ts",
   "compatibility_date": "2025-10-08",
   "compatibility_flags": ["nodejs_compat"],

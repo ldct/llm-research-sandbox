@@ -32,14 +32,17 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    // Route POST / and GET /health to the container
-    if (
-      (url.pathname === "/" && request.method === "POST") ||
-      (url.pathname === "/health" && request.method === "GET")
-    ) {
+    if (url.pathname === "/lean-4-24-0" && request.method === "POST") {
       const id = env.LEAN_CONTAINER.idFromName("singleton");
       const stub = env.LEAN_CONTAINER.get(id);
-      return stub.fetch(request);
+      // Rewrite path to / for the container's Python server
+      return stub.fetch(new Request(new URL("/", url), request));
+    }
+
+    if (url.pathname === "/lean-4-24-0/health" && request.method === "GET") {
+      const id = env.LEAN_CONTAINER.idFromName("singleton");
+      const stub = env.LEAN_CONTAINER.get(id);
+      return stub.fetch(new Request(new URL("/health", url), request));
     }
 
     return new Response("Not Found", { status: 404 });
