@@ -8,7 +8,10 @@ const VERSIONS = [
   { id: 'lean-4-28-0-rc1', label: '4.28-rc1' },
 ];
 
-const DEFAULT_CODE = `-- Welcome to Lean 4 Editor
+const EXAMPLES = [
+  {
+    name: 'Hello Lean',
+    code: `-- Welcome to Lean 4 Editor
 -- Press Ctrl+Enter or click ▶ Run to evaluate
 
 #eval "Hello, Lean! 🎉"
@@ -19,7 +22,45 @@ const DEFAULT_CODE = `-- Welcome to Lean 4 Editor
 
 theorem add_zero (n : Nat) : n + 0 = n := by
   simp
-`;
+`,
+  },
+  {
+    name: 'Lists & Tactics',
+    code: `-- Working with lists and proving properties
+
+def myReverse : List α → List α
+  | [] => []
+  | x :: xs => myReverse xs ++ [x]
+
+#eval myReverse [1, 2, 3, 4, 5]
+
+#eval [1, 2, 3].map (· * 10)
+
+#eval [1, 2, 3, 4, 5].filter (· > 3)
+
+-- A simple proof about natural numbers
+theorem add_comm_example (a b : Nat) : a + b = b + a := by
+  omega
+
+-- Prove that reversing a singleton is itself
+theorem reverse_singleton (x : α) : myReverse [x] = [x] := by
+  simp [myReverse]
+
+-- Dependent types: vector with length
+inductive Vec (α : Type) : Nat → Type where
+  | nil  : Vec α 0
+  | cons : α → Vec α n → Vec α (n + 1)
+
+def Vec.head : Vec α (n + 1) → α
+  | .cons x _ => x
+
+#check Vec.head
+#check @Vec.cons
+`,
+  },
+];
+
+const DEFAULT_CODE = EXAMPLES[0].code;
 
 // ── State ─────────────────────────────────────────────
 let currentVersion = localStorage.getItem('lean-version') || 'lean-4-27-0';
@@ -194,6 +235,31 @@ function jumpToLine(line) {
 function escHtml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+
+// ── Examples menu ──────────────────────────────────────
+const examplesBtn = document.getElementById('examples-btn');
+const examplesMenu = document.getElementById('examples-menu');
+
+EXAMPLES.forEach((ex, i) => {
+  const item = document.createElement('button');
+  item.textContent = ex.name;
+  item.addEventListener('click', () => {
+    textarea.value = ex.code;
+    examplesMenu.classList.add('hidden');
+  });
+  examplesMenu.appendChild(item);
+});
+
+examplesBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  examplesMenu.classList.toggle('hidden');
+});
+
+document.addEventListener('click', () => {
+  examplesMenu.classList.add('hidden');
+});
+
+examplesMenu.addEventListener('click', (e) => e.stopPropagation());
 
 // ── Resizable divider ─────────────────────────────────
 let dragging = false;
