@@ -6,7 +6,7 @@ interface Env {
 }
 
 const CONTAINER_PORT = 8000;
-const SLEEP_MS = 2 * 60 * 1000; // 2 minutes
+const SLEEP_MS = 10 * 1000; // 10 seconds
 
 class BaseLeanContainer extends DurableObject {
   private ensureRunning(): void {
