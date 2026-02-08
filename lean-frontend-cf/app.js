@@ -38,24 +38,32 @@ def myReverse : List α → List α
 
 #eval [1, 2, 3, 4, 5].filter (· > 3)
 
--- A simple proof about natural numbers
-theorem add_comm_example (a b : Nat) : a + b = b + a := by
-  omega
-
--- Prove that reversing a singleton is itself
+-- Reversing a singleton is itself
 theorem reverse_singleton (x : α) : myReverse [x] = [x] := by
   simp [myReverse]
 
--- Dependent types: vector with length
-inductive Vec (α : Type) : Nat → Type where
-  | nil  : Vec α 0
-  | cons : α → Vec α n → Vec α (n + 1)
+-- Reverse distributes over append (reversed)
+theorem reverse_append (xs ys : List α) :
+    myReverse (xs ++ ys) = myReverse ys ++ myReverse xs := by
+  induction xs with
+  | nil => simp [myReverse]
+  | cons x xs ih => simp [myReverse, ih, List.append_assoc]
 
-def Vec.head : Vec α (n + 1) → α
-  | .cons x _ => x
+-- Reverse is an involution
+theorem reverse_reverse (xs : List α) :
+    myReverse (myReverse xs) = xs := by
+  induction xs with
+  | nil => rfl
+  | cons x xs ih => simp [myReverse, reverse_append, ih]
 
-#check Vec.head
-#check @Vec.cons
+-- Length is preserved by reverse
+theorem reverse_length (xs : List α) :
+    (myReverse xs).length = xs.length := by
+  induction xs with
+  | nil => rfl
+  | cons x xs ih => simp [myReverse, ih]
+
+#eval myReverse (myReverse [1, 2, 3, 4, 5])
 `,
   },
 ];
