@@ -66,6 +66,164 @@ theorem reverse_length (xs : List α) :
 #eval myReverse (myReverse [1, 2, 3, 4, 5])
 `,
   },
+  {
+    name: 'NNG Challenges',
+    code: `-- Natural Number Game challenges (proofs left as sorry)
+-- From github.com/chasenorman/Canonical
+-- Try replacing sorry with actual proofs!
+
+-- TUTORIAL WORLD
+
+example (x q : Nat) : (37 * x) + q = (37 * x) + q := by sorry
+
+example (x y : Nat) (h : y = x + 7) : 2 * y = 2 * (x + 7) := by sorry
+
+example : 2 = Nat.succ (Nat.succ 0) := by sorry
+
+example (a b c : Nat) : a + (b + 0) + (c + 0) = a + b + c := by sorry
+
+example (n : Nat) : Nat.succ n = n + 1 := by sorry
+
+example : 2 + 2 = 4 := by sorry
+
+-- ADDITION WORLD
+
+theorem zero_add (n : Nat) : 0 + n = n := by sorry
+
+theorem succ_add (a b : Nat) : a.succ + b = (a + b).succ := by sorry
+
+theorem add_comm (a b : Nat) : a + b = b + a := by sorry
+
+theorem add_assoc (a b c : Nat) : a + b + c = a + (b + c) := by sorry
+
+theorem add_right_comm (a b c : Nat) : a + b + c = a + c + b := by sorry
+
+-- IMPLICATION WORLD
+
+example (x y z : Nat) (h1 : x + y = 37) (h2 : 3 * x + z = 42) : x + y = 37 := by sorry
+
+example (x y : Nat) (h : 0 + x = 0 + y + 2) : x = y + 2 := by sorry
+
+example (x y : Nat) (h1 : x = 37) (h2 : x = 37 \u2192 y = 42) : y = 42 := by sorry
+
+example (x : Nat) (h : x + 1 = 4) : x = 3 := by sorry
+
+example (x : Nat) : x = 37 \u2192 x = 37 := by sorry
+
+example (x y : Nat) : x + 1 = y + 1 \u2192 x = y := by sorry
+
+example (x y : Nat) (h1 : x = y) (h2 : x \u2260 y) : False := by sorry
+
+example : 0 \u2260 1 := by sorry
+
+example : 1 \u2260 0 := by sorry
+
+example : 2 + 2 \u2260 5 := by sorry
+
+-- MULTIPLICATION WORLD
+
+theorem mul_one (m : Nat) : m * 1 = m := by sorry
+
+theorem zero_mul (m : Nat) : 0 * m = 0 := by sorry
+
+theorem succ_mul (a b : Nat) : a.succ * b = a * b + b := by sorry
+
+theorem mul_comm (a b : Nat) : a * b = b * a := by sorry
+
+theorem one_mul (m : Nat) : 1 * m = m := by sorry
+
+theorem two_mul (m : Nat) : 2 * m = m + m := by sorry
+
+theorem mul_add (a b c : Nat) : a * (b + c) = a * b + a * c := by sorry
+
+theorem add_mul (a b c : Nat) : (a + b) * c = a * c + b * c := by sorry
+
+theorem mul_assoc (a b c : Nat) : a * b * c = a * (b * c) := by sorry
+
+-- ALGORITHM WORLD
+
+theorem add_left_comm (a b c : Nat) : a + (b + c) = b + (a + c) := by sorry
+
+example (a b c d : Nat) : (a + b) + (c + d) = ((a + c) + d) + b := by sorry
+
+example (a b c d e f g h : Nat) :
+    (d + f) + (h + (a + c)) + (g + e + b) = a + b + c + d + e + f + g + h := sorry
+
+-- ADVANCED ADDITION WORLD
+
+theorem add_right_cancel (a b n : Nat) : a + n = b + n \u2192 a = b := by sorry
+
+theorem add_left_cancel (a b n : Nat) : n + a = n + b \u2192 a = b := by sorry
+
+theorem add_left_eq_self (x y : Nat) : x + y = y \u2192 x = 0 := by sorry
+
+theorem add_right_eq_self (x y : Nat) : x + y = x \u2192 y = 0 := by sorry
+
+theorem add_right_eq_zero (a b : Nat) : a + b = 0 \u2192 a = 0 := by sorry
+
+theorem add_left_eq_zero (a b : Nat) : a + b = 0 \u2192 b = 0 := by sorry
+
+-- POWER WORLD
+
+example : 0^0 = 1 := by sorry
+
+example (n : Nat) : 0^n.succ = 0 := by sorry
+
+theorem pow_one (a : Nat) : a^1 = a := by sorry
+
+theorem one_pow (n : Nat) : 1^n = 1 := sorry
+
+theorem pow_two (a : Nat) : a^2 = a * a := by sorry
+
+theorem pow_add (a m n : Nat) : a^(m + n) = a^m * a^n := by sorry
+
+theorem mul_pow (a b n : Nat) : (a * b)^n = a^n * b^n := sorry
+
+theorem pow_pow (a m n : Nat) : (a^m)^n = a^(m * n) := by sorry
+
+theorem add_sq (a b : Nat) : (a + b) ^ 2 = a ^ 2 + b ^ 2 + 2 * a * b := sorry
+
+-- LEQ WORLD
+
+example (x : Nat) : x \u2264 x := by sorry
+
+theorem zero_le (x : Nat) : 0 \u2264 x := by sorry
+
+example (x : Nat) : x \u2264 x.succ := by sorry
+
+theorem le_trans (x y z : Nat) : x \u2264 y \u2192 y \u2264 z \u2192 x \u2264 z := by sorry
+
+theorem le_zero (x : Nat) : x \u2264 0 \u2192 x = 0 := by sorry
+
+theorem le_antisymm (x y : Nat) : x \u2264 y \u2192 y \u2264 x \u2192 x = y := sorry
+
+example (x y : Nat) (h : x = 37 \u2228 y = 42) : y = 42 \u2228 x = 37 := by sorry
+
+theorem le_total (x y : Nat) : x \u2264 y \u2228 y \u2264 x := sorry
+
+-- ADVANCED MULTIPLICATION WORLD
+
+theorem mul_le_mul_right (a b t : Nat) (h : a \u2264 b) : a * t \u2264 b * t := by sorry
+
+theorem mul_left_ne_zero (a b : Nat) (h : a * b \u2260 0) : b \u2260 0 := by sorry
+
+theorem eq_succ_of_ne_zero (a : Nat) (ha : a \u2260 0) : \u2203 n, a = Nat.succ n := by sorry
+
+theorem one_le_of_ne_zero (a : Nat) (ha : a \u2260 0) : 1 \u2264 a := by sorry
+
+theorem le_mul_right (a b : Nat) (h : a * b \u2260 0) : a \u2264 (a * b) := sorry
+
+theorem mul_right_eq_one (x y : Nat) (h : x * y = 1) : x = 1 := sorry
+
+theorem mul_ne_zero (a b : Nat) (ha : a \u2260 0) (hb : b \u2260 0) : a * b \u2260 0 := sorry
+
+theorem mul_eq_zero (a b : Nat) (h : a * b = 0) : a = 0 \u2228 b = 0 := by sorry
+
+theorem mul_left_cancel (a b c : Nat) (ha : a \u2260 0) (h : a * b = a * c) : b = c := sorry
+
+theorem mul_right_eq_self (a b : Nat) (ha : a \u2260 0) (h : a * b = a) : b = 1 := by sorry
+`,
+  },
 ];
 
 const DEFAULT_CODE = EXAMPLES[0].code;
