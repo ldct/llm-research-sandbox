@@ -11,6 +11,7 @@ const VERSIONS = [
   { id: 'lean-4-26-0', label: '4.26' },
   { id: 'lean-4-27-0', label: '4.27' },
   { id: 'lean-4-28-0-rc1', label: '4.28-rc1' },
+  { id: 'mathlib-repl-4-27-0', label: 'Mathlib 4.27', repl: true },
 ];
 
 const EXAMPLES = [
@@ -25,7 +26,7 @@ const EXAMPLES = [
 
 #check Nat.add_comm
 
-theorem add_zero (n : Nat) : n + 0 = n := by
+theorem my_add_zero (n : Nat) : n + 0 = n := by
   simp
 `,
   },
@@ -231,11 +232,25 @@ theorem mul_right_eq_self (a b : Nat) (ha : a \u2260 0) (h : a * b = a) : b = 1 
   },
 ];
 
+const MATHLIB_EXAMPLE = {
+  name: 'Mathlib',
+  code: `-- Mathlib is pre-loaded — no import needed!
+#check Real.sqrt
+example : (2 : ℚ) + 2 = 4 := by norm_num
+#eval (10 : Nat).factorial
+`,
+  version: 'mathlib-repl-4-27-0',
+};
+
+EXAMPLES.push(MATHLIB_EXAMPLE);
+
 const DEFAULT_CODE = EXAMPLES[0].code;
 
 // ── State ─────────────────────────────────────────────
 let currentVersion = localStorage.getItem('lean-version') || 'lean-4-27-0';
 let running = false;
+let healthPollTimer = null;
+let mathlibReady = false;
 
 // ── DOM refs ──────────────────────────────────────────
 const editorPane = document.getElementById('editor-pane');
@@ -276,6 +291,11 @@ const editorView = new EditorView({
 });
 
 // ── Version toggle ────────────────────────────────────
+function isRepl(v) {
+  const obj = VERSIONS.find(x => x.id === v);
+  return obj && obj.repl;
+}
+
 function setVersion(v) {
   currentVersion = v;
   localStorage.setItem('lean-version', v);
@@ -283,7 +303,20 @@ function setVersion(v) {
     btn.classList.toggle('active', btn.dataset.version === v);
   });
   const vObj = VERSIONS.find(x => x.id === v);
-  statusVersion.textContent = `Lean ${vObj ? vObj.label : v}`;
+  if (vObj && vObj.repl) {
+    statusVersion.textContent = vObj.label;
+  } else {
+    statusVersion.textContent = `Lean ${vObj ? vObj.label : v}`;
+  }
+
+  // Start/stop health polling for REPL versions
+  stopHealthPoll();
+  if (isRepl(v)) {
+    mathlibReady = false;
+    startHealthPoll();
+  } else {
+    removeBanner();
+  }
 }
 
 document.getElementById('version-toggle').addEventListener('click', (e) => {
@@ -292,6 +325,75 @@ document.getElementById('version-toggle').addEventListener('click', (e) => {
 });
 
 setVersion(currentVersion);
+
+// ── Health polling for Mathlib REPL ─────────────────
+function stopHealthPoll() {
+  if (healthPollTimer) {
+    clearInterval(healthPollTimer);
+    healthPollTimer = null;
+  }
+}
+
+function removeBanner() {
+  const existing = document.getElementById('mathlib-banner');
+  if (existing) existing.remove();
+}
+
+function showBanner(text, type) {
+  let banner = document.getElementById('mathlib-banner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id = 'mathlib-banner';
+    outputContent.prepend(banner);
+  }
+  banner.className = `mathlib-banner ${type}`;
+  if (type === 'loading') {
+    banner.innerHTML = `<div class="pulse-bar"></div><span>${escHtml(text)}</span>`;
+  } else {
+    banner.innerHTML = `<span>${escHtml(text)}</span>`;
+  }
+}
+
+async function checkHealth() {
+  try {
+    const resp = await fetch(`${API_BASE}/${currentVersion}/health`);
+    if (!resp.ok) {
+      if (resp.status === 503) {
+        showBanner('⏳ Starting Mathlib container… (this takes ~2-3 min on cold start)', 'loading');
+        statusState.textContent = 'Starting container…';
+      } else {
+        showBanner(`Health check error: HTTP ${resp.status}`, 'error');
+      }
+      return;
+    }
+    const data = await resp.json();
+    if (data.ready) {
+      mathlibReady = true;
+      stopHealthPoll();
+      showBanner('✓ Mathlib loaded', 'ready');
+      statusState.textContent = 'Ready';
+      // Fade out after 3s
+      setTimeout(() => {
+        const b = document.getElementById('mathlib-banner');
+        if (b && b.classList.contains('ready')) {
+          b.style.animation = 'bannerFadeOut 0.5s ease forwards';
+          setTimeout(() => b.remove(), 500);
+        }
+      }, 3000);
+    } else {
+      const status = data.status || 'loading';
+      showBanner(`⏳ Loading Mathlib… (${status}) — this takes ~60s on first request`, 'loading');
+      statusState.textContent = 'Loading Mathlib…';
+    }
+  } catch (err) {
+    showBanner(`Health check failed: ${err.message}`, 'error');
+  }
+}
+
+function startHealthPoll() {
+  checkHealth();
+  healthPollTimer = setInterval(checkHealth, 5000);
+}
 
 // ── Run code ──────────────────────────────────────────
 async function runCode() {
@@ -309,7 +411,11 @@ async function runCode() {
   document.body.classList.add('running');
   statusState.textContent = 'Running…';
   statusElapsed.textContent = '';
-  outputContent.innerHTML = '<div class="output-placeholder">Evaluating…</div>';
+  if (isRepl(currentVersion) && !mathlibReady) {
+    outputContent.innerHTML = '<div class="output-placeholder">Waiting for Mathlib to load…</div>';
+  } else {
+    outputContent.innerHTML = '<div class="output-placeholder">Evaluating…</div>';
+  }
 
   const t0 = performance.now();
 
@@ -326,7 +432,12 @@ async function runCode() {
     }
 
     const data = await resp.json();
-    renderOutput(data, wallMs);
+    // Detect REPL response by presence of 'messages' key
+    if ('messages' in data) {
+      renderReplOutput(data, wallMs);
+    } else {
+      renderOutput(data, wallMs);
+    }
     statusState.textContent = data.ok ? 'Success' : 'Error';
     statusElapsed.textContent = `${data.elapsed.toFixed(2)}s (wall: ${(wallMs / 1000).toFixed(2)}s)`;
   } catch (err) {
@@ -389,6 +500,72 @@ function renderOutput(data, wallMs) {
   });
 }
 
+function renderReplOutput(data, wallMs) {
+  let html = '';
+  const messages = data.messages || [];
+  const sorries = data.sorries || [];
+
+  if (messages.length > 0) {
+    html += '<div class="repl-messages">';
+    for (const msg of messages) {
+      const sev = msg.severity || 'info';
+      const sevClass = sev === 'error' ? 'severity-error'
+        : sev === 'warning' ? 'severity-warning'
+        : 'severity-info';
+      const pos = msg.pos ? `${msg.pos.line}:${msg.pos.column}` : '';
+      html += `<div class="repl-msg ${sevClass}">`;
+      html += `<div class="repl-msg-header">`;
+      if (pos) {
+        html += `<span class="msg-pos" data-line="${msg.pos.line}" data-col="${msg.pos.column}">${pos}</span>`;
+      }
+      html += `<span class="msg-severity">${escHtml(sev)}</span>`;
+      html += `</div>`;
+      html += `<div class="repl-msg-body">${escHtml(msg.data || '')}</div>`;
+      html += `</div>`;
+    }
+    html += '</div>';
+  }
+
+  if (sorries.length > 0) {
+    html += '<div class="repl-sorries">';
+    html += '<div class="repl-sorries-label">Sorries (unsolved goals)</div>';
+    for (const sorry of sorries) {
+      const pos = sorry.pos ? `${sorry.pos.line}:${sorry.pos.column}` : '';
+      html += `<div class="repl-sorry">`;
+      html += `<div class="repl-sorry-header">`;
+      if (pos) {
+        html += `sorry at <span class="msg-pos" data-line="${sorry.pos.line}" data-col="${sorry.pos.column}">${pos}</span>`;
+      }
+      html += `</div>`;
+      html += `<div class="repl-sorry-body">${escHtml(sorry.goal || sorry.data || '')}</div>`;
+      html += `</div>`;
+    }
+    html += '</div>';
+  }
+
+  if (messages.length === 0 && sorries.length === 0) {
+    html += '<div class="output-placeholder">No output.</div>';
+  }
+
+  const elapsed = typeof data.elapsed === 'number' ? data.elapsed.toFixed(2) : '?';
+  html += `
+    <div class="output-meta">
+      <span class="${data.ok ? 'exit-ok' : 'exit-fail'}">${data.ok ? 'ok' : 'error'}</span>
+      <span>repl: ${elapsed}s</span>
+      <span>wall: ${(wallMs / 1000).toFixed(2)}s</span>
+    </div>`;
+
+  outputContent.innerHTML = html;
+
+  // Attach click handlers for position links
+  outputContent.querySelectorAll('.msg-pos').forEach(el => {
+    el.addEventListener('click', () => {
+      const line = parseInt(el.dataset.line, 10);
+      jumpToLine(line);
+    });
+  });
+}
+
 function formatOutputText(text) {
   const escaped = escHtml(text);
   return escaped.replace(
@@ -423,6 +600,9 @@ EXAMPLES.forEach((ex, i) => {
     editorView.dispatch({
       changes: { from: 0, to: editorView.state.doc.length, insert: ex.code },
     });
+    if (ex.version) {
+      setVersion(ex.version);
+    }
     examplesMenu.classList.add('hidden');
   });
   examplesMenu.appendChild(item);

@@ -89,6 +89,18 @@ html, body {
   font-weight: 600;
 }
 
+.version-toggle button.mathlib-btn.active {
+  background: #7c3aed;
+}
+
+.version-separator {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.25);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
 .toolbar-right {
   display: flex;
   align-items: center;
@@ -347,4 +359,169 @@ html, body {
 /* Loading state on run */
 .running #status-state {
   color: var(--warning);
+}
+
+/* Mathlib loading banner */
+.mathlib-banner {
+  padding: 10px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: bannerFadeIn 0.3s ease;
+}
+
+.mathlib-banner.loading {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--warning);
+}
+
+.mathlib-banner.ready {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--success);
+}
+
+.mathlib-banner.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--error);
+}
+
+.mathlib-banner .pulse-bar {
+  width: 60px;
+  height: 4px;
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mathlib-banner .pulse-bar::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: var(--warning);
+  border-radius: 2px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
+
+@keyframes bannerFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bannerFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* REPL message output */
+.repl-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repl-msg {
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+}
+
+.repl-msg.severity-info    { border-left-color: var(--success); }
+.repl-msg.severity-warning { border-left-color: var(--warning); }
+.repl-msg.severity-error   { border-left-color: var(--error); }
+
+.repl-msg-header {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repl-msg.severity-info    .repl-msg-header { color: var(--success); }
+.repl-msg.severity-warning .repl-msg-header { color: var(--warning); }
+.repl-msg.severity-error   .repl-msg-header { color: var(--error); }
+
+.repl-msg-header .msg-pos {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.repl-msg-header .msg-pos:hover {
+  opacity: 0.7;
+}
+
+.repl-msg-header .msg-severity {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.repl-msg-body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 8px 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Sorries section */
+.repl-sorries {
+  margin-top: 12px;
+}
+
+.repl-sorries-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 0;
+  color: var(--warning);
+}
+
+.repl-sorry {
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg);
+  border-left: 3px solid var(--warning);
+  margin-bottom: 8px;
+}
+
+.repl-sorry-header {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  color: var(--warning);
+}
+
+.repl-sorry-header .msg-pos {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.repl-sorry-header .msg-pos:hover {
+  opacity: 0.7;
+}
+
+.repl-sorry-body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 8px 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
