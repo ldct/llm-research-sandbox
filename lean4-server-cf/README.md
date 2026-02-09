@@ -218,26 +218,108 @@ All responses include `Access-Control-Allow-Origin: *` headers. The Worker handl
 
 ## Docker Images
 
-| Image | Base | Size (compressed) | Registry |
-|-------|------|--------------------|----------|
-| `lean4-server:v4.X.Y` | `ghcr.io/ldct/lean4:v4.X.Y` | ~250MB | Cloudflare + GHCR |
-| `mathlib4-server:v4.27.0` | `ghcr.io/ldct/mathlib4:v4.27.0` | ~3.3GB | Cloudflare |
-| `mathlib4-repl:v4.27.0` | `ghcr.io/ldct/mathlib4:v4.27.0` | ~3.3GB | Cloudflare |
+All Dockerfiles are in `../lean4-dockerfiles/`.
 
-Dockerfiles are in `../lean4-dockerfiles/`.
+### Image layer chain
 
-## Deploying
+```
+ubuntu:noble
+  └─ ghcr.io/ldct/lean4:v4.X.Y          Layer 1: base Lean image
+       │   (Dockerfile.lean4-27.0 etc.)
+       │   Installs elan + Lean toolchain, runs smoke tests
+       │
+       ├─ lean4-server:v4.X.Y            Layer 2a: plain Lean server
+       │   (Dockerfile.lean4-server)
+       │   Adds python3 + lean_server.py
+       │
+       └─ ghcr.io/ldct/mathlib4:v4.X.Y   Layer 2b: base Mathlib image
+            │   (Dockerfile.mathlib4-27 etc.)
+            │   Creates lakefile.toml requiring mathlib4,
+            │   runs lake update + lake exe cache get + lake build
+            │   (pre-compiles all oleans — ~10.1GB uncompressed)
+            │
+            ├─ mathlib4-server:v4.27.0    Layer 3a: Mathlib batch server
+            │   (Dockerfile.mathlib4-server)
+            │   Adds python3 + mathlib_server.py
+            │
+            └─ mathlib4-repl:v4.27.0      Layer 3b: Mathlib REPL server
+                (Dockerfile.mathlib4-repl)
+                Adds python3 + git, clones & builds lean-repl,
+                copies repl_server.py
+```
+
+### Image sizes
+
+| Image | Size (compressed) | Size (uncompressed) | Registry |
+|-------|--------------------|---------------------|----------|
+| `lean4:v4.X.Y` (base) | ~250MB | ~800MB | GHCR |
+| `lean4-server:v4.X.Y` | ~250MB | ~850MB | Cloudflare + GHCR |
+| `mathlib4:v4.X.Y` (base) | ~3.3GB | ~10.1GB | GHCR |
+| `mathlib4-server:v4.27.0` | ~3.3GB | ~10.2GB | Cloudflare |
+| `mathlib4-repl:v4.27.0` | ~3.3GB | ~10.2GB | Cloudflare |
+
+Mathlib images are large because they include ~5.2GB of pre-compiled build artifacts
+in `/project/.lake/` (oleans, ileans, private, ir, server, trace, hash files for ~7.5k
+Mathlib modules).
+
+### Server scripts
+
+| Script | Invocation | Description |
+|--------|------------|-------------|
+| `lean_server.py` | `lean --stdin` | Pipes POST body to Lean's stdin, returns stdout/stderr |
+| `mathlib_server.py` | `lake env lean <file>` | Writes code to `/project/MathProject.lean`, runs via lake so Mathlib imports resolve |
+| `repl_server.py` | `lake env repl` (persistent) | Spawns lean-repl once, sends `import Mathlib` at startup, then sends each request as `{"cmd": "<code>", "env": 0}` over stdin |
+
+## Building & Deploying
+
+### Building base images (pushed to GHCR)
 
 ```bash
-# Push a container image
-npx wrangler containers push <local-image:tag>
+cd ../lean4-dockerfiles
 
-# Deploy the Worker
+# Build base Lean image
+docker build -f Dockerfile.lean4-27.0 -t ghcr.io/ldct/lean4:v4.27.0 .
+docker push ghcr.io/ldct/lean4:v4.27.0
+
+# Build base Mathlib image (slow — downloads + compiles all of Mathlib)
+docker build -f Dockerfile.mathlib4-27 -t ghcr.io/ldct/mathlib4:v4.27.0 .
+docker push ghcr.io/ldct/mathlib4:v4.27.0
+```
+
+### Building server images (pushed to Cloudflare)
+
+```bash
+cd ../lean4-dockerfiles
+
+# Build server image (uses base from GHCR)
+docker build -f Dockerfile.mathlib4-repl -t mathlib4-repl:v4.27.0 .
+
+# Push to Cloudflare container registry (must be run from the worker project dir)
+cd ../lean4-server-cf
+npx wrangler containers push mathlib4-repl:v4.27.0
+```
+
+### Deploying the Worker
+
+```bash
+cd lean4-server-cf
+
+# Deploy Worker + container config
 npx wrangler deploy
 
 # Check container status
 npx wrangler containers list
 npx wrangler containers info <ID>
 ```
+
+### Adding a new version
+
+1. Create `Dockerfile.lean4-X.Y` (copy an existing one, change the version)
+2. Build & push the base image to GHCR
+3. Build the server image (`Dockerfile.lean4-server` with updated `FROM`)
+4. Push to Cloudflare: `npx wrangler containers push lean4-server:v4.X.Y`
+5. Add container + binding + migration in `wrangler.jsonc`
+6. Add route entries in `src/index.ts`
+7. `npx wrangler deploy`
 
 Authentication is via `CLOUDFLARE_API_KEY` and `CLOUDFLARE_EMAIL` in `.env`.
