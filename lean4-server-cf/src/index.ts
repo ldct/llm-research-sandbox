@@ -32,7 +32,7 @@ export class Mathlib4v27Container extends BaseMathlib4Container {}
 
 class BaseMathlib4ReplContainer extends Container<Env> {
   defaultPort = 8000;
-  sleepAfter = "300s";
+  sleepAfter = "60s";
   enableInternet = false;
 }
 
