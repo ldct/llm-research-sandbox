@@ -1,0 +1,14 @@
+FROM ghcr.io/ldct/mathlib4:v4.27.0
+
+RUN apt-get update && apt-get install -y python3 git && rm -rf /var/lib/apt/lists/*
+
+# Clone and build lean-repl (matching Lean version)
+RUN cd /opt && \
+    git clone --branch v4.27.0 --depth 1 \
+      https://github.com/leanprover-community/repl.git && \
+    cd repl && lake build repl
+
+COPY repl_server.py /repl_server.py
+
+EXPOSE 8000
+CMD ["python3", "/repl_server.py"]

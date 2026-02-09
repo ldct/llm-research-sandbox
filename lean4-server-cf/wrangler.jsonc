@@ -40,6 +40,12 @@
       "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/mathlib4-server:v4.27.0",
       "instance_type": "standard-3",
       "max_instances": 5
+    },
+    {
+      "class_name": "Mathlib4v27ReplContainer",
+      "image": "registry.cloudflare.com/d130938d761b67012e1f4df74bd23241/mathlib4-repl:v4.27.0",
+      "instance_type": "standard-3",
+      "max_instances": 5
     }
   ],
   "durable_objects": {
@@ -67,6 +73,10 @@
       {
         "class_name": "Mathlib4v27Container",
         "name": "MATHLIB_4_27_0"
+      },
+      {
+        "class_name": "Mathlib4v27ReplContainer",
+        "name": "MATHLIB_REPL_4_27_0"
       }
     ]
   },
@@ -91,6 +101,10 @@
     {
       "new_sqlite_classes": ["Mathlib4v27Container"],
       "tag": "v5"
+    },
+    {
+      "new_sqlite_classes": ["Mathlib4v27ReplContainer"],
+      "tag": "v6"
     }
   ]
 }
