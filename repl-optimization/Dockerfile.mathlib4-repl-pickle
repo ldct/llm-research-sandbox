@@ -1,0 +1,14 @@
+FROM mathlib4-repl:v4.27.0
+
+# Create data directory for pickle
+RUN mkdir -p /data
+
+# Copy scripts
+COPY generate_pickle.py /generate_pickle.py
+COPY repl_server_pickle.py /repl_server_pickle.py
+
+# Generate the pickle at build time (this takes ~78s for the import + pickle time)
+RUN cd /project && python3 /generate_pickle.py
+
+EXPOSE 8000
+CMD ["python3", "/repl_server_pickle.py"]
