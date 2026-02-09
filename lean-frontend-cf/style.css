@@ -361,6 +361,26 @@ html, body {
   color: var(--warning);
 }
 
+/* Mobile */
+@media (max-width: 700px) {
+  #toolbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .toolbar-left .logo { font-size: 13px; }
+  .version-toggle { flex-wrap: wrap; }
+  .version-toggle button { padding: 5px 8px; font-size: 11px; }
+  #main { flex-direction: column; height: auto; flex: 1; }
+  #editor-pane { flex: 0 0 auto; height: 40vh; min-width: 0; }
+  #output-pane { flex: 1 1 auto; min-width: 0; min-height: 0; }
+  #divider { width: 100%; height: 5px; cursor: row-resize; }
+  #statusbar { font-size: 11px; gap: 10px; padding: 0 10px; }
+  #statusbar .status-shortcut { display: none; }
+  body { display: flex; flex-direction: column; }
+}
+
 /* Mathlib loading banner */
 .mathlib-banner {
   padding: 10px 16px;
