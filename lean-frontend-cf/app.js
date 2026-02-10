@@ -270,6 +270,12 @@ const FILE_EXAMPLES = [
     desc: 'Competition problem formalizations (1.2MB)',
     version: 'mathlib-repl-4-27-0',
   },
+  {
+    name: 'Numbers: Integers',
+    file: 'numbers-integers.lean',
+    desc: 'Building ℤ from scratch (Brasca) — quotient construction, ring & order (520 lines)',
+    version: 'mathlib-repl-4-27-0',
+  },
 ];
 
 // Mark where file examples start for menu separator
