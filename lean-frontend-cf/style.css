@@ -165,6 +165,21 @@ html, body {
   border-top: 1px solid var(--border);
 }
 
+.examples-menu .menu-separator {
+  border-top: 2px solid var(--accent);
+  margin: 4px 12px;
+  opacity: 0.4;
+}
+
+.examples-menu .menu-label {
+  padding: 6px 16px 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--comment);
+  font-family: var(--font-sans);
+}
+
 /* Run button */
 #run-btn {
   display: flex;

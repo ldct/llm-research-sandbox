@@ -239,6 +239,43 @@ example : (2 : ℚ) + 2 = 4 := by norm_num
 
 EXAMPLES.push(MATHLIB_EXAMPLE);
 
+const FILE_EXAMPLES = [
+  {
+    name: 'MIL Solutions',
+    file: 'mil-all.lean',
+    desc: 'Mathematics in Lean — 489 solved exercises (4794 lines)',
+    version: 'mathlib-repl-4-27-0',
+  },
+  {
+    name: 'FM 2024 Solutions',
+    file: 'fm-all.lean',
+    desc: 'Formalising Mathematics 2024 (Buzzard) — solutions (6216 lines)',
+    version: 'mathlib-repl-4-27-0',
+  },
+  {
+    name: 'FM 2026 Solutions',
+    file: 'fm2026-all.lean',
+    desc: 'Formalising Mathematics 2026 (Buzzard) — solutions',
+    version: 'mathlib-repl-4-27-0',
+  },
+  {
+    name: 'HTPI Exercises',
+    file: 'htpi-all.lean',
+    desc: 'How to Prove It with Lean (Velleman) — 248 exercises, Chapters 3-8',
+    version: 'mathlib-repl-4-27-0',
+  },
+  {
+    name: 'Compfiles',
+    file: 'compfiles-all.lean',
+    desc: 'Competition problem formalizations (1.2MB)',
+    version: 'mathlib-repl-4-27-0',
+  },
+];
+
+// Mark where file examples start for menu separator
+const FILE_EXAMPLES_START = EXAMPLES.length;
+FILE_EXAMPLES.forEach(ex => EXAMPLES.push(ex));
+
 const DEFAULT_CODE = EXAMPLES[0].code;
 
 // ── State ─────────────────────────────────────────────
@@ -589,16 +626,41 @@ const examplesBtn = document.getElementById('examples-btn');
 const examplesMenu = document.getElementById('examples-menu');
 
 EXAMPLES.forEach((ex, i) => {
+  if (i === FILE_EXAMPLES_START) {
+    const sep = document.createElement('div');
+    sep.className = 'menu-separator';
+    examplesMenu.appendChild(sep);
+    const label = document.createElement('div');
+    label.className = 'menu-label';
+    label.textContent = 'Textbook files';
+    examplesMenu.appendChild(label);
+  }
   const item = document.createElement('button');
   item.textContent = ex.name;
-  item.addEventListener('click', () => {
-    editorView.dispatch({
-      changes: { from: 0, to: editorView.state.doc.length, insert: ex.code },
-    });
-    if (ex.version) {
-      setVersion(ex.version);
-    }
+  if (ex.desc) item.title = ex.desc;
+  item.addEventListener('click', async () => {
     examplesMenu.classList.add('hidden');
+    if (ex.version) setVersion(ex.version);
+    if (ex.file) {
+      editorView.dispatch({
+        changes: { from: 0, to: editorView.state.doc.length, insert: `-- Loading ${ex.file}…` },
+      });
+      try {
+        const resp = await fetch(ex.file);
+        const code = await resp.text();
+        editorView.dispatch({
+          changes: { from: 0, to: editorView.state.doc.length, insert: code },
+        });
+      } catch (err) {
+        editorView.dispatch({
+          changes: { from: 0, to: editorView.state.doc.length, insert: `-- Failed to load ${ex.file}: ${err.message}` },
+        });
+      }
+    } else {
+      editorView.dispatch({
+        changes: { from: 0, to: editorView.state.doc.length, insert: ex.code },
+      });
+    }
   });
   examplesMenu.appendChild(item);
 });
