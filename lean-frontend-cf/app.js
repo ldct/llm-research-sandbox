@@ -4,13 +4,8 @@ import {
 } from './cm-bundle.js';
 
 // ── Config ────────────────────────────────────────────
-const API_BASE = 'https://lean4-servers.xuanji.workers.dev';
+const API_BASE = 'https://euro-specs-special-visited.trycloudflare.com';
 const VERSIONS = [
-  { id: 'lean-4-24-0', label: '4.24' },
-  { id: 'lean-4-25-0', label: '4.25' },
-  { id: 'lean-4-26-0', label: '4.26' },
-  { id: 'lean-4-27-0', label: '4.27' },
-  { id: 'lean-4-28-0-rc1', label: '4.28-rc1' },
   { id: 'mathlib-repl-4-27-0', label: 'Mathlib 4.27', repl: true },
 ];
 
@@ -247,7 +242,7 @@ EXAMPLES.push(MATHLIB_EXAMPLE);
 const DEFAULT_CODE = EXAMPLES[0].code;
 
 // ── State ─────────────────────────────────────────────
-let currentVersion = localStorage.getItem('lean-version') || 'lean-4-27-0';
+let currentVersion = 'mathlib-repl-4-27-0';
 let running = false;
 let healthPollTimer = null;
 let mathlibReady = false;
@@ -270,7 +265,7 @@ const runKeymap = keymap.of([{
   run: () => { runCode(); return true; },
 }]);
 
-const editorView = new EditorView({
+const editorView = window._editorView = new EditorView({
   state: EditorState.create({
     doc: DEFAULT_CODE,
     extensions: [
@@ -356,7 +351,7 @@ function showBanner(text, type) {
 
 async function checkHealth() {
   try {
-    const resp = await fetch(`${API_BASE}/${currentVersion}/health`);
+    const resp = await fetch(`${API_BASE}/health`);
     if (!resp.ok) {
       if (resp.status === 503) {
         showBanner('⏳ Starting Mathlib container… (this takes ~2-3 min on cold start)', 'loading');
@@ -401,7 +396,7 @@ async function runCode() {
   running = true;
 
   const code = editorView.state.doc.toString();
-  const url = `${API_BASE}/${currentVersion}`;
+  const url = `${API_BASE}/`;
 
   // UI: loading
   runBtn.disabled = true;
