@@ -7035,6 +7035,8 @@ theorem Like_Exercise_3_7_5 (U : Type) (F : Set (Set U))
     (h1 : 𝒫 (⋃₀ F) ⊆ ⋃₀ {𝒫 A | A ∈ F}) :
     ∃ (A : Set U), A ∈ F ∧ ∀ (B : Set U), B ∈ F → B ⊆ A := sorry
 
+end HTPI.Exercises
+
 -- ════════════════════════════════════════════════════════════════
 -- Chapter 4: Relations (37 exercises)
 -- ════════════════════════════════════════════════════════════════
@@ -7245,6 +7247,8 @@ theorem Exercise_4_5_20c {A : Type} (R S : BinRel A)
 def equiv_mod (m x y : Int) : Prop := m ∣ (x - y)
 
 theorem Theorem_4_5_10 : ∀ (m : Int), equiv_rel (equiv_mod m) := sorry
+
+end HTPI.Exercises
 
 -- ════════════════════════════════════════════════════════════════
 -- Chapter 5: Functions (46 exercises)
@@ -7463,6 +7467,8 @@ example {A : Type} (f : A → A) (C : Set A) :
 example {A B : Type} (f : A → B) (g : B → A) (Y : Set B)
     (h1 : f ∘ g = id) (h2 : g ∘ f = id) :
     inverse_image f Y = image g Y := sorry
+
+end HTPI.Exercises
 
 -- ════════════════════════════════════════════════════════════════
 -- Chapter 6: Mathematical Induction (46 exercises)
@@ -7771,6 +7777,8 @@ theorem Exercise_6_5_14 {A : Type} (R : Set (A × A)) :
     smallestElt (sub (A × A)) (cumul_comp R)
     {S : Set (A × A) | R ⊆ S ∧ transitive (RelFromExt S)} := sorry
 
+end HTPI.Exercises
+
 -- ════════════════════════════════════════════════════════════════
 -- Chapter 7: Number Theory (47 exercises)
 -- ════════════════════════════════════════════════════════════════
@@ -7981,6 +7989,8 @@ lemma Theorem_7_2_3_Int {p : Nat} {a b : Int}
 theorem Exercise_7_5_14b (n : Nat) (b : Int)
     (h1 : prime n) (h2 : b ^ 2 ≡ 1 (MOD n)) :
     b ≡ 1 (MOD n) ∨ b ≡ -1 (MOD n) := sorry
+
+end HTPI.Exercises
 
 -- ════════════════════════════════════════════════════════════════
 -- Chapter 8: Infinite Sets (59 exercises)
@@ -8284,4 +8294,6 @@ theorem Set_Nat_to_EqRel_Nat :
 
 -- 9.
 theorem EqRel_Nat_equinum_Set_Nat : EqRel Nat ∼ Set Nat := sorry
+
+end HTPI.Exercises
 
