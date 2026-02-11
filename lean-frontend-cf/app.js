@@ -465,11 +465,14 @@ async function runCode() {
 
     const wallMs = performance.now() - t0;
 
-    if (!resp.ok) {
-      throw new Error(`HTTP ${resp.status}: ${await resp.text()}`);
-    }
+    const data = await resp.json().catch(async () => {
+      const text = await resp.text().catch(() => '');
+      throw new Error(`HTTP ${resp.status}: ${text}`);
+    });
 
-    const data = await resp.json();
+    if (!resp.ok && !('messages' in data)) {
+      throw new Error(`HTTP ${resp.status}: ${JSON.stringify(data)}`);
+    }
     // Detect REPL response by presence of 'messages' key
     if ('messages' in data) {
       renderReplOutput(data, wallMs);
