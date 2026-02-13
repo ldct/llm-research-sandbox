@@ -1,0 +1,125 @@
+Loaded 738 groups through order 81
+Scanning orders 82 to 200
+
+Order 82: 2 groups, cumulative 740 — PASS
+Order 83: 1 groups, cumulative 741 — PASS
+Order 84: 15 groups, cumulative 756 — PASS
+Order 85: 1 groups, cumulative 757 — PASS
+Order 86: 2 groups, cumulative 759 — PASS
+Order 87: 1 groups, cumulative 760 — PASS
+Order 88: 12 groups, cumulative 772 — PASS
+Order 89: 1 groups, cumulative 773 — PASS
+Order 90: 10 groups, cumulative 783 — PASS
+Order 91: 1 groups, cumulative 784 — PASS
+Order 92: 4 groups, cumulative 788 — PASS
+Order 93: 2 groups, cumulative 790 — PASS
+Order 94: 2 groups, cumulative 792 — PASS
+Order 95: 1 groups, cumulative 793 — PASS
+Order 96: 231 groups, cumulative 1024 — COLLISION (4 within-order)
+Order 97: 1 groups, cumulative 1025 — PASS
+Order 98: 5 groups, cumulative 1030 — PASS
+Order 99: 2 groups, cumulative 1032 — PASS
+Order 100: 16 groups, cumulative 1048 — COLLISION (1 within-order)
+Order 101: 1 groups, cumulative 1049 — PASS
+Order 102: 4 groups, cumulative 1053 — PASS
+Order 103: 1 groups, cumulative 1054 — PASS
+Order 104: 14 groups, cumulative 1068 — PASS
+Order 105: 2 groups, cumulative 1070 — PASS
+Order 106: 2 groups, cumulative 1072 — PASS
+Order 107: 1 groups, cumulative 1073 — PASS
+Order 108: 45 groups, cumulative 1118 — PASS
+Order 109: 1 groups, cumulative 1119 — PASS
+Order 110: 6 groups, cumulative 1125 — PASS
+Order 111: 2 groups, cumulative 1127 — PASS
+Order 112: 43 groups, cumulative 1170 — PASS
+Order 113: 1 groups, cumulative 1171 — PASS
+Order 114: 6 groups, cumulative 1177 — PASS
+Order 115: 1 groups, cumulative 1178 — PASS
+Order 116: 5 groups, cumulative 1183 — PASS
+Order 117: 4 groups, cumulative 1187 — PASS
+Order 118: 2 groups, cumulative 1189 — PASS
+Order 119: 1 groups, cumulative 1190 — PASS
+Order 120: 47 groups, cumulative 1237 — PASS
+Order 121: 2 groups, cumulative 1239 — COLLISION (1 within-order)
+Order 122: 2 groups, cumulative 1241 — PASS
+Order 123: 1 groups, cumulative 1242 — PASS
+Order 124: 4 groups, cumulative 1246 — PASS
+Order 125: 5 groups, cumulative 1251 — PASS
+Order 126: 16 groups, cumulative 1267 — PASS
+Order 127: 1 groups, cumulative 1268 — PASS
+Order 128: 2328 groups, cumulative 3596 — COLLISION (463 within-order)
+Order 129: 2 groups, cumulative 3598 — PASS
+Order 130: 4 groups, cumulative 3602 — PASS
+Order 131: 1 groups, cumulative 3603 — PASS
+Order 132: 10 groups, cumulative 3613 — PASS
+Order 133: 1 groups, cumulative 3614 — PASS
+Order 134: 2 groups, cumulative 3616 — PASS
+Order 135: 5 groups, cumulative 3621 — PASS
+Order 136: 15 groups, cumulative 3636 — PASS
+Order 137: 1 groups, cumulative 3637 — PASS
+Order 138: 4 groups, cumulative 3641 — PASS
+Order 139: 1 groups, cumulative 3642 — PASS
+Order 140: 11 groups, cumulative 3653 — PASS
+Order 141: 1 groups, cumulative 3654 — PASS
+Order 142: 2 groups, cumulative 3656 — PASS
+Order 143: 1 groups, cumulative 3657 — PASS
+Order 144: 197 groups, cumulative 3854 — PASS
+Order 145: 1 groups, cumulative 3855 — PASS
+Order 146: 2 groups, cumulative 3857 — PASS
+Order 147: 6 groups, cumulative 3863 — COLLISION (1 within-order)
+Order 148: 5 groups, cumulative 3868 — PASS
+Order 149: 1 groups, cumulative 3869 — PASS
+Order 150: 13 groups, cumulative 3882 — PASS
+Order 151: 1 groups, cumulative 3883 — PASS
+Order 152: 12 groups, cumulative 3895 — PASS
+Order 153: 2 groups, cumulative 3897 — PASS
+Order 154: 4 groups, cumulative 3901 — PASS
+Order 155: 2 groups, cumulative 3903 — PASS
+Order 156: 18 groups, cumulative 3921 — PASS
+Order 157: 1 groups, cumulative 3922 — PASS
+Order 158: 2 groups, cumulative 3924 — PASS
+Order 159: 1 groups, cumulative 3925 — PASS
+Order 160: 238 groups, cumulative 4163 — COLLISION (6 within-order)
+Order 161: 1 groups, cumulative 4164 — PASS
+Order 162: 55 groups, cumulative 4219 — COLLISION (7 within-order)
+Order 163: 1 groups, cumulative 4220 — PASS
+Order 164: 5 groups, cumulative 4225 — PASS
+Order 165: 2 groups, cumulative 4227 — PASS
+Order 166: 2 groups, cumulative 4229 — PASS
+Order 167: 1 groups, cumulative 4230 — PASS
+Order 168: 57 groups, cumulative 4287 — PASS
+Order 169: 2 groups, cumulative 4289 — COLLISION (1 within-order)
+Order 170: 4 groups, cumulative 4293 — PASS
+Order 171: 5 groups, cumulative 4298 — PASS
+Order 172: 4 groups, cumulative 4302 — PASS
+Order 173: 1 groups, cumulative 4303 — PASS
+Order 174: 4 groups, cumulative 4307 — PASS
+Order 175: 2 groups, cumulative 4309 — PASS
+Order 176: 42 groups, cumulative 4351 — PASS
+Order 177: 1 groups, cumulative 4352 — PASS
+Order 178: 2 groups, cumulative 4354 — PASS
+Order 179: 1 groups, cumulative 4355 — PASS
+Order 180: 37 groups, cumulative 4392 — PASS
+Order 181: 1 groups, cumulative 4393 — PASS
+Order 182: 4 groups, cumulative 4397 — PASS
+Order 183: 2 groups, cumulative 4399 — PASS
+Order 184: 12 groups, cumulative 4411 — PASS
+Order 185: 1 groups, cumulative 4412 — PASS
+Order 186: 6 groups, cumulative 4418 — PASS
+Order 187: 1 groups, cumulative 4419 — PASS
+Order 188: 4 groups, cumulative 4423 — PASS
+Order 189: 13 groups, cumulative 4436 — COLLISION (1 within-order)
+Order 190: 4 groups, cumulative 4440 — PASS
+Order 191: 1 groups, cumulative 4441 — PASS
+Order 192: 1543 groups, cumulative 5984 — COLLISION (165 within-order)
+Order 193: 1 groups, cumulative 5985 — PASS
+Order 194: 2 groups, cumulative 5987 — PASS
+Order 195: 2 groups, cumulative 5989 — PASS
+Order 196: 12 groups, cumulative 6001 — PASS
+Order 197: 1 groups, cumulative 6002 — PASS
+Order 198: 10 groups, cumulative 6012 — PASS
+Order 199: 1 groups, cumulative 6013 — PASS
+Order 200: 52 groups, cumulative 6065 — COLLISION (2 within-order)
+
+Done! 6065 groups through order 200.
+Orders with collisions: [96, 100, 121, 128, 147, 160, 162, 169, 189, 192, 200]
