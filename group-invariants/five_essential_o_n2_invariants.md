@@ -21,8 +21,8 @@ Total computation time: **~1 second** for all 312 groups (compared to ~3 seconds
 ## Distinguishability Results
 
 Out of **210 non-abelian groups**:
-- **203 groups (96.7%)** have unique 5-invariant signatures
-- **7 groups (3.3%)** form indistinguishable pairs (7 pairs total)
+- **196 groups (93.3%)** have unique 5-invariant signatures
+- **14 groups (6.7%)** form 7 indistinguishable pairs
 
 ### Comparison
 
