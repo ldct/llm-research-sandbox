@@ -2,7 +2,7 @@
 
 ## Overview
 
-A set of **7 truly O(n²) invariants** achieves **100% distinguishability** among all 210 non-abelian groups of order ≤ 60. Every non-abelian group has a unique 7-invariant signature.
+A set of **7 truly O(n²) pair-counting invariants** achieves **100% distinguishability** among all 210 non-abelian groups of order ≤ 60. Every non-abelian group has a unique 7-invariant signature. Additionally, 100 of 102 abelian groups are distinguished; the sole collision is SmallGroup(49,1) vs SmallGroup(49,2).
 
 ## Invariant Definitions
 
@@ -16,27 +16,11 @@ For each group, we compute 7 invariants by counting pairs (a,b) that satisfy:
 6. **invA\_commuting\_involution**: ab = ba AND a² = e (commuting pairs where a is an involution)
 7. **invB\_ab\_order\_div5**: (ab)⁵ = e (product has order dividing 5)
 
-Invariants 1–5 were identified in a previous analysis as the minimal subset of 18 O(n²) invariants preserving distinguishability. They left 7 pairs of non-abelian groups indistinguishable. Invariants 6–7 resolve all remaining pairs.
-
 ## Distinguishability Results
 
-Out of **210 non-abelian groups**:
-- **210 groups (100%)** have unique 7-invariant signatures
-- **0 groups** are indistinguishable
-
-### How Each New Invariant Helps
-
-| Invariant | Resolved pairs |
-|-----------|---------------|
-| **invA** (ab=ba, a²=e) | (32,2)↔(32,24), (32,27)↔(32,34), (32,30)↔(32,31), (32,37)↔(32,38) |
-| **invB** ((ab)⁵=e) | (50,1)↔(50,4) |
-
-### Comparison with Previous Sets
-
-| Invariant Set | Count | Distinguishable | Percentage |
-|---------------|-------|-----------------|------------|
-| 5 invariants (previous minimal) | 5 | 196/210 | 93.3% |
-| **7 invariants (this work)** | **7** | **210/210** | **100%** |
+- **210/210 (100%)** non-abelian groups have unique 7-invariant signatures
+- **100/102 (98%)** abelian groups have unique signatures (sole collision: SmallGroup(49,1) ↔ SmallGroup(49,2))
+- **310/312 (99.4%)** of all groups of order ≤ 60 are distinguished
 
 ## Complete Data Table
 
