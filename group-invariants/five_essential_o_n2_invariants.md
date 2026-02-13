@@ -440,37 +440,3 @@ This minimal set demonstrates that:
 4. **Simple is better** - 5 carefully chosen invariants match the performance of 18
 
 Future work could explore whether different combinations of 5 invariants achieve the same or better results, or whether even fewer invariants might suffice for certain subclasses of groups.
-
-## Verifying with a Local GAP Installation
-
-Install GAP 4.15.1 from source (includes the SmallGroups package):
-
-```bash
-curl -fsSL https://github.com/gap-system/gap/releases/download/v4.15.1/gap-4.15.1.tar.gz -o gap-4.15.1.tar.gz
-tar -xzf gap-4.15.1.tar.gz
-cd gap-4.15.1
-./configure && make -j2
-```
-
-Then compute the 5 invariants for any group, e.g. SmallGroup(5,1):
-
-```bash
-./gap -q <<'EOF'
-G := SmallGroup(5, 1);
-elements := AsList(G);
-inv1 := 0; inv3 := 0; inv5 := 0; inv6 := 0; inv13 := 0;
-for a in elements do
-  for b in elements do
-    if a*b = b*a then inv1 := inv1 + 1; fi;
-    if a^2 = b^2 then inv3 := inv3 + 1; fi;
-    if a^3 = b^3 then inv5 := inv5 + 1; fi;
-    if a^4 = b^4 then inv6 := inv6 + 1; fi;
-    if (a*b)^2 = Identity(G) then inv13 := inv13 + 1; fi;
-  od;
-od;
-Print("inv1=", inv1, " inv3=", inv3, " inv5=", inv5, " inv6=", inv6, " inv13=", inv13, "\n");
-QUIT;
-EOF
-```
-
-Expected output: `inv1=25 inv3=5 inv5=5 inv6=5 inv13=5` — matching the table above.
