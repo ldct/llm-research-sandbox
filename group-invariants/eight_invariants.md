@@ -1,8 +1,10 @@
-# Eight O(n²) Invariants Distinguishing All Groups of Order ≤ 60
+# Eight O(n²) Invariants Distinguishing All Groups of Order ≤ 63
 
 ## Overview
 
-A set of **8 truly O(n²) pair-counting invariants** achieves **100% distinguishability** among all 312 groups of order ≤ 60. Every group has a unique 8-invariant signature.
+A set of **8 truly O(n²) pair-counting invariants** achieves **100% distinguishability** among all 319 groups of order ≤ 63. Every group has a unique 8-invariant signature.
+
+The first collision occurs at order 64 (= 2⁶). See `more_groups_results.md` for the full analysis through order 200.
 
 ## Invariant Definitions
 
@@ -19,7 +21,8 @@ For each group, we compute 8 invariants by counting pairs (a,b) that satisfy:
 
 ## Distinguishability Results
 
-- **312/312 (100%)** of all groups of order ≤ 60 have unique 8-invariant signatures
+- **319/319 (100%)** of all groups of order ≤ 63 have unique 8-invariant signatures
+- First collision at order 64: SmallGroup(64,13) and SmallGroup(64,14)
 
 ## Complete Data Table
 
@@ -337,6 +340,13 @@ For each group, we compute 8 invariants by counting pairs (a,b) that satisfy:
 | 60 | 11 | SmallGroup(60,11) | ✗ | 1800 | 360 | 120 | 360 | 480 | 240 | 300 | 60 |
 | 60 | 12 | SmallGroup(60,12) | ✗ | 1080 | 1080 | 120 | 1080 | 1920 | 240 | 300 | 60 |
 | 60 | 13 | SmallGroup(60,13) | ✓ | 3600 | 240 | 180 | 240 | 240 | 240 | 300 | 60 |
+| 61 | 1 | SmallGroup(61,1) | ✓ | 3721 | 61 | 61 | 61 | 61 | 61 | 61 | 61 |
+| 62 | 1 | SmallGroup(62,1) | ✗ | 1054 | 1054 | 62 | 1054 | 1984 | 124 | 62 | 62 |
+| 62 | 2 | SmallGroup(62,2) | ✓ | 3844 | 124 | 62 | 124 | 124 | 124 | 62 | 62 |
+| 63 | 1 | SmallGroup(63,1) | ✗ | 945 | 63 | 945 | 63 | 63 | 63 | 63 | 189 |
+| 63 | 2 | SmallGroup(63,2) | ✓ | 3969 | 63 | 189 | 63 | 63 | 63 | 63 | 441 |
+| 63 | 3 | SmallGroup(63,3) | ✗ | 945 | 63 | 2079 | 63 | 63 | 63 | 63 | 189 |
+| 63 | 4 | SmallGroup(63,4) | ✓ | 3969 | 63 | 567 | 63 | 63 | 63 | 63 | 441 |
 
 ## Legend
 
