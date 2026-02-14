@@ -146,3 +146,33 @@ The largest cluster (9 groups: [1381, 1472, 1473, 1489, 1493, 1511, 1513, 1518, 
 Character table fingerprints should break most of these. If not, subgroup isomorphism type profiles almost certainly will — it's extremely rare for non-isomorphic p-groups to have the same subgroup type multiset.
 
 If even that fails, we're looking at genuine Brauer pairs, which would be a mathematically interesting finding worth documenting.
+
+## Results (Completed)
+
+All 70 collision clusters (187 groups) successfully resolved. **6,065 / 6,065 groups uniquely identified.**
+
+### Invariants Used
+
+| Invariant | Description | Clusters Resolved |
+|-----------|-------------|-------------------|
+| `qhash` | Hash of sorted `IdSmallGroup(G/N)` for all proper nontrivial normal N | 51 |
+| `mhash` | Hash of sorted `IdSmallGroup(M)` for all maximal subgroups M | 17 sub-clusters |
+| `h3` | H³(G, ℤ) — 3rd integral cohomology (via GAP HAP) | 1 (128,1327 vs 1329) |
+| `h4` | H⁴(G, ℤ) — 4th integral cohomology | 1 (128,1597 vs 1598) |
+| `schash` | Structure constant hash from character table | 2 (128,1317/1322; 160,70/71) |
+| `pchash` | Polycyclic presentation hash | 1 (189,4 vs 5 — Brauer pair) |
+
+### The Hardest Cases
+
+**[189,4] vs [189,5]** — A genuine Brauer pair:
+- Same character table (verified via structure constants)
+- Same table of marks (subgroup lattice isomorphic as poset)
+- Same integral cohomology H^n(G,ℤ) for all computed n (1–12)
+- Same subgroup type profiles, centralizer profiles, power graph
+- Same Schur multiplier, same Aut(G)
+- Distinguished only by the polycyclic presentation: `g₂³ = g₃` vs `g₂³ = g₃²`
+
+### Output
+
+- `final_all_invariants.csv`: 6,065 rows × 99 invariant columns, all signatures unique
+- `compute_final_v2.g`: GAP script computing the 6 new invariants for collision groups
