@@ -2,7 +2,7 @@
 Copyright (c) 2025. All rights reserved.
 Released under MIT license.
 
-Lower bound on ln(2) using the fast-converging series:
+Bounds on ln(2) using the atanh series:
   ln(z) = 2 * Σ_{k=0}^∞ (1/(2k+1)) * ((z-1)/(z+1))^(2k+1)
 
 For z = 2, this becomes:
@@ -13,7 +13,10 @@ ln(z) = 2·atanh((z-1)/(z+1)) for z > 0.
 
 Convergence rate: Each term provides approximately log₁₀(9) ≈ 0.95 decimal
 digits of precision, since the exponent increases by 2 and (1/3)^2 = 1/9.
-Thus only 6 terms are needed to establish 0.693147 < ln(2).
+
+Main results:
+- `log_2_gt`: 0.693147 < ln(2)  (6 terms, partial sum lower bound)
+- `log_2_lt`: ln(2) < 0.693148  (7 terms + geometric tail bound)
 -/
 import Mathlib
 
