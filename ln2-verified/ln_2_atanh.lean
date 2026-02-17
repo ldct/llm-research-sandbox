@@ -79,8 +79,7 @@ theorem log_two_eq_tsum : Real.log 2 = ∑' (k : ℕ), log_two_term k := by
     which exceeds 0.693147. Since all remaining terms are positive, the full
     series (which equals ln(2)) is strictly greater than the partial sum.
 
-    This is much more efficient than the Σ 1/(n·2ⁿ) series, which requires
-    20 terms to achieve the same bound. -/
+-/
 theorem lower_bound_log_two : (0.693147 : ℝ) < Real.log 2 := by
   rw [log_two_eq_tsum]
   -- Partial sum of 6 terms: 15757912/22733865 > 0.693147
