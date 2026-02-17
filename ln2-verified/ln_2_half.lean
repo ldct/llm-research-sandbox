@@ -1,6 +1,25 @@
+/-
+Copyright (c) 2025. All rights reserved.
+Released under MIT license.
+
+Lower bound on ln(2) using the Taylor series of -ln(1-x).
+
+The Taylor series expansion of -ln(1-x) for |x| < 1 is:
+  -ln(1-x) = Σ_{n=1}^∞ x^n / n
+
+Setting x = 1/2:
+  -ln(1 - 1/2) = -ln(1/2) = ln(2) = Σ_{n=1}^∞ (1/2)^n / n = Σ_{n=1}^∞ 1/(n·2^n)
+
+This series converges relatively slowly; 20 terms are needed to establish
+0.693147 < ln(2). Compare with ln_2_atanh.lean which uses the faster-converging
+atanh series and requires only 6 terms.
+-/
 import Mathlib
 
-/-- The series representation of log 2: ln(2) = Σ 1/(n·2ⁿ) -/
+/-! ## Series representation via Taylor series of -ln(1-x) at x=1/2 -/
+
+/-- The series representation of log 2: ln(2) = Σ 1/(n·2ⁿ)
+    Derived from the Taylor series -ln(1-x) = Σ x^n/n at x = 1/2. -/
 theorem log_two_eq_tsum : ∑' (n : ℕ), (1:ℝ) / (n * 2^n) = Real.log 2 := by
   have h := Complex.hasSum_taylorSeries_neg_log (z := 1/2) (by norm_num : ‖(1/2 : ℂ)‖ < 1)
   simp only [one_div] at h
