@@ -125,10 +125,112 @@ theorem exp_one_gt_2_7182818284 : (2.7182818284 : ℝ) < Real.exp 1 := by
        _ ≤ Real.exp 1 := h
 
 /-!
-## Reusable macro for arbitrary precision
+## Upper bounds for exp(1)
+
+For upper bounds, we use `Real.exp_bound` which gives:
+  |exp(x) - Σ_{m<n} x^m/m!| ≤ |x|^n * (n+1)/(n! * n)  for |x| ≤ 1
+
+For x=1: exp(1) ≤ partial_sum(n) + (n+1)/(n! * n)
+-/
+
+/-- exp(1) < 3, using 3 terms + tail bound -/
+theorem exp_one_lt_3 : Real.exp 1 < (3 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 3)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.72, using 4 terms: upper = 87/32 ≈ 2.71875 -/
+theorem exp_one_lt_2_72 : Real.exp 1 < (2.72 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 4)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.719, using 5 terms: upper = 1631/600 ≈ 2.71833 -/
+theorem exp_one_lt_2_719 : Real.exp 1 < (2.719 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 5)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.7183, using 7 terms: upper = 31967/11760 ≈ 2.718282 -/
+theorem exp_one_lt_2_7183 : Real.exp 1 < (2.7183 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 7)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.71829, using 9 terms -/
+theorem exp_one_lt_2_71829 : Real.exp 1 < (2.71829 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 9)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.718282, using 10 terms -/
+theorem exp_one_lt_2_718282 : Real.exp 1 < (2.718282 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 10)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.7182819, using 11 terms -/
+theorem exp_one_lt_2_7182819 : Real.exp 1 < (2.7182819 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 11)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.71828183, using 12 terms -/
+theorem exp_one_lt_2_71828183 : Real.exp 1 < (2.71828183 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 12)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.718281829, using 13 terms -/
+theorem exp_one_lt_2_718281829 : Real.exp 1 < (2.718281829 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 13)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-- exp(1) < 2.7182818285, using 14 terms -/
+theorem exp_one_lt_2_7182818285 : Real.exp 1 < (2.7182818285 : ℝ) := by
+  have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < 14)
+  simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+             one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+             Nat.succ_eq_add_one] at h
+  have habs := abs_sub_le_iff.mp h
+  linarith
+
+/-!
+## Reusable macros for arbitrary precision
 
 The `exp_lower_bound n` macro proves `c < Real.exp 1` for any `c` smaller than
 the partial sum of n terms.
+
+The `exp_upper_bound n` macro proves `Real.exp 1 < c` for any `c` larger than
+the partial sum plus tail bound.
 -/
 
 /-- Tactic macro for proving lower bounds on exp(1) using n terms of Taylor series.
@@ -141,7 +243,18 @@ macro "exp_lower_bound" n:num : tactic =>
                 Nat.succ_eq_add_one, Nat.add_eq, Nat.add_zero] at h
      linarith))
 
--- Examples using the macro
+/-- Tactic macro for proving upper bounds on exp(1) using n terms of Taylor series + tail bound.
+    Works for both `exp 1 < c` and `exp 1 ≤ c` goals. -/
+macro "exp_upper_bound" n:num : tactic =>
+  `(tactic|
+    (have h := Real.exp_bound (by norm_num : |(1 : ℝ)| ≤ 1) (by norm_num : 0 < $n)
+     simp only [Finset.sum_range_succ, Finset.range_zero, Finset.sum_empty,
+                one_pow, Nat.factorial, Nat.cast_one, Nat.cast_ofNat,
+                Nat.succ_eq_add_one] at h
+     have habs := abs_sub_le_iff.mp h
+     linarith))
+
+-- Examples using the lower bound macro
 example : (2 : ℝ) < Real.exp 1 := by exp_lower_bound 3
 example : (2.5 : ℝ) ≤ Real.exp 1 := by exp_lower_bound 3
 example : (2.7 : ℝ) < Real.exp 1 := by exp_lower_bound 6
@@ -149,3 +262,13 @@ example : (2.718 : ℝ) < Real.exp 1 := by exp_lower_bound 8
 example : (2.71828 : ℝ) < Real.exp 1 := by exp_lower_bound 10
 example : (2.718281828 : ℝ) < Real.exp 1 := by exp_lower_bound 14
 example : (2.7182818284 : ℝ) < Real.exp 1 := by exp_lower_bound 15
+
+-- Examples using the upper bound macro
+example : Real.exp 1 < (3 : ℝ) := by exp_upper_bound 3
+example : Real.exp 1 < (2.72 : ℝ) := by exp_upper_bound 4
+example : Real.exp 1 < (2.719 : ℝ) := by exp_upper_bound 5
+example : Real.exp 1 < (2.7183 : ℝ) := by exp_upper_bound 7
+example : Real.exp 1 < (2.71829 : ℝ) := by exp_upper_bound 9
+example : Real.exp 1 < (2.718282 : ℝ) := by exp_upper_bound 10
+example : Real.exp 1 < (2.718281829 : ℝ) := by exp_upper_bound 13
+example : Real.exp 1 < (2.7182818285 : ℝ) := by exp_upper_bound 14
