@@ -80,7 +80,7 @@ theorem log_two_eq_tsum : Real.log 2 = ∑' (k : ℕ), log_two_term k := by
     series (which equals ln(2)) is strictly greater than the partial sum.
 
 -/
-theorem lower_bound_log_two : (0.693147 : ℝ) < Real.log 2 := by
+theorem log_2_gt : (0.693147 : ℝ) < Real.log 2 := by
   rw [log_two_eq_tsum]
   -- Partial sum of 6 terms: 15757912/22733865 > 0.693147
   have hpartial : ∑ k ∈ Finset.range 6, log_two_term k = 15757912 / 22733865 := by

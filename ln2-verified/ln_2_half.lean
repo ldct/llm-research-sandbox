@@ -75,7 +75,7 @@ lemma summable_log_two_series : Summable (fun n : ℕ => (1:ℝ) / (n * 2^n)) :=
     The partial sum of 19 terms equals 10574855234543/15256293212160 ≈ 0.6931470894,
     which exceeds 0.693147. Since all remaining terms are positive, the full
     series (which equals ln(2)) is strictly greater than the partial sum. -/
-theorem lower_bound_log_two : (0.693147 : ℝ) < Real.log 2 := by
+theorem log_2_gt : (0.693147 : ℝ) < Real.log 2 := by
   have heq : Real.log 2 = ∑' (n : ℕ), (1:ℝ) / (n * 2^n) := log_two_eq_tsum.symm
   rw [heq]
   -- First 19 terms sum to 10574855234543/15256293212160 > 0.693147
