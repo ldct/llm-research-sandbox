@@ -13,9 +13,6 @@ Setting x = 1/2:
 Convergence rate: Each term provides approximately log₁₀(2) ≈ 0.30 decimal digits
 of precision, since consecutive terms decrease by a factor of ~2. Thus 20 terms
 are needed to establish 0.693147 < ln(2) (about 6 correct digits).
-
-Compare with ln_2_atanh.lean which uses the faster-converging atanh series
-(~0.95 digits/term) and requires only 6 terms for the same precision.
 -/
 import Mathlib
 
