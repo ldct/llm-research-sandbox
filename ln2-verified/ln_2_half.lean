@@ -46,7 +46,7 @@ theorem log_two_eq_tsum : ∑' (n : ℕ), (1:ℝ) / (n * 2^n) = Real.log 2 := by
     simp only [one_div]
     rw [inv_pow, mul_inv_cancel₀ (pow_ne_zero _ (by norm_num : (2:ℝ) ≠ 0))]
 
-lemma summable_log_series : Summable (fun n : ℕ => (1:ℝ) / (n * 2^n)) := by
+lemma summable_log_two_series : Summable (fun n : ℕ => (1:ℝ) / (n * 2^n)) := by
   have h := Complex.hasSum_taylorSeries_neg_log (z := 1/2) (by norm_num : ‖(1/2 : ℂ)‖ < 1)
   simp only [one_div] at h
   have h2 : (1 : ℂ) - 2⁻¹ = (2⁻¹ : ℝ) := by norm_num
@@ -86,12 +86,12 @@ theorem lower_bound_log_two : (0.693147 : ℝ) < Real.log 2 := by
       < 10574855234543/15256293212160 := hbound
     _ = ∑ n ∈ Finset.range 20, (1:ℝ) / (n * 2^n) := hpartial.symm
     _ < ∑' (n : ℕ), (1:ℝ) / (n * 2^n) := by
-        have hdecomp := summable_log_series.sum_add_tsum_compl (s := Finset.range 20)
+        have hdecomp := summable_log_two_series.sum_add_tsum_compl (s := Finset.range 20)
         rw [← hdecomp]
         set S := (↑(Finset.range 20) : Set ℕ)ᶜ with hS_def
         suffices h : 0 < ∑' (x : S), (1:ℝ) / (↑x * 2^(↑x : ℕ)) by linarith
         have hmem : (20 : ℕ) ∈ S := by simp [hS_def]
-        have hsum := summable_log_series.subtype S
+        have hsum := summable_log_two_series.subtype S
         have hnn : ∀ (i : S), 0 ≤ (1:ℝ) / (↑i * 2^(↑i : ℕ)) := by
           intro ⟨i, hi⟩
           simp only [Set.mem_compl_iff, Finset.mem_coe, Finset.mem_range, not_lt, hS_def] at hi

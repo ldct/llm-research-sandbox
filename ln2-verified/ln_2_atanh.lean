@@ -20,7 +20,7 @@ import Mathlib
 /-! ## Main series representation theorem -/
 
 /-- The series representation of ln(z) for positive z -/
-theorem log_series_representation {z : ℝ} (hz : 0 < z) :
+theorem log_eq_hasSum_atanh {z : ℝ} (hz : 0 < z) :
     HasSum (fun k : ℕ => 2 * (1 / (2 * k + 1)) * ((z - 1) / (z + 1)) ^ (2 * k + 1)) (Real.log z) := by
   set x := (z - 1) / (z + 1) with hx_def
   have habs : |x| < 1 := by
@@ -47,26 +47,26 @@ theorem log_series_representation {z : ℝ} (hz : 0 < z) :
   rw [Real.log_mul (ne_of_gt h2_pos) (ne_of_gt hz)]
   ring
 
-theorem summable_log_series_representation {z : ℝ} (hz : 0 < z) :
+theorem summable_log_atanh {z : ℝ} (hz : 0 < z) :
     Summable (fun k : ℕ => 2 * (1 / (2 * k + 1)) * ((z - 1) / (z + 1)) ^ (2 * k + 1)) :=
-  (log_series_representation hz).summable
+  (log_eq_hasSum_atanh hz).summable
 
 /-! ## Specialization to z = 2 -/
 
 /-- The k-th term of the series for ln(2): 2 * (1/(2k+1)) * (1/3)^(2k+1) -/
-noncomputable def logTwoSeriesTerm (k : ℕ) : ℝ := 2 * (1 / (2 * k + 1)) * (1/3 : ℝ) ^ (2 * k + 1)
+noncomputable def log_two_term (k : ℕ) : ℝ := 2 * (1 / (2 * k + 1)) * (1/3 : ℝ) ^ (2 * k + 1)
 
-theorem summable_logTwoSeriesTerm : Summable logTwoSeriesTerm := by
-  have h := summable_log_series_representation (by norm_num : (0:ℝ) < 2)
+theorem summable_log_two_series : Summable log_two_term := by
+  have h := summable_log_atanh (by norm_num : (0:ℝ) < 2)
   convert h using 1
   ext k
-  simp only [logTwoSeriesTerm]
+  simp only [log_two_term]
   norm_num
 
-theorem log_two_eq_tsum_new : Real.log 2 = ∑' (k : ℕ), logTwoSeriesTerm k := by
-  have h := log_series_representation (by norm_num : (0:ℝ) < 2)
-  have heq : ∀ k, 2 * (1 / (2 * ↑k + 1)) * ((2 - 1) / (2 + 1)) ^ (2 * k + 1) = logTwoSeriesTerm k := by
-    intro k; simp only [logTwoSeriesTerm]; norm_num
+theorem log_two_eq_tsum : Real.log 2 = ∑' (k : ℕ), log_two_term k := by
+  have h := log_eq_hasSum_atanh (by norm_num : (0:ℝ) < 2)
+  have heq : ∀ k, 2 * (1 / (2 * ↑k + 1)) * ((2 - 1) / (2 + 1)) ^ (2 * k + 1) = log_two_term k := by
+    intro k; simp only [log_two_term]; norm_num
   simp only [heq] at h
   exact h.tsum_eq.symm
 
@@ -81,25 +81,25 @@ theorem log_two_eq_tsum_new : Real.log 2 = ∑' (k : ℕ), logTwoSeriesTerm k :=
 
     This is much more efficient than the Σ 1/(n·2ⁿ) series, which requires
     20 terms to achieve the same bound. -/
-theorem lower_bound_log_two_new : (0.693147 : ℝ) < Real.log 2 := by
-  rw [log_two_eq_tsum_new]
+theorem lower_bound_log_two : (0.693147 : ℝ) < Real.log 2 := by
+  rw [log_two_eq_tsum]
   -- Partial sum of 6 terms: 15757912/22733865 > 0.693147
-  have hpartial : ∑ k ∈ Finset.range 6, logTwoSeriesTerm k = 15757912 / 22733865 := by
-    simp only [logTwoSeriesTerm]
+  have hpartial : ∑ k ∈ Finset.range 6, log_two_term k = 15757912 / 22733865 := by
+    simp only [log_two_term]
     norm_num
   have hbound : (0.693147 : ℝ) < 15757912 / 22733865 := by norm_num
   calc (0.693147 : ℝ)
       < 15757912 / 22733865 := hbound
-    _ = ∑ k ∈ Finset.range 6, logTwoSeriesTerm k := hpartial.symm
-    _ < ∑' (k : ℕ), logTwoSeriesTerm k := by
-        have hdecomp := summable_logTwoSeriesTerm.sum_add_tsum_compl (s := Finset.range 6)
+    _ = ∑ k ∈ Finset.range 6, log_two_term k := hpartial.symm
+    _ < ∑' (k : ℕ), log_two_term k := by
+        have hdecomp := summable_log_two_series.sum_add_tsum_compl (s := Finset.range 6)
         rw [← hdecomp]
         set S := (↑(Finset.range 6) : Set ℕ)ᶜ with hS_def
-        suffices h : 0 < ∑' (x : S), logTwoSeriesTerm x by linarith
+        suffices h : 0 < ∑' (x : S), log_two_term x by linarith
         have hmem : (6 : ℕ) ∈ S := by simp [hS_def]
-        have hsum := summable_logTwoSeriesTerm.subtype S
-        have hnn : ∀ (i : S), 0 ≤ logTwoSeriesTerm i := by
+        have hsum := summable_log_two_series.subtype S
+        have hnn : ∀ (i : S), 0 ≤ log_two_term i := by
           intro ⟨i, _⟩
-          simp only [logTwoSeriesTerm]
+          simp only [log_two_term]
           positivity
-        exact hsum.tsum_pos hnn ⟨6, hmem⟩ (by simp [logTwoSeriesTerm]; positivity)
+        exact hsum.tsum_pos hnn ⟨6, hmem⟩ (by simp [log_two_term]; positivity)
