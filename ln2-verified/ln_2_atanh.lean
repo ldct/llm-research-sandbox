@@ -8,8 +8,15 @@ Lower bound on ln(2) using the fast-converging series:
 For z = 2, this becomes:
   ln(2) = 2 * Σ_{k=0}^∞ (1/(2k+1)) * (1/3)^(2k+1)
 
-This series converges much faster than Σ 1/(n·2ⁿ), requiring only 6 terms
-to establish 0.693147 < ln(2), compared to 20 terms with the other series.
+This is the series expansion of 2·atanh((z-1)/(z+1)), using the identity
+ln(z) = 2·atanh((z-1)/(z+1)) for z > 0.
+
+Convergence rate: Each term provides approximately log₁₀(9) ≈ 0.95 decimal
+digits of precision, since the exponent increases by 2 and (1/3)^2 = 1/9.
+Thus only 6 terms are needed to establish 0.693147 < ln(2).
+
+Compare with ln_2_half.lean which uses the slower Taylor series Σ 1/(n·2ⁿ)
+(≈0.30 digits/term) and requires 20 terms for the same precision.
 -/
 import Mathlib
 
