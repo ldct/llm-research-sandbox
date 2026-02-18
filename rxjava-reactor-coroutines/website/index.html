@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RxJava vs Reactor vs Kotlin Coroutines</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/kotlin.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e4e4e4;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #e94560, #7F52FF, #0f3460);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+        .comparison {
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .comparison-header {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .comparison-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .comparison-header .num {
+            background: linear-gradient(135deg, #e94560, #7F52FF);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .code-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media (max-width: 1400px) {
+            .code-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 900px) {
+            .code-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 1rem;
+            }
+            header {
+                padding: 2rem 0;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .comparison-header h2 {
+                font-size: 1.1rem;
+            }
+            .code-panel pre {
+                font-size: 0.8rem;
+                padding: 0.75rem;
+                min-height: auto;
+            }
+            .output-section pre {
+                font-size: 0.8rem;
+            }
+            .output-section h4 {
+                font-size: 0.7rem;
+            }
+            .lang-badge {
+                font-size: 0.65rem;
+            }
+            .dep {
+                font-size: 0.8rem;
+            }
+            .legend-item {
+                font-size: 0.85rem;
+            }
+        }
+        .code-panel {
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+        .code-panel:last-child {
+            border-right: none;
+        }
+        .code-panel-header {
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .lang-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .lang-badge.rxjava {
+            background: #e94560;
+            color: white;
+        }
+        .lang-badge.kotlin-flow {
+            background: #7F52FF;
+            color: white;
+        }
+        .lang-badge.kotlin-seq {
+            background: #2e7d32;
+            color: white;
+        }
+        .lang-badge.reactor {
+            background: #43a047;
+            color: white;
+        }
+        .code-panel pre {
+            margin: 0;
+            padding: 1rem;
+            background: transparent !important;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            min-height: 120px;
+        }
+        .code-panel code {
+            background: transparent !important;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+        .output-section {
+            background: rgba(0,0,0,0.3);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 1rem 1.5rem;
+        }
+        .output-section h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+        .output-section pre {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: #4ade80;
+            white-space: pre-wrap;
+        }
+        .deps {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .dep {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RxJava vs Reactor vs Coroutines</h1>
+            <p class="subtitle">Side-by-side comparison of reactive programming patterns</p>
+            <div class="deps">
+                <div class="dep">RxJava 3.1.8</div>
+                <div class="dep">Reactor 3.6.0</div>
+                <div class="dep">Coroutines 1.8.0</div>
+            </div>
+            <div class="legend">
+                <div class="legend-item"><span class="lang-badge rxjava">RxJava</span> Reactive Streams</div>
+                <div class="legend-item"><span class="lang-badge reactor">Reactor</span> Reactive Streams</div>
+                <div class="legend-item"><span class="lang-badge kotlin-flow">Flow</span> Kotlin Functional</div>
+                <div class="legend-item"><span class="lang-badge kotlin-seq">Sequential</span> Kotlin Imperative</div>
+            </div>
+        </header>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">1</span>
+                <h2>Basic Stream / Iteration</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.just("Hello", "World")
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.just("Hello", "World")
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flowOf("Hello", "World")
+    .collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (item in listOf("Hello", "World")) {
+    println(item)
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>Hello
+World</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">2</span>
+                <h2>Map (Transform)</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.just("apple", "banana", "cherry")
+    .map(String::toUpperCase)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.just("apple", "banana", "cherry")
+    .map(String::toUpperCase)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flowOf("apple", "banana", "cherry")
+    .map { it.uppercase() }
+    .collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (fruit in listOf("apple", "banana", "cherry")) {
+    println(fruit.uppercase())
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>APPLE
+BANANA
+CHERRY</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">3</span>
+                <h2>FlatMap (Flatten Nested Streams)</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.just("Hi", "Rx")
+    .flatMap(word -> 
+        Observable.fromArray(word.split("")))
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.just("Hi", "Rx")
+    .flatMap(word -> 
+        Flux.fromArray(word.split("")))
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flowOf("Hi", "Rx")
+    .flatMapConcat { word -> 
+        word.toList().asFlow()
+            .map { it.toString() } 
+    }.collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (word in listOf("Hi", "Rx")) {
+    for (char in word) {
+        println(char)
+    }
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>H
+i
+R
+x</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">4</span>
+                <h2>Filter</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.range(1, 10)
+    .filter(n -> n % 2 == 0)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.range(1, 10)
+    .filter(n -> n % 2 == 0)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">(1..10).asFlow()
+    .filter { it % 2 == 0 }
+    .collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (n in 1..10) {
+    if (n % 2 == 0) println(n)
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>2
+4
+6
+8
+10</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">5</span>
+                <h2>Reduce (Aggregate)</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.range(1, 5)
+    .reduce(0, Integer::sum)
+    .subscribe(sum -> 
+        System.out.println("Sum: " + sum));</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.range(1, 5)
+    .reduce(0, Integer::sum)
+    .subscribe(sum -> 
+        System.out.println("Sum: " + sum));</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">val sum = (1..5).asFlow()
+    .reduce { a, b -> a + b }
+println("Sum: $sum")</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">var sum = 0
+for (n in 1..5) {
+    sum += n
+}
+println("Sum: $sum")</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>Sum: 15</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">6</span>
+                <h2>Async Operations</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.just(1, 2, 3)
+    .flatMap(id -> fetchUserAsync(id))
+    .subscribe(System.out::println);
+
+// Helper
+static Observable&lt;String&gt; fetchUserAsync(int id) {
+    return Observable.just("User-" + id)
+        .delay(50, TimeUnit.MILLISECONDS);
+}</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.just(1, 2, 3)
+    .flatMap(id -> fetchUserAsync(id))
+    .subscribe(System.out::println);
+
+// Helper
+static Mono&lt;String&gt; fetchUserAsync(int id) {
+    return Mono.just("User-" + id)
+        .delayElement(Duration.ofMillis(50));
+}</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flowOf(1, 2, 3)
+    .flatMapConcat { fetchUserFlow(it) }
+    .collect { println(it) }
+
+// Helper
+fun fetchUserFlow(id: Int) = flow {
+    delay(50)
+    emit("User-$id")
+}</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (id in 1..3) {
+    val user = fetchUser(id)
+    println(user)
+}
+
+// Helper
+suspend fun fetchUser(id: Int): String {
+    delay(50)
+    return "User-$id"
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>User-1
+User-2
+User-3</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">7</span>
+                <h2>Zip (Combine Streams)</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable&lt;String&gt; names = 
+    Observable.just("Alice", "Bob");
+Observable&lt;Integer&gt; ages = 
+    Observable.just(25, 30);
+
+Observable.zip(names, ages, 
+    (name, age) -> name + " is " + age)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux&lt;String&gt; names = 
+    Flux.just("Alice", "Bob");
+Flux&lt;Integer&gt; ages = 
+    Flux.just(25, 30);
+
+Flux.zip(names, ages, 
+    (name, age) -> name + " is " + age)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">val names = flowOf("Alice", "Bob")
+val ages = flowOf(25, 30)
+
+names.zip(ages) { name, age -> 
+    "$name is $age" 
+}.collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">val names = listOf("Alice", "Bob")
+val ages = listOf(25, 30)
+
+for (i in names.indices) {
+    println("${names[i]} is ${ages[i]}")
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>Alice is 25
+Bob is 30</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">8</span>
+                <h2>Error Handling</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable.just(1, 2, 0, 4)
+    .map(n -> 10 / n)
+    .onErrorReturnItem(-1)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Flux.just(1, 2, 0, 4)
+    .map(n -> 10 / n)
+    .onErrorReturn(-1)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flowOf(1, 2, 0, 4)
+    .map { 10 / it }
+    .catch { emit(-1) }
+    .collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">for (n in listOf(1, 2, 0, 4)) {
+    try {
+        println(10 / n)
+    } catch (e: Exception) {
+        println(-1)
+        break
+    }
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>10
+5
+-1</pre>
+            </div>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-header">
+                <span class="num">9</span>
+                <h2>Parallel Execution</h2>
+            </div>
+            <div class="code-grid">
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge rxjava">RxJava</span>
+                    </div>
+                    <pre><code class="language-java">Observable&lt;String&gt; a = Observable.just("Data-A")
+    .delay(100, TimeUnit.MILLISECONDS);
+Observable&lt;String&gt; b = Observable.just("Data-B")
+    .delay(50, TimeUnit.MILLISECONDS);
+
+Observable.zip(a, b, (x, y) -> x + ", " + y)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge reactor">Reactor</span>
+                    </div>
+                    <pre><code class="language-java">Mono&lt;String&gt; a = Mono.just("Data-A")
+    .delayElement(Duration.ofMillis(100));
+Mono&lt;String&gt; b = Mono.just("Data-B")
+    .delayElement(Duration.ofMillis(50));
+
+Mono.zip(a, b, (x, y) -> x + ", " + y)
+    .subscribe(System.out::println);</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-flow">Coroutines (Flow)</span>
+                    </div>
+                    <pre><code class="language-kotlin">flow {
+    coroutineScope {
+        val a = async { fetchData("A", 100) }
+        val b = async { fetchData("B", 50) }
+        emit("${a.await()}, ${b.await()}")
+    }
+}.collect { println(it) }</code></pre>
+                </div>
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
+                    </div>
+                    <pre><code class="language-kotlin">coroutineScope {
+    val a = async { fetchData("A", 100) }
+    val b = async { fetchData("B", 50) }
+    println("${a.await()}, ${b.await()}")
+}
+
+suspend fun fetchData(n: String, ms: Long): String {
+    delay(ms); return "Data-$n"
+}</code></pre>
+                </div>
+            </div>
+            <div class="output-section">
+                <h4>Output</h4>
+                <pre>Data-A, Data-B</pre>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with RxJava 3, Project Reactor 3.6 &amp; Kotlin Coroutines 1.8</p>
+        </footer>
+    </div>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>
