@@ -1,15 +1,16 @@
-name: Build CSLib Docker images
+name: Build CSLib-REPL Docker images
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - lean4-dockerfiles/Dockerfile.cslib
-      - .github/workflows/build-cslib.yml
+      - lean4-dockerfiles/Dockerfile.cslib-repl
+      - lean4-dockerfiles/repl_server.py
+      - .github/workflows/build-cslib-repl.yml
 
 env:
-  IMAGE: ghcr.io/ldct/cslib
+  IMAGE: ghcr.io/ldct/cslib-repl
 
 jobs:
   build-and-push:
@@ -21,21 +22,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - cslib_tag: v4.25.0
-            lean_toolchain: "leanprover/lean4:v4.25.0"
-            lean_version: "4.25.0"
-            image_tag: v4.25.0
-          - cslib_tag: v4.26.0
-            lean_toolchain: "leanprover/lean4:v4.26.0"
-            lean_version: "4.26.0"
-            image_tag: v4.26.0
-          - cslib_tag: v4.27.0-rc1
-            lean_toolchain: "leanprover/lean4:v4.27.0-rc1"
-            lean_version: "4.27.0-rc1"
-            image_tag: v4.27.0-rc1
           - cslib_tag: v4.29.0-rc1
             lean_toolchain: "leanprover/lean4:v4.29.0-rc1"
             lean_version: "4.29.0-rc1"
+            repl_tag: v4.29.0-rc1
             image_tag: v4.29.0-rc1
     steps:
       - uses: actions/checkout@v4
@@ -49,10 +39,11 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: lean4-dockerfiles
-          file: lean4-dockerfiles/Dockerfile.cslib
+          file: lean4-dockerfiles/Dockerfile.cslib-repl
           push: true
           tags: ${{ env.IMAGE }}:${{ matrix.image_tag }}
           build-args: |
             CSLIB_TAG=${{ matrix.cslib_tag }}
             LEAN_TOOLCHAIN=${{ matrix.lean_toolchain }}
             LEAN_VERSION=${{ matrix.lean_version }}
+            REPL_TAG=${{ matrix.repl_tag }}
