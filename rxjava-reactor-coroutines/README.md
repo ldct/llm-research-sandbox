@@ -104,6 +104,11 @@ All demos cover these patterns with identical output:
 
 A static HTML page showing all examples side-by-side with syntax highlighting.
 
+### Live versions
+
+- **GitHub Pages:** https://ldct.github.io/llm-research-sandbox/rxjava-reactor-coroutines/website/
+- **exe.xyz:** https://rxjava-coroutine-comparison.exe.xyz:8000/
+
 ### Run locally
 
 ```bash
@@ -114,10 +119,6 @@ python -m http.server 8000
 ```
 
 Then open http://localhost:8000
-
-### Live version
-
-https://rxjava-coroutine-comparison.exe.xyz:8000/
 
 ## Adding New Examples
 

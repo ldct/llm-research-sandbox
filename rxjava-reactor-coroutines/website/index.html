@@ -275,9 +275,9 @@
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (item in listOf("Hello", "World")) {
-    println(item)
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    flowOf("Hello", "World").collect { emit(it) }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -321,9 +321,11 @@ World</pre>
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (fruit in listOf("apple", "banana", "cherry")) {
-    println(fruit.uppercase())
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    flowOf("apple", "banana", "cherry").collect { fruit ->
+        emit(fruit.uppercase())
+    }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -372,11 +374,13 @@ CHERRY</pre>
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (word in listOf("Hi", "Rx")) {
-    for (char in word) {
-        println(char)
+                    <pre><code class="language-kotlin">flow {
+    flowOf("Hi", "Rx").collect { word ->
+        for (char in word) {
+            emit(char.toString())
+        }
     }
-}</code></pre>
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -422,9 +426,11 @@ x</pre>
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (n in 1..10) {
-    if (n % 2 == 0) println(n)
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    (1..10).asFlow().collect { n ->
+        if (n % 2 == 0) emit(n)
+    }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -474,9 +480,7 @@ println("Sum: $sum")</code></pre>
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
                     <pre><code class="language-kotlin">var sum = 0
-for (n in 1..5) {
-    sum += n
-}
+(1..5).asFlow().collect { sum += it }
 println("Sum: $sum")</code></pre>
                 </div>
             </div>
@@ -538,16 +542,12 @@ fun fetchUserFlow(id: Int) = flow {
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (id in 1..3) {
-    val user = fetchUser(id)
-    println(user)
-}
-
-// Helper
-suspend fun fetchUser(id: Int): String {
-    delay(50)
-    return "User-$id"
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    flowOf(1, 2, 3).collect { id ->
+        delay(50)
+        emit("User-$id")
+    }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -605,12 +605,13 @@ names.zip(ages) { name, age ->
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">val names = listOf("Alice", "Bob")
-val ages = listOf(25, 30)
-
-for (i in names.indices) {
-    println("${names[i]} is ${ages[i]}")
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    val names = flowOf("Alice", "Bob").toList()
+    val ages = flowOf(25, 30).toList()
+    names.forEachIndexed { i, name ->
+        emit("$name is ${ages[i]}")
+    }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -657,14 +658,12 @@ Bob is 30</pre>
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">for (n in listOf(1, 2, 0, 4)) {
-    try {
-        println(10 / n)
-    } catch (e: Exception) {
-        println(-1)
-        break
+                    <pre><code class="language-kotlin">flow {
+    flowOf(1, 2, 0, 4).collect { n ->
+        emit(10 / n)
     }
-}</code></pre>
+}.catch { emit(-1) }
+ .collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
@@ -721,15 +720,13 @@ Mono.zip(a, b, (x, y) -> x + ", " + y)
                     <div class="code-panel-header">
                         <span class="lang-badge kotlin-seq">Coroutines (Sequential)</span>
                     </div>
-                    <pre><code class="language-kotlin">coroutineScope {
-    val a = async { fetchData("A", 100) }
-    val b = async { fetchData("B", 50) }
-    println("${a.await()}, ${b.await()}")
-}
-
-suspend fun fetchData(n: String, ms: Long): String {
-    delay(ms); return "Data-$n"
-}</code></pre>
+                    <pre><code class="language-kotlin">flow {
+    coroutineScope {
+        val a = async { fetchData("A", 100) }
+        val b = async { fetchData("B", 50) }
+        emit("${a.await()}, ${b.await()}")
+    }
+}.collect { println(it) }</code></pre>
                 </div>
             </div>
             <div class="output-section">
