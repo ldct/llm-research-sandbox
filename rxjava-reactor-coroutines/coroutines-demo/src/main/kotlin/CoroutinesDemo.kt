@@ -66,84 +66,88 @@ fun main() = runBlocking {
 
     println("\n" + "=".repeat(50))
     println("=== Sequential (Imperative) Style ===")
+    println("(Using flow { collect { emit() } } pattern)")
     
-    // 1. Basic iteration
+    // 1. Basic - collect/emit passthrough
     println("\n1. Basic iteration:")
-    for (item in listOf("Hello", "Coroutines", "World")) {
-        println(item)
-    }
+    flow {
+        flowOf("Hello", "Coroutines", "World").collect { emit(it) }
+    }.collect { println(it) }
     
-    // 2. Map with loop
+    // 2. Map with collect/emit
     println("\n2. Map (uppercase):")
-    for (fruit in listOf("apple", "banana", "cherry")) {
-        println(fruit.uppercase())
-    }
-    
-    // 3. FlatMap with nested loops
-    println("\n3. FlatMap (split words):")
-    for (word in listOf("Hi", "Rx")) {
-        for (char in word) {
-            println(char)
+    flow {
+        flowOf("apple", "banana", "cherry").collect { fruit ->
+            emit(fruit.uppercase())
         }
-    }
+    }.collect { println(it) }
     
-    // 4. Filter with if
+    // 3. FlatMap with nested emit
+    println("\n3. FlatMap (split words):")
+    flow {
+        flowOf("Hi", "Rx").collect { word ->
+            for (char in word) {
+                emit(char.toString())
+            }
+        }
+    }.collect { println(it) }
+    
+    // 4. Filter with if + emit
     println("\n4. Filter (even numbers):")
-    for (n in 1..10) {
-        if (n % 2 == 0) println(n)
-    }
+    flow {
+        (1..10).asFlow().collect { n ->
+            if (n % 2 == 0) emit(n)
+        }
+    }.collect { println(it) }
     
-    // 5. Reduce with accumulator
+    // 5. Reduce with accumulator in collect
     println("\n5. Reduce (sum 1-5):")
     var sumSeq = 0
-    for (n in 1..5) {
-        sumSeq += n
-    }
+    (1..5).asFlow().collect { sumSeq += it }
     println("Sum: $sumSeq")
     
-    // 6. Async with sequential calls
+    // 6. Async with delay in collect/emit
     println("\n6. Sequential async (fetch user data):")
-    for (id in 1..3) {
-        val user = fetchUser(id)
-        println(user)
-    }
-    
-    // 7. Zip with indexed iteration
-    println("\n7. Zip (combine names and ages):")
-    val namesList = listOf("Alice", "Bob")
-    val agesList = listOf(25, 30)
-    for (i in namesList.indices) {
-        println("${namesList[i]} is ${agesList[i]}")
-    }
-    
-    // 8. Error handling with try-catch
-    println("\n8. Error handling:")
-    for (n in listOf(1, 2, 0, 4)) {
-        try {
-            println(10 / n)
-        } catch (e: Exception) {
-            println(-1)
-            break
+    flow {
+        flowOf(1, 2, 3).collect { id ->
+            delay(50)
+            emit("User-$id")
         }
-    }
+    }.collect { println(it) }
     
-    // 9. Parallel with async/await
+    // 7. Zip - collect both flows, combine
+    println("\n7. Zip (combine names and ages):")
+    flow {
+        val namesList = flowOf("Alice", "Bob").toList()
+        val agesList = flowOf(25, 30).toList()
+        namesList.forEachIndexed { i, name ->
+            emit("$name is ${agesList[i]}")
+        }
+    }.collect { println(it) }
+    
+    // 8. Error handling - let it throw, catch outside
+    println("\n8. Error handling:")
+    flow {
+        flowOf(1, 2, 0, 4).collect { n ->
+            emit(10 / n)
+        }
+    }.catch { emit(-1) }
+     .collect { println(it) }
+    
+    // 9. Parallel with async/await inside flow
     println("\n9. Parallel execution:")
-    coroutineScope {
-        val a = async { fetchData("A", 100) }
-        val b = async { fetchData("B", 50) }
-        println("${a.await()}, ${b.await()}")
-    }
+    flow {
+        coroutineScope {
+            val a = async { fetchData("A", 100) }
+            val b = async { fetchData("B", 50) }
+            emit("${a.await()}, ${b.await()}")
+        }
+    }.collect { println(it) }
 }
 
 fun fetchUserFlow(id: Int): Flow<String> = flow {
     delay(50)
     emit("User-$id")
-}
-
-suspend fun fetchUser(id: Int): String {
-    delay(50)
-    return "User-$id"
 }
 
 suspend fun fetchData(name: String, delayMs: Long): String {
