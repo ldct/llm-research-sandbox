@@ -1,0 +1,52 @@
+ARG CSLIB_TAG=v4.27.0-rc1
+ARG LEAN_TOOLCHAIN=leanprover/lean4:v4.27.0-rc1
+ARG LEAN_VERSION=4.27.0-rc1
+ARG REPL_TAG=v4.27.0-rc1
+
+FROM ubuntu:noble
+
+ARG CSLIB_TAG
+ARG LEAN_TOOLCHAIN
+ARG LEAN_VERSION
+ARG REPL_TAG
+
+RUN apt-get update && apt-get install -y curl git python3 zstd && rm -rf /var/lib/apt/lists/*
+
+ENV PATH="/root/.elan/bin:${PATH}"
+
+RUN curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+
+# Install toolchain: try elan first, fall back to manual install from GitHub releases
+RUN elan toolchain install ${LEAN_TOOLCHAIN} && elan default ${LEAN_TOOLCHAIN} || \
+    ( mkdir -p /root/.elan/toolchains/$(echo ${LEAN_TOOLCHAIN} | sed 's|/|--|g; s|:|---|g') && \
+      curl -L -o /tmp/lean.tar.zst "https://github.com/leanprover/lean4/releases/download/v${LEAN_VERSION}/lean-${LEAN_VERSION}-linux.tar.zst" && \
+      zstd -d /tmp/lean.tar.zst -o /tmp/lean.tar && \
+      tar xf /tmp/lean.tar --strip-components=1 -C /root/.elan/toolchains/$(echo ${LEAN_TOOLCHAIN} | sed 's|/|--|g; s|:|---|g') && \
+      rm /tmp/lean.tar /tmp/lean.tar.zst && \
+      elan default ${LEAN_TOOLCHAIN} )
+
+WORKDIR /project
+
+RUN git clone --branch ${CSLIB_TAG} --depth 1 https://github.com/leanprover/cslib.git .
+
+ENV MATHLIB_NO_CACHE_ON_UPDATE=1
+
+RUN lake update
+
+RUN lake exe cache get
+
+RUN lake build
+
+# Smoke test cslib
+RUN printf 'import Cslib\n#eval 1 + 1\n' > Test.lean && lake env lean Test.lean
+
+# Clone and build lean-repl (matching Lean version)
+RUN cd /opt && \
+    git clone --branch ${REPL_TAG} --depth 1 \
+      https://github.com/leanprover-community/repl.git && \
+    cd repl && lake build repl
+
+COPY repl_server.py /repl_server.py
+
+EXPOSE 8000
+CMD ["python3", "/repl_server.py"]
