@@ -4,7 +4,7 @@ import {
 } from './cm-bundle.js';
 
 // ── Config ────────────────────────────────────────────
-const API_BASE = 'https://euro-specs-special-visited.trycloudflare.com';
+const API_BASE = 'https://district-newly-procedures-turbo.trycloudflare.com';
 const VERSIONS = [
   { id: 'mathlib-repl-4-27-0', label: 'Mathlib 4.27', repl: true },
 ];
