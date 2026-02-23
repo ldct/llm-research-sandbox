@@ -287,8 +287,6 @@ const DEFAULT_CODE = EXAMPLES[0].code;
 // ── State ─────────────────────────────────────────────
 let currentVersion = 'mathlib-repl-4-27-0';
 let running = false;
-let healthPollTimer = null;
-let mathlibReady = false;
 
 // ── DOM refs ──────────────────────────────────────────
 const editorPane = document.getElementById('editor-pane');
@@ -347,14 +345,7 @@ function setVersion(v) {
     statusVersion.textContent = `Lean ${vObj ? vObj.label : v}`;
   }
 
-  // Start/stop health polling for REPL versions
-  stopHealthPoll();
-  if (isRepl(v)) {
-    mathlibReady = false;
-    startHealthPoll();
-  } else {
-    removeBanner();
-  }
+
 }
 
 document.getElementById('version-toggle').addEventListener('click', (e) => {
@@ -364,74 +355,6 @@ document.getElementById('version-toggle').addEventListener('click', (e) => {
 
 setVersion(currentVersion);
 
-// ── Health polling for Mathlib REPL ─────────────────
-function stopHealthPoll() {
-  if (healthPollTimer) {
-    clearInterval(healthPollTimer);
-    healthPollTimer = null;
-  }
-}
-
-function removeBanner() {
-  const existing = document.getElementById('mathlib-banner');
-  if (existing) existing.remove();
-}
-
-function showBanner(text, type) {
-  let banner = document.getElementById('mathlib-banner');
-  if (!banner) {
-    banner = document.createElement('div');
-    banner.id = 'mathlib-banner';
-    outputContent.prepend(banner);
-  }
-  banner.className = `mathlib-banner ${type}`;
-  if (type === 'loading') {
-    banner.innerHTML = `<div class="pulse-bar"></div><span>${escHtml(text)}</span>`;
-  } else {
-    banner.innerHTML = `<span>${escHtml(text)}</span>`;
-  }
-}
-
-async function checkHealth() {
-  try {
-    const resp = await fetch(`${API_BASE}/health`);
-    if (!resp.ok) {
-      if (resp.status === 503) {
-        showBanner('⏳ Starting Mathlib container… (this takes ~2-3 min on cold start)', 'loading');
-        statusState.textContent = 'Starting container…';
-      } else {
-        showBanner(`Health check error: HTTP ${resp.status}`, 'error');
-      }
-      return;
-    }
-    const data = await resp.json();
-    if (data.ready) {
-      mathlibReady = true;
-      stopHealthPoll();
-      showBanner('✓ Mathlib loaded', 'ready');
-      statusState.textContent = 'Ready';
-      // Fade out after 3s
-      setTimeout(() => {
-        const b = document.getElementById('mathlib-banner');
-        if (b && b.classList.contains('ready')) {
-          b.style.animation = 'bannerFadeOut 0.5s ease forwards';
-          setTimeout(() => b.remove(), 500);
-        }
-      }, 3000);
-    } else {
-      const status = data.status || 'loading';
-      showBanner(`⏳ Loading Mathlib… (${status}) — this takes ~60s on first request`, 'loading');
-      statusState.textContent = 'Loading Mathlib…';
-    }
-  } catch (err) {
-    showBanner(`Health check failed: ${err.message}`, 'error');
-  }
-}
-
-function startHealthPoll() {
-  checkHealth();
-  healthPollTimer = setInterval(checkHealth, 5000);
-}
 
 // ── Run code ──────────────────────────────────────────
 async function runCode() {
@@ -449,11 +372,7 @@ async function runCode() {
   document.body.classList.add('running');
   statusState.textContent = 'Running…';
   statusElapsed.textContent = '';
-  if (isRepl(currentVersion) && !mathlibReady) {
-    outputContent.innerHTML = '<div class="output-placeholder">Waiting for Mathlib to load…</div>';
-  } else {
-    outputContent.innerHTML = '<div class="output-placeholder">Evaluating…</div>';
-  }
+  outputContent.innerHTML = '<div class="output-placeholder">Evaluating…</div>';
 
   const t0 = performance.now();
 
