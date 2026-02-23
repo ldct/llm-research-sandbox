@@ -362,7 +362,7 @@ async function runCode() {
   running = true;
 
   const code = editorView.state.doc.toString();
-  const url = `${API_BASE}/`;
+  const url = `${API_BASE}/mathlib/`;
 
   // UI: loading
   runBtn.disabled = true;
