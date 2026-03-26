@@ -1,0 +1,36 @@
+quadratic-sieve/quadratic_sieve.py
+  d4a0d7a5b4c37f24 1-359
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.19",
+  "base_commit_sha": "74998186f5fbb181add3bf5c3fc939be04963790",
+  "prompts": {
+    "4b722392ca16814e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3ec3127d-9e11-4c61-9d41-752f99db383f",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Xuanji Li <xuanji@gmail.com>",
+      "messages": [],
+      "total_additions": 388,
+      "total_deletions": 7,
+      "accepted_lines": 381,
+      "overriden_lines": 0
+    },
+    "d4a0d7a5b4c37f24": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "da340b39-2ab4-4121-a486-365f7a005395",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Xuanji Li <xuanji@gmail.com>",
+      "messages": [],
+      "total_additions": 359,
+      "total_deletions": 0,
+      "accepted_lines": 359,
+      "overriden_lines": 0
+    }
+  }
+}
