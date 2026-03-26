@@ -1,0 +1,25 @@
+firecracker/NOTES.md
+  4b722392ca16814e 1-413
+firecracker/repl_server_small.py
+  4b722392ca16814e 1-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.20",
+  "base_commit_sha": "1275fc2125985558d63a5fc82f95bdd0ca06b3e9",
+  "prompts": {
+    "4b722392ca16814e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3ec3127d-9e11-4c61-9d41-752f99db383f",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Xuanji Li <xuanji@gmail.com>",
+      "messages": [],
+      "total_additions": 132,
+      "total_deletions": 4,
+      "accepted_lines": 509,
+      "overriden_lines": 0
+    }
+  }
+}
