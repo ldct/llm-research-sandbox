@@ -1,0 +1,38 @@
+---
+---
+<div class="page">
+  <header class="bar">Header</header>
+  <main class="content">
+    <div class="note">Short content — footer still hugs the bottom.</div>
+  </main>
+  <footer class="bar">Footer</footer>
+</div>
+
+<style>
+  .page {
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed #afb8c1;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+  }
+  .bar {
+    padding: 10px 14px;
+    background: #2d333b;
+    color: white;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+  .content {
+    flex: 1;
+    padding: 16px;
+    color: #1f2328;
+  }
+  .note {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: #6e7781;
+  }
+</style>

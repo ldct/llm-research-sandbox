@@ -1,0 +1,35 @@
+---
+---
+<div class="container">
+  <aside class="sidebar">
+    <div class="label">sidebar</div>
+    <div class="sub">200px</div>
+  </aside>
+  <section class="content">
+    <div class="label">content</div>
+    <div class="sub">1fr</div>
+  </section>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    height: 240px;
+    border: 1px dashed #afb8c1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .sidebar {
+    background: #2d333b;
+    color: white;
+    padding: 16px;
+  }
+  .content {
+    background: white;
+    color: #1f2328;
+    padding: 16px;
+  }
+  .label { font-family: var(--mono); font-weight: 600; }
+  .sub { font-family: var(--mono); font-size: 0.78rem; opacity: 0.6; }
+</style>

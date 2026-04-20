@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import Impl from '../../components/Impl.astro';
+import { layouts, frameworks, type FrameworkId } from '../../data/layouts';
+
+import CenteredFlex from '../../components/previews/centered/Flexbox.astro';
+import CenteredGrid from '../../components/previews/centered/Grid.astro';
+import EqualHorizFlex from '../../components/previews/equal-horizontal/Flexbox.astro';
+import EqualHorizGrid from '../../components/previews/equal-horizontal/Grid.astro';
+import EqualHorizGapFlex from '../../components/previews/equal-horizontal-gap/Flexbox.astro';
+import EqualHorizGapGrid from '../../components/previews/equal-horizontal-gap/Grid.astro';
+import VStackFlex from '../../components/previews/vertical-stack/Flexbox.astro';
+import VStackGrid from '../../components/previews/vertical-stack/Grid.astro';
+import SidebarFlex from '../../components/previews/sidebar/Flexbox.astro';
+import SidebarGrid from '../../components/previews/sidebar/Grid.astro';
+import StickyFooterFlex from '../../components/previews/sticky-footer/Flexbox.astro';
+import StickyFooterGrid from '../../components/previews/sticky-footer/Grid.astro';
+import CenteredColFlex from '../../components/previews/centered-column/Flexbox.astro';
+import CenteredColGrid from '../../components/previews/centered-column/Grid.astro';
+import CardGridFlex from '../../components/previews/card-grid/Flexbox.astro';
+import CardGridGrid from '../../components/previews/card-grid/Grid.astro';
+
+export function getStaticPaths() {
+  return layouts.map((layout) => ({ params: { slug: layout.slug } }));
+}
+
+const { slug } = Astro.params;
+const layout = layouts.find((l) => l.slug === slug)!;
+
+// Dispatch preview component by (slug, framework). Only web frameworks are live.
+const previews: Record<string, Partial<Record<FrameworkId, any>>> = {
+  'centered':              { flexbox: CenteredFlex,       grid: CenteredGrid },
+  'equal-horizontal':      { flexbox: EqualHorizFlex,     grid: EqualHorizGrid },
+  'equal-horizontal-gap':  { flexbox: EqualHorizGapFlex,  grid: EqualHorizGapGrid },
+  'vertical-stack':        { flexbox: VStackFlex,         grid: VStackGrid },
+  'sidebar':               { flexbox: SidebarFlex,        grid: SidebarGrid },
+  'sticky-footer':         { flexbox: StickyFooterFlex,   grid: StickyFooterGrid },
+  'centered-column':       { flexbox: CenteredColFlex,    grid: CenteredColGrid },
+  'card-grid':             { flexbox: CardGridFlex,       grid: CardGridGrid },
+};
+---
+
+<Base title={`${layout.title} — layout-rosetta`} description={layout.tagline}>
+  <p class="back-link"><a href="/">← all layouts</a></p>
+
+  <h1>{layout.title}</h1>
+  <p class="muted">
+    <span class={`pill tier-${layout.tier}`}>tier {layout.tier}</span>
+    &nbsp;{layout.tagline}
+  </p>
+
+  <p>{layout.description}</p>
+
+  <div class="spec">
+    <h3>Invariants</h3>
+    <ul>
+      {layout.invariants.map((inv) => <li>{inv}</li>)}
+    </ul>
+  </div>
+
+  <h2>Implementations</h2>
+
+  {frameworks.map((f) => {
+    const impl = layout.implementations[f.id];
+    const PreviewComp = previews[layout.slug]?.[f.id];
+    return (
+      <Impl framework={f} impl={impl}>
+        {PreviewComp && <PreviewComp />}
+      </Impl>
+    );
+  })}
+</Base>

@@ -1,0 +1,37 @@
+---
+import { Code } from 'astro:components';
+import type { Framework, Implementation } from '../data/layouts';
+
+interface Props {
+  framework: Framework;
+  impl: Implementation;
+}
+
+const { framework, impl } = Astro.props;
+---
+
+<section class="impl-block">
+  <div class="impl-head">
+    <span class="framework-name">{framework.label}</span>
+    <span class={`diff diff-${impl.difficulty}`}>{impl.difficulty}</span>
+    <span class="spacer"></span>
+    <span class="dim">{framework.lang}</span>
+  </div>
+
+  {framework.live ? (
+    <div class="preview-frame">
+      <div class="preview-label">Live preview</div>
+      <slot />
+    </div>
+  ) : (
+    <div class="no-preview">
+      code-only — render requires {framework.label} runtime
+    </div>
+  )}
+
+  <div class="code-wrap">
+    <Code code={impl.code} lang={framework.lang as any} theme="github-dark" />
+  </div>
+
+  {impl.notes && <div class="impl-notes">{impl.notes}</div>}
+</section>

@@ -1,0 +1,36 @@
+---
+---
+<div class="container">
+  <aside class="sidebar">
+    <div class="label">sidebar</div>
+    <div class="sub">200px</div>
+  </aside>
+  <section class="content">
+    <div class="label">content</div>
+    <div class="sub">flex: 1</div>
+  </section>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    height: 240px;
+    border: 1px dashed #afb8c1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .sidebar {
+    flex: 0 0 200px;
+    background: #2d333b;
+    color: white;
+    padding: 16px;
+  }
+  .content {
+    flex: 1;
+    background: white;
+    color: #1f2328;
+    padding: 16px;
+  }
+  .label { font-family: var(--mono); font-weight: 600; }
+  .sub { font-family: var(--mono); font-size: 0.78rem; opacity: 0.6; }
+</style>

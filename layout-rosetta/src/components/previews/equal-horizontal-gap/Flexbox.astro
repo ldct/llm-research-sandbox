@@ -1,0 +1,32 @@
+---
+---
+<div class="container">
+  <div class="child">One</div>
+  <div class="child">Two</div>
+  <div class="child">Three</div>
+  <div class="child">Four</div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    gap: 12px;
+    height: 80px;
+    padding: 4px;
+    border: 1px dashed #afb8c1;
+    border-radius: 6px;
+  }
+  .child {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
+  .child:nth-child(1) { background: #539bf5; }
+  .child:nth-child(2) { background: #57ab5a; }
+  .child:nth-child(3) { background: #c69026; }
+  .child:nth-child(4) { background: #986ee2; }
+</style>

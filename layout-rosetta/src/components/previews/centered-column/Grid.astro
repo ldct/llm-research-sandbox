@@ -1,0 +1,35 @@
+---
+---
+<div class="page">
+  <article class="column">
+    <h4 class="title">Lorem Ipsum</h4>
+    <p>Using grid: <code>grid-template-columns: 1fr min(680px, 100%) 1fr</code> and the column in track 2.</p>
+    <p>The min() trick avoids repeating the max-width.</p>
+  </article>
+</div>
+
+<style>
+  .page {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr min(680px, 100%) 1fr;
+    border: 1px dashed #afb8c1;
+    border-radius: 6px;
+    background: #f6f8fa;
+  }
+  .column {
+    grid-column: 2;
+    background: white;
+    padding: 18px 22px;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    color: #1f2328;
+  }
+  .title {
+    margin: 0 0 0.5em;
+    font-family: var(--mono);
+  }
+  .column p { margin: 0 0 0.7em; }
+  .column p:last-child { margin: 0; }
+  .column code { background: #eaeef2; padding: 1px 4px; border-radius: 3px; }
+</style>

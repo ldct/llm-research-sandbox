@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { layouts, frameworks } from '../data/layouts';
+---
+
+<Base title="layout-rosetta" description="Compare the same layout across CSS Flexbox, Grid, SwiftUI, Compose, and Flutter.">
+  <h1>layout-rosetta</h1>
+  <p class="muted">
+    A catalog of common UI layouts, each implemented in multiple frameworks side by side.
+    Pick a row to see the spec, live web previews, and idiomatic code for every framework.
+  </p>
+
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th>Layout</th>
+        {frameworks.map((f) => <th>{f.label}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {layouts.map((layout) => (
+        <tr>
+          <td class="layout-cell">
+            <a href={`/layouts/${layout.slug}/`}>{layout.title}</a>
+            <div class="sub">{layout.tagline}</div>
+          </td>
+          {frameworks.map((f) => {
+            const impl = layout.implementations[f.id];
+            return (
+              <td>
+                <span class={`diff diff-${impl.difficulty}`}>{impl.difficulty}</span>
+              </td>
+            );
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <h2>Legend</h2>
+  <p>
+    <span class="diff diff-trivial">trivial</span>
+    one or two lines; the framework handles it natively.
+  </p>
+  <p>
+    <span class="diff diff-easy">easy</span>
+    a handful of lines; idiomatic but requires knowing one or two modifiers.
+  </p>
+  <p>
+    <span class="diff diff-medium">medium</span>
+    more work; multiple interacting concepts.
+  </p>
+  <p>
+    <span class="diff diff-gotcha">gotcha</span>
+    the framework makes this surprisingly awkward.
+  </p>
+</Base>
