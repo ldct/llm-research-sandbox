@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\begin{center}
+{\large\bfseries 35th Irish Mathematical Olympiad\\7 May 2022}
+\end{center}
+\bigskip\noindent\textbf{Paper 1}\bigskip
+\begin{enumerate}
+\item For $n$ a positive integer, $n! = 1 \cdot 2 \cdot 3 \cdots (n-1) \cdot n$ is the product of the positive integers from 1 to $n$.
+
+Determine, with proof, all positive integers $n$ for which $n! + 3$ is a power of 3.
+
+\item Let $ABCD$ be a square and let $\Gamma$ denote the circle with diameter $CD$. A tangent line is drawn to the circle $\Gamma$ from $B$, meeting the circle $\Gamma$ at $E$ and intersecting the segment $AD$ at $K$.
+
+Prove that $|AD| = 4|KD|$.
+
+\item Let $n \ge 3$ be an integer and let $(p_1, p_2, p_3, \ldots, p_n)$ be a permutation of $\{1, 2, 3, \ldots, n\}$. For this permutation we say that $p_t$ is a turning point if $2 \le t \le n - 1$ and
+\[
+(p_t - p_{t-1})(p_t - p_{t+1}) > 0.
+\]
+For example, for $n = 8$, the permutation $(2, 4, 6, 7, 5, 1, 3, 8)$ has two turning points: $p_4 = 7$ and $p_6 = 1$.
+
+For fixed $n$, let $q(n)$ denote the number of permutations of $\{1, 2, 3, \ldots, n\}$ with exactly one turning point. Find all $n \ge 3$ for which $q(n)$ is a perfect square.
+
+\item Let $\mathbb{N}$ denote the strictly positive integers. A function $f : \mathbb{N} \mapsto \mathbb{N}$ has the following properties which hold for all $n \in \mathbb{N}$:
+\begin{enumerate}
+\item[(a)] $f(n) < f(n+1)$;
+\item[(b)] $f(f(f(n))) = 4n$.
+\end{enumerate}
+Find $f(2022)$.
+
+\item Let $\triangle ABC$ be a triangle with circumcentre $O$. The perpendicular line from $O$ to $BC$ intersects line $BC$ at $M$ and line $AC$ at $P$, and the perpendicular line from $O$ to $AC$ intersects line $AC$ at $N$ and line $BC$ at $Q$. Let $D$ be the intersection point of lines $PQ$ and $MN$. Construct the parallelogram $PCQJ$ with $PJ \parallel CQ$ and $QJ \parallel CP$.
+
+Prove the following:
+\begin{enumerate}
+\item[(a)] The points $A$, $B$, $O$, $P$, $Q$, $J$ are all on the same circle.
+\item[(b)] Line $OD$ is perpendicular to line $CJ$.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\begin{center}
+{\large\bfseries 35th Irish Mathematical Olympiad\\7 May 2022}
+\end{center}
+\bigskip\noindent\textbf{Paper 2}\bigskip
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item Suppose $a, b, c$ are real numbers such that $a + b + c = 1$. Prove that
+\[
+a^3 + b^3 + c^3 + 3(1-a)(1-b)(1-c) = 1.
+\]
+
+\item The four vertices of quadrilateral $ABCD$ lie on the circle with diameter $AB$. The diagonals of $ABCD$ intersect at $E$, and the lines $AD$ and $BC$ intersect at $F$. Line $FE$ meets $AB$ at $K$ and line $DK$ meets the circle again at $L$.
+
+Prove that $CL$ is perpendicular to $AB$.
+
+\item The equation $AB \times CD = EFGH$, where each of the letters $A$, $B$, $C$, $D$, $E$, $F$, $G$, $H$ represents a different digit and the values of $A$, $C$ and $E$ are all nonzero, has many solutions, e.g., $46 \times 85 = 3910$. Find the smallest value of the four-digit number $EFGH$ for which there is a solution.
+
+\item Let $k$ be a positive integer and let $x_0, x_1, x_2, \ldots$ be an infinite sequence defined by the relationship
+\[
+x_0 = 0, \quad x_1 = 1, \quad x_{n+1} = kx_n + x_{n-1} \text{ for all } n \ge 1.
+\]
+\begin{enumerate}
+\item[(a)] For the special case $k = 1$, prove that $x_{n-1}x_{n+1}$ is never a perfect square for $n \ge 2$.
+\item[(b)] For the general case of integers $k \ge 1$, prove that $x_{n-1}x_{n+1}$ is never a perfect square for $n \ge 2$.
+\end{enumerate}
+
+\item Let $n \ge 5$ be an odd number and let $r$ be an integer such that $1 \le r \le (n-1)/2$. In a sports tournament, $n$ players take part in a series of contests. In each contest, $2r+1$ players participate, and the scores obtained by the players are the numbers
+\[
+-r, -(r-1), \ldots, -1, 0, 1, \ldots, r-1, r
+\]
+in some order. Each possible subset of $2r+1$ players takes part together in exactly one contest. Let the final score of player $i$ be $S_i$, for each $i = 1, 2, \ldots, n$. Define $N$ to be the smallest difference between the final scores of two players, i.e.,
+\[
+N = \min_{i < j} |S_i - Sj|.
+\]
+Determine, with proof, the maximum possible value of $N$.
+\end{enumerate}
+\end{document}

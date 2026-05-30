@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\begin{center}
+{\large\bfseries 36th Irish Mathematical Olympiad\\6 May 2023}
+\end{center}
+\bigskip\noindent\textbf{Paper 1}\bigskip
+\begin{enumerate}
+\item We are given a triangle $ABC$ such that $\angle BAC < 90^\circ$. The point $D$ is on the opposite side of the line $AB$ to $C$ such that $|AD| = |BD|$ and $\angle ADB = 90^\circ$. Similarly, the point $E$ is on the opposite side of $AC$ to $B$ such that $|AE| = |CE|$ and $\angle AEC = 90^\circ$. The point $X$ is such that $ADXE$ is a parallelogram.
+
+Prove that $|BX| = |CX|$.
+
+\item For $n \ge 3$, a \textit{special $n$-triangle} is a triangle with $n$ distinct numbers on each side such that the sum of the numbers on a side is the same for all sides. For instance, because $41 + 23 + 43 = 43 + 17 + 47 = 47 + 19 + 41$, the following is a special 3-triangle:
+\begin{center}
+\begin{tabular}{ccccc}
+& & 41 & & \\
+& 23 & & 19 & \\
+43 & & 17 & & 47
+\end{tabular}
+\end{center}
+Note that a special $n$-triangle contains $3(n-1)$ numbers.
+
+An infinite set $A$ of positive integers is a \textit{special set} if, for each $n \ge 3$, the smallest $3(n-1)$ numbers of $A$ can be used to form a special $n$-triangle.
+
+Show that the set of positive integers that are not multiples of 2023 is a special set.
+
+\item Let $A$, $B$, $C$, $D$, $E$ be five points on a circle such that $|AB| = |CD|$ and $|BC| = |DE|$. The segments $AD$ and $BE$ intersect at $F$. Let $M$ denote the midpoint of segment $CD$. Prove that the circle of center $M$ and radius $ME$ passes through the midpoint of segment $AF$.
+
+\item Find all functions $f : \mathbb{R} \to \mathbb{R}$ with the property that
+\[
+f(x)f(y) = (xy-1)^2 f\!\left(\frac{x+y-1}{xy-1}\right)
+\]
+for all real numbers $x$, $y$ with $xy \ne 1$.
+
+\item The positive integers $a$, $b$, $c$, $d$ satisfy
+\begin{enumerate}
+\item[(i)] $a + b + c + d = 2023$
+\item[(ii)] $2023 \mid ab - cd$
+\item[(iii)] $2023 \mid a^2 + b^2 + c^2 + d^2$.
+\end{enumerate}
+Assuming that each of the numbers $a$, $b$, $c$, $d$ is divisible by 7, prove that each of the numbers $a$, $b$, $c$, $d$ is divisible by 17.
+\end{enumerate}
+
+\newpage
+\begin{center}
+{\large\bfseries 36th Irish Mathematical Olympiad\\6 May 2023}
+\end{center}
+\bigskip\noindent\textbf{Paper 2}\bigskip
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item A positive integer is \textit{totally square} if the sum of its digits (written in base 10) is a square number. For example, 13 is totally square because $1 + 3 = 2^2$, but 16 is not totally square. Show that there are infinitely many positive integers that are not the sum of two totally square integers.
+
+\item Aisling and Brendan take alternate moves in the following game. Before the game starts, the number $x = 2023$ is written on a piece of paper. Aisling makes the first move. A move from a positive integer $x$ consists of replacing $x$ either with $x + 1$ or with $x/p$ where $p$ is a prime factor of $x$.
+
+The winner is the first player to write the number $x = 1$.
+
+Determine whether Aisling or Brendan has a winning strategy for this game.
+
+\item Suppose that $a$, $b$, $c$ are positive real numbers and $a + b + c = 3$. Prove that
+\[
+\frac{a+b}{c+2} + \frac{b+c}{a+2} + \frac{c+a}{b+2} \ge 2
+\]
+and determine when equality holds.
+
+\item The triangle $ABC$ has circumcentre $O$ and circumcircle $\Gamma$. Let $AI$ be a diameter of $\Gamma$. The ray $AI$ extends to intersect the circumcircle $\omega$ of $\triangle BOC$ for the second time at a point $P$.
+
+Let $AD$ and $IQ$ be perpendicular to $BC$, with $D$ and $Q$ on $BC$. Let $M$ be the midpoint of $BC$.
+\begin{enumerate}
+\item[(a)] Prove that $|AD| \cdot |QI| = |CD| \cdot |CQ| = |BD| \cdot |BQ|$.
+\item[(b)] Prove that $IM$ is parallel to $PD$.
+\end{enumerate}
+
+\item Caitlin and Donal play a game called \textit{Basketball Shoot-Out}. The game consists of 10 rounds. In each round, Caitlin and Donal both throw a ball simultaneously at each other's basket. If a player's ball falls into the basket, that player scores one point; otherwise, they score zero points. The scoreboard shows the complete sequence of points scored by each player in each of the 10 rounds of the game.
+
+It turns out that Caitlin has scored at least as many points in total as Donal after every round of the game. Prove the number of possible scoreboards is divisible by 4 but not by 8.
+\end{enumerate}
+\end{document}

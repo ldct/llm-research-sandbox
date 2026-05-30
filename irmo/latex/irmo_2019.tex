@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\begin{center}
+{\large\bfseries 32nd Irish Mathematical Olympiad\\11 May 2019}
+\end{center}
+\bigskip\noindent\textbf{Paper 1}\bigskip
+\begin{enumerate}
+\item Define the \textit{quasi-primes} as follows.
+\begin{itemize}
+\item The first quasi-prime is $q_1 = 2$
+\item For $n \ge 2$, the $n^{\text{th}}$ quasi-prime $q_n$ is the smallest integer greater than $q_{n-1}$ and not of the form $q_i q_j$ for some $1 \le i \le j \le n-1$.
+\end{itemize}
+Determine, with proof, whether or not 1000 is a quasi-prime.
+
+\item Jenny is going to attend a sports camp for 7 days. Each day, she will play exactly one of three sports: hockey, tennis or camogie. The only restriction is that in any period of 4 consecutive days, she must play all three sports.
+
+Find, with proof, the number of possible sports schedules for Jenny's week.
+
+\item A quadrilateral $ABCD$ is such that the sides $AB$ and $DC$ are parallel, and $|BC| = |AB| + |CD|$. Prove that the angle bisectors of the angles $\angle ABC$ and $\angle BCD$ intersect at right angles on the side $AD$.
+
+\item Find the set of all quadruplets $(x, y, z, w)$ of non-zero real numbers which satisfy
+\[
+1 + \frac{1}{x} + \frac{2(x+1)}{xy} + \frac{3(x+1)(y+2)}{xyz} + \frac{4(x+1)(y+2)(z+3)}{xyzw} = 0.
+\]
+
+\item Let $M$ be a point on the side $BC$ of triangle $ABC$ and let $P$ and $Q$ denote the circumcentres of triangles $ABM$ and $ACM$ respectively. Let $L$ denote the point of intersection of the extended lines $BP$ and $CQ$ and let $K$ denote the reflection of $L$ through the line $PQ$.
+
+Prove that $M$, $P$, $Q$ and $K$ all lie on the same circle.
+
+[\textit{We say that $K$ is the reflection of $L$ through the line $PQ$ if $PQ$ is the perpendicular bisector of the segment $KL$}]
+\end{enumerate}
+
+\newpage
+\begin{center}
+{\large\bfseries 32nd Irish Mathematical Olympiad\\11 May 2019}
+\end{center}
+\bigskip\noindent\textbf{Paper 2}\bigskip
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item The number 2019 has the following nice properties:
+\begin{enumerate}
+\item[(a)] It is the sum of the fourth powers of five distinct positive integers.
+\item[(b)] It is the sum of six consecutive positive integers.
+\end{enumerate}
+In fact,
+\begin{align}
+2019 &= 1^4 + 2^4 + 3^4 + 5^4 + 6^4. \tag{1}\\
+2019 &= 334 + 335 + 336 + 337 + 338 + 339. \tag{2}
+\end{align}
+Prove that 2019 is the smallest number that satisfies \textbf{both} (a) and (b).
+
+(You may assume that (1) and (2) are correct!)
+
+\item Three non-zero real numbers $a$, $b$, $c$ satisfy $a + b + c = 0$ and $a^4 + b^4 + c^4 = 128$. Determine all possible values of $ab + bc + ca$.
+
+\item Consider a point $G$ in the interior of a parallelogram $ABCD$. A circle $\Gamma$ through $A$ and $G$ intersects the sides $AB$ and $AD$ for the second time at the points $E$ and $F$ respectively. The line $FG$ extended intersects the side $BC$ at $H$ and the line $EG$ extended intersects the side $CD$ at $I$. The circumcircle of triangle $HGI$ intersects the circle $\Gamma$ for the second time at $M \ne G$. Prove that $M$ lies on the diagonal $AC$.
+
+\item Suppose $x$, $y$, $z$ are real numbers such that $x^2 + y^2 + z^2 + 2xyz = 1$. Prove that $8xyz \le 1$, with equality if and only if $(x, y, z)$ is one of the following:
+\[
+\left(\frac{1}{2}, \frac{1}{2}, \frac{1}{2}\right)\quad
+\left(-\frac{1}{2}, -\frac{1}{2}, \frac{1}{2}\right)\quad
+\left(-\frac{1}{2}, \frac{1}{2}, -\frac{1}{2}\right)\quad
+\left(\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}\right).
+\]
+
+\item \textit{Island Hopping Holidays} offer short holidays to 64 islands, labeled Island $i$, $1 \le i \le 64$. A guest chooses any Island $a$ for the first night of the holiday, moves to Island $b$ for the second night, and finally moves to Island $c$ for the third night. Due to the limited number of boats, we must have $b \in T_a$ and $c \in T_b$, where the sets $T_i$ are chosen so that
+\begin{enumerate}
+\item[(a)] each $T_i$ is non-empty, and $i \notin T_i$,
+\item[(b)] $\sum_{i=1}^{64} |T_i| = 128$, where $|T_i|$ is the number of elements of $T_i$.
+\end{enumerate}
+Exhibit a choice of sets $T_i$ giving at least $63 \cdot 64 + 6 = 4038$ possible holidays.
+
+Note that $c = a$ is allowed, and holiday choices $(a, b, c)$ and $(a', b', c')$ are considered distinct if $a \ne a'$ or $b \ne b'$ or $c \ne c'$.
+\end{enumerate}
+\end{document}

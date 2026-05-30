@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\begin{center}
+{\large\bfseries 10th Irish Mathematical Olympiad\\10 May 1997}
+\end{center}
+\bigskip\noindent\textbf{Paper 1}\bigskip
+\begin{enumerate}
+\item Find, with proof, all pairs of integers $(x, y)$ satisfying the equation
+\[
+1 + 1996x + 1998y = xy.
+\]
+
+\item Let $ABC$ be an equilateral triangle.
+For a point $M$ inside $ABC$, let $D$, $E$, $F$ be the feet of the perpendiculars from $M$ onto $BC$, $CA$, $AB$, respectively. Find the locus of all such points $M$ for which $\angle FDE$ is a right angle.
+
+\item Find all polynomials $p$ satisfying the equation
+\[
+(x - 16)p(2x) = 16(x - 1)p(x)
+\]
+for all $x$.
+
+\item Suppose $a$, $b$ and $c$ are nonnegative real numbers such that $a + b + c \geq abc$. Prove that $a^2 + b^2 + c^2 \geq abc$.
+
+\item Let $S$ be the set of all odd integers greater than one. For each $x \in S$, denote by $\delta(x)$ the unique integer satisfying the inequality
+\[
+2^{\delta(x)} < x < 2^{\delta(x)+1}.
+\]
+For $a, b \in S$, define
+\[
+a * b = 2^{\delta(a)-1}(b - 3) + a.
+\]
+[For example, to calculate $5 * 7$, note that $2^2 < 5 < 2^3$, so $\delta(5) = 2$, and hence $5 * 7 = 2^{2-1}(7 - 3) + 5 = 13$. Also $2^2 < 7 < 2^3$, so $\delta(7) = 2$ and $7 * 5 = 2^{2-1}(5 - 3) + 7 = 11$.]
+
+Prove that if $a, b, c \in S$, then
+\begin{enumerate}
+\item[(a)] $a * b \in S$ and
+\item[(b)] $(a * b) * c = a * (b * c)$.
+\end{enumerate}
+
+\end{enumerate}
+\newpage
+\begin{center}
+{\large\bfseries 10th Irish Mathematical Olympiad\\10 May 1997}
+\end{center}
+\bigskip\noindent\textbf{Paper 2}\bigskip
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item Given a positive integer $n$, denote by $\sigma(n)$ the sum of all positive integers which divide $n$. [For example, $\sigma(3) = 1 + 3 = 4$, $\sigma(6) = 1 + 2 + 3 + 6 = 12$, $\sigma(12) = 1 + 2 + 3 + 4 + 6 + 12 = 28$.]
+We say that $n$ is \textit{abundant} if $\sigma(n) > 2n$. (So, for example, 12 is abundant.)
+Let $a$, $b$ be positive integers and suppose that $a$ is abundant. Prove that $ab$ is abundant.
+
+\item $ABCD$ is a quadrilateral which is circumscribed about a circle $\Gamma$ (i.e., each side of the quadrilateral is tangent to $\Gamma$.) If $\angle A = \angle B = 120^\circ$, $\angle D = 90^\circ$ and $BC$ has length 1, find, with proof, the length of $AD$.
+
+\item Let $A$ be a subset of $\{0, 1, 2, 3, \ldots, 1997\}$ containing more than 1000 elements. Prove that either $A$ contains a power of 2 (that is, a number of the form $2^k$, with $k$ a nonnegative integer) or there exist two distinct elements $a, b \in A$ such that $a + b$ is a power of 2.
+
+\item Let $S$ be the set of all natural numbers $n$ satisfying the following conditions:
+\begin{enumerate}
+\item[(i)] $n$ has 1000 digits;
+\item[(ii)] all the digits of $n$ are odd, and
+\item[(iii)] the absolute value of the difference between adjacent digits of $n$ is 2.
+\end{enumerate}
+Determine the number of distinct elements in $S$.
+
+\item Let $p$ be a prime number, $n$ a natural number and $T = \{1, 2, 3, \ldots, n\}$. Then $n$ is called \textit{$p$-partitionable} if there exist $p$ nonempty subsets $T_1, T_2, \ldots, T_p$ of $T$ such that
+\begin{enumerate}
+\item[(i)] $T = T_1 \cup T_2 \cup \cdots \cup T_p$;
+\item[(ii)] $T_1, T_2, \ldots, T_p$ are disjoint (that is $T_i \cap T_j$ is the empty set for all $i, j$ with $i \neq j$), and
+\item[(iii)] the sum of the elements in $T_i$ is the same for $i = 1, 2, \ldots, p$.
+\end{enumerate}
+[For example, 5 is 3-partitionable since, if we take $T_1 = \{1, 4\}$, $T_2 = \{2, 3\}$, $T_3 = \{5\}$, then (i), (ii) and (iii) are satisfied. Also, 6 is 3-partitionable since, if we take $T_1 = \{1, 6\}$, $T_2 = \{2, 5\}$, $T_3 = \{3, 4\}$, then (i), (ii) and (iii) are satisfied.]
+\begin{enumerate}
+\item[(a)] Suppose that $n$ is $p$-partitionable. Prove that $p$ divides $n$ or $n + 1$.
+\item[(b)] Suppose that $n$ is divisible by $2p$. Prove that $n$ is $p$-partitionable.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

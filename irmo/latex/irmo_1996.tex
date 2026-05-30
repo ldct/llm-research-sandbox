@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\begin{center}
+{\large\bfseries 9th Irish Mathematical Olympiad\\4 May 1996}
+\end{center}
+\bigskip\noindent\textbf{Paper 1}\bigskip
+\begin{enumerate}
+\item For each positive integer $n$, let $f(n)$ denote the highest common factor of $n!+1$ and $(n+1)!$ (where $!$ denotes factorial). Find, with proof, a formula for $f(n)$ for each $n$. [Note that ``highest common factor'' is another name for ``greatest common divisor''.]
+
+\item For each positive integer $n$, let $S(n)$ denote the sum of the digits of $n$ when $n$ is written in base ten. Prove that, for every positive integer $n$,
+\[S(2n) \le 2S(n) \le 10S(2n).\]
+Prove also that there exists a positive integer $n$ with
+\[S(n) = 1996S(3n).\]
+
+\item Let $K$ be the set of all real numbers $x$ such that $0 \le x \le 1$. Let $f$ be a function from $K$ to the set of all real numbers $\mathbb{R}$ with the following properties
+\begin{enumerate}
+\item[(a)] $f(1) = 1$;
+\item[(b)] $f(x) \ge 0$ for all $x \in K$;
+\item[(c)] if $x, y$ and $x + y$ are all in $K$, then
+\[f(x+y) \ge f(x) + f(y).\]
+\end{enumerate}
+Prove that $f(x) \le 2x$, for all $x \in K$.
+
+\item Let $F$ be the mid-point of the side $BC$ of a triangle $ABC$. Isosceles right-angled triangles $ABD$ and $ACE$ are constructed externally on the sides $AB$ and $AC$ with right-angles at $D$ and $E$ respectively. Prove that $DEF$ is an isosceles right-angled triangle.
+
+\item Show, with proof, how to dissect a square into at most five pieces in such a way that the pieces can be re-assembled to form three squares no two of which are the same size.
+\end{enumerate}
+
+\newpage
+\begin{center}
+{\large\bfseries 9th Irish Mathematical Olympiad\\4 May 1996}
+\end{center}
+\bigskip\noindent\textbf{Paper 2}\bigskip
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item The sequence $F_0, F_1, F_2, \ldots$ is defined as follows: $F_0 = 0$, $F_1 = 1$ and, for all $n \ge 0$,
+\[F_{n+2} = F_n + F_{n+1}.\]
+(So, $F_2 = 1, F_3 = 2, F_4 = 3, F_5 = 5, F_6 = 8\ldots$)
+
+Prove that
+\begin{enumerate}
+\item[(a)] The statement ``$F_{n+k} - F_n$ is divisible by 10 for all positive integers $n$'' is true if $k = 60$, but not true for any positive integer $k < 60$.
+\item[(b)] The statement ``$F_{n+t} - F_n$ is divisible by 100 for all positive integers $n$'' is true if $t = 300$, but not true for any positive integer $t < 300$.
+\end{enumerate}
+
+\item Prove that the inequality
+\[2^{\frac{1}{2}} \cdot 4^{\frac{1}{4}} \cdot 8^{\frac{1}{8}} \cdots (2^n)^{\frac{1}{2^n}} < 4\]
+holds for all positive integers $n$.
+
+\item Let $p$ be a prime number, and $a$ and $n$ positive integers. Prove that if
+\[2^p + 3^p = a^n,\]
+then $n = 1$.
+
+\item Let $ABC$ be an acute-angled triangle and let $D$, $E$, $F$ be the feet of the perpendiculars from $A$, $B$, $C$ onto the sides $BC$, $CA$, $AB$, respectively. Let $P$, $Q$, $R$ be the feet of the perpendiculars from $A$, $B$, $C$ onto the lines $EF$, $FD$, $DE$, respectively. Prove that the lines $AP$, $BQ$, $CR$ (extended) are concurrent.
+
+\item We are given a rectangular board divided into 45 squares so that there are five rows of squares, each row containing nine squares. The following game is played:
+
+Initially, a number of discs are randomly placed on some of the squares, no square being allowed to contain more than one disc. A complete move consists of moving every disc from the square containing it to another square, subject to the following rules:
+\begin{enumerate}
+\item[(a)] each disc may be moved one square up or down, or left or right, of the square it occupies to an adjoining square;
+\item[(b)] if a particular disc is moved up or down as part of a complete move, then it must be moved left or right in the next complete move;
+\item[(c)] if a particular disc is moved left or right as part of a complete move, then it must be moved up or down in the next complete move;
+\item[(d)] at the end of each complete move no square can contain two or more discs.
+\end{enumerate}
+
+The game stops if it becomes impossible to perform a complete move. Prove that if initially 33 discs are placed on the board, then the game must eventually stop. Prove also that it is possible to place 32 discs on the board in such a way that the game could go on forever.
+\end{enumerate}
+\end{document}
