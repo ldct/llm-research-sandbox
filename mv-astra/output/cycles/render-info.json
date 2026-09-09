@@ -1,0 +1,30 @@
+{
+  "daylight": {
+    "renderer": "Blender 4.5.0 / Cycles",
+    "max_samples": 512,
+    "adaptive_threshold": 0.008,
+    "denoised": true,
+    "width": 2400,
+    "height": 2056,
+    "png_bit_depth": 16,
+    "camera": "Perspective, camera-aligned anamorphic staircase",
+    "view_transform": "AgX / Medium High Contrast",
+    "composited": false,
+    "image_generation": false,
+    "textures_packed": true
+  },
+  "evening": {
+    "renderer": "Blender 4.5.0 / Cycles",
+    "max_samples": 512,
+    "adaptive_threshold": 0.008,
+    "denoised": true,
+    "width": 2400,
+    "height": 2056,
+    "png_bit_depth": 16,
+    "camera": "Perspective, camera-aligned anamorphic staircase",
+    "view_transform": "AgX / Medium High Contrast",
+    "composited": false,
+    "image_generation": false,
+    "textures_packed": true
+  }
+}

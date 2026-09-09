@@ -1,0 +1,15 @@
+{
+  "renderer": "Blender 4.5.0 / Cycles",
+  "max_samples": 512,
+  "adaptive_threshold": 0.00800000037997961,
+  "denoised": true,
+  "width": 2400,
+  "height": 2056,
+  "png_bit_depth": 16,
+  "camera_type": "ORTHO",
+  "perspective_geometry_correction": false,
+  "orthographic_scale": 21.799999237060547,
+  "image_generation": false,
+  "composited": false,
+  "textures_packed": true
+}

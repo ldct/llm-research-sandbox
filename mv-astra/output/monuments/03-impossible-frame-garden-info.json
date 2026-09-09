@@ -1,0 +1,35 @@
+{
+  "renderer": "Blender 4.5.0 / Cycles",
+  "camera_type": "ORTHO",
+  "orthographic_scale": 25.200000762939453,
+  "resolution": [
+    2400,
+    2800
+  ],
+  "max_samples": 512,
+  "denoised": true,
+  "png_bit_depth": 16,
+  "exr_bit_depth": 32,
+  "reference": {
+    "page": "https://store.steampowered.com/app/1927720/Monument_Valley/",
+    "image": "references/monument-valley/steam-01.jpg",
+    "motifs": "Interleaved ivory and dark green frames, upright paths, bronze circular sockets"
+  },
+  "alignment_error_pixels": [
+    0.00016689300537109375
+  ],
+  "image_generation": false,
+  "composited": false,
+  "perspective_geometry_correction": false,
+  "textures_packed": true,
+  "collision_audits": [
+    {
+      "check": "frame garden approach / uprights",
+      "intersections": []
+    },
+    {
+      "check": "ivory hook / green frame",
+      "intersections": []
+    }
+  ]
+}

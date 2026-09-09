@@ -1,0 +1,20 @@
+{
+  "marble_01": {
+    "Diffuse": "assets/textures/marble_01_diff_2k.jpg",
+    "Rough": "assets/textures/marble_01_rough_2k.jpg",
+    "nor_gl": "assets/textures/marble_01_nor_gl_2k.jpg",
+    "Displacement": "assets/textures/marble_01_disp_2k.jpg"
+  },
+  "concrete_floor_02": {
+    "Diffuse": "assets/textures/concrete_floor_02_diff_2k.jpg",
+    "Rough": "assets/textures/concrete_floor_02_rough_2k.jpg",
+    "nor_gl": "assets/textures/concrete_floor_02_nor_gl_2k.jpg",
+    "Displacement": "assets/textures/concrete_floor_02_disp_2k.jpg"
+  },
+  "plastered_wall_02": {
+    "Diffuse": "assets/textures/plastered_wall_02_diff_2k.jpg",
+    "Rough": "assets/textures/plastered_wall_02_rough_2k.jpg",
+    "nor_gl": "assets/textures/plastered_wall_02_nor_gl_2k.jpg",
+    "Displacement": "assets/textures/plastered_wall_02_disp_2k.jpg"
+  }
+}

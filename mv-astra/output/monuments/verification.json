@@ -1,0 +1,38 @@
+[
+  {
+    "scene": "01-island-of-steps",
+    "verified_camera": "ORTHO",
+    "renderer": "CYCLES",
+    "packed_image_count": 18,
+    "mesh_objects": 647,
+    "passed_collision_checks": [
+      "island paths / rocks, pavilions, bridge",
+      "upper bridge / pavilions"
+    ],
+    "alignment_error_pixels_after_reopening": 0.00018157418026599665
+  },
+  {
+    "scene": "02-moon-palace",
+    "verified_camera": "ORTHO",
+    "renderer": "CYCLES",
+    "packed_image_count": 15,
+    "mesh_objects": 618,
+    "passed_collision_checks": [
+      "palace stairs / tower and chapels",
+      "chapels / central tower"
+    ],
+    "alignment_error_pixels_after_reopening": 0.00016689300537109375
+  },
+  {
+    "scene": "03-impossible-frame-garden",
+    "verified_camera": "ORTHO",
+    "renderer": "CYCLES",
+    "packed_image_count": 15,
+    "mesh_objects": 574,
+    "passed_collision_checks": [
+      "frame garden approach / uprights",
+      "ivory hook / green frame"
+    ],
+    "alignment_error_pixels_after_reopening": 0.0
+  }
+]

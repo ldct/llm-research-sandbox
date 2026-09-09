@@ -1,0 +1,10 @@
+11:19:11 | INFO: Data are loaded, start creating Blender stuff
+11:19:11 | INFO: Blender create Mesh node realCap_Model_2.006
+11:19:11 | INFO: Blender create Mesh node realCap_Model_2.009
+11:19:11 | INFO: Blender create Mesh node realCap_Model_2.014
+11:19:11 | INFO: Blender create Mesh node realCap_Model_2.002
+11:19:11 | INFO: glTF import finished in 0.08s
+[('Cube', (0.0, 0.0, 0.0), (2.0, 2.0, 2.0)), ('namaqualand_rocks_02_a', (-1.2395724058151245, -0.0, 0.0), (0.2268640547990799, 0.21695975959300995, 0.15248534083366394)), ('namaqualand_rocks_02_b', (-0.8101965188980103, -0.0, 0.0), (0.21972283720970154, 0.16330355405807495, 0.08290474861860275)), ('namaqualand_rocks_02_c', (-0.40107887983322144, -0.0, 0.0), (0.2149469256401062, 0.1675470769405365, 0.0852416381239891)), ('namaqualand_rocks_02_d', (0.0, 0.0, 0.0), (0.19951653480529785, 0.1573309600353241, 0.12402696907520294))]
+Blender 4.5.0 (hash 8cb6b388974a built 2025-07-15 01:35:28)
+
+Blender quit

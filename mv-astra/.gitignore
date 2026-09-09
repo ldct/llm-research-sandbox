@@ -1,0 +1,8 @@
+# Local renderer installation and downloaded API caches.
+/.tools/
+# OS and Python caches.
+.DS_Store
+__pycache__/
+*.py[cod]
+# Blender automatic backup copies; deliberate snapshots are tracked separately.
+*.blend[0-9]*
